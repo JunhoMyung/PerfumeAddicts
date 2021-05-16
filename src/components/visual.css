@@ -1,0 +1,73 @@
+.header{
+    text-align: center;
+}
+
+.tab_ul{
+    background-color: rgb(91, 35, 245);
+    color: white;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.tab_ul li{
+    width:15%;
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin: 8px;
+}
+
+.main_table{
+    padding-left: 25px;
+}
+
+td{
+    padding-bottom: 15px;
+}
+.inner_second_td{
+    padding-left:15px;
+}
+
+.form{
+    width: 115px;
+    text-align: center;
+}
+
+img{
+    width: 450px;
+    height: auto;
+}
+
+.detail_ul{
+    display: block;
+    
+    
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.detail_ul li{
+    width:20%;
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin: 8px;
+}
+
+.detail_ul_bytton{
+    width: 200px;
+    height: 40px;
+}
+
+.radar_chart{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
