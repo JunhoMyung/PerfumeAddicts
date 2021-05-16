@@ -16,8 +16,9 @@ const main = () => {
                 <li><a href="/">HOME</a></li>
                 <li><a href="/">ABOUT</a></li>
                 <li><a href="/">BEST</a></li>
+                <li><a href="/">NEW</a></li>
+                <li><a href="/">BRANDS</a></li>
                 <li><a href="./filter">DISCOVER</a></li>
-                <li><a href="/">SIGN IN</a></li>
                 <ul style={{float: "right"}}>
                     <li><a href="/bbs/login.php">LOG IN</a></li>
                     <li><a href="/bbs/register_form.php">SIGN UP</a></li>
