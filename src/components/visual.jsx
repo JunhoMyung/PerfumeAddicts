@@ -28,13 +28,13 @@ class visual extends Component {
         this.setState({page : "detail"});
     }
 
-    render_tab = () =>{
-        if (this.state.page == "detail"){
+    render_tab = () => {
+        if (this.state.page === "detail"){
             return(
-                <img src={radar_chart} className='radar_chart'/> 
+                <img src={radar_chart} className='radar_chart' alt = ""/> 
             )
         }
-        else if (this.state.page == "music"){
+        else if (this.state.page === "music"){
             return(
                <MyMusic />
             )
@@ -54,11 +54,13 @@ class visual extends Component {
                 <br/><br/>
     
                 <table>
+                    <tbody>
                     <tr>
-                        <td className='main_table'><img src={Perfume1} /></td>
+                        <td className='main_table'><img src={Perfume1} alt = "" /></td>
                         <td className='main_table'>
                             <h3><b>{this.state.info.name} &emsp;</b></h3>
                             <table>
+                                <tbody>
                                 <tr> 
                                     <td><b>Volume:  </b></td>
                                     <td className='inner_second_td'>
@@ -97,6 +99,7 @@ class visual extends Component {
                                     <td><b>Total:  </b></td>
                                     <td className='inner_second_td'>${this.state.total_price}</td>
                                 </tr>
+                                </tbody>
                             </table>
                             <td><button>BUY NOW</button> &emsp;
                                 <button>ADD TO CART</button>
@@ -104,10 +107,11 @@ class visual extends Component {
                         </td>
                         
                     </tr>
+                    </tbody>
                 </table>
     
                 &emsp; &emsp; Currently playing: Perfect - Ed Sheeran
-                <ReactPlayer url = {this.state.url} controls = {true} playing = {true} width="340px" height="200px" volume = "0.2"/>
+                <ReactPlayer url = {this.state.url} controls = {true} playing = {true} width="340px" height="200px" volume = {0.2}/>
                 <br/><br/>
                 <ul className='detail_ul'>
                     <li><button className='detail_ul_bytton' onClick = {this.detail}>DETAIL</button></li>
