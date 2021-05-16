@@ -15,10 +15,6 @@ const visual = () => {
         window.location.href = "/music";
     }
 
-    function detail(){
-        window.location.href = "/visual_detail";
-    }
-
     const total_price = "0"
 
     return (
@@ -91,7 +87,7 @@ const visual = () => {
             <br/><br/>
 
             <ul className='detail_ul'>
-                <li><button className='detail_ul_bytton' onClick = {detail}>DETAIL</button></li>
+                <li><button className='detail_ul_bytton' >DETAIL</button></li>
                 <li><button className='detail_ul_bytton'>REVIEW</button></li>
                 <li><button className='detail_ul_bytton' onClick = {music}>MUSIC</button></li>
                 <li><button className='detail_ul_bytton'>Q&A</button></li>
