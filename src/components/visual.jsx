@@ -24,6 +24,7 @@ class visual extends Component {
         this.setState({page : "music"});
     }
 
+<<<<<<< HEAD
     detail = () => {
         this.setState({page : "detail"});
     }
@@ -40,7 +41,6 @@ class visual extends Component {
             )
         }
     }
-
     render(){
         return (
             <div>
@@ -111,6 +111,7 @@ class visual extends Component {
                 <ReactPlayer url = {this.state.url} controls = {true} playing = {true} width="340px" height="200px" volume = "0.2"/>
                 <br/><br/>
 
+<<<<<<< HEAD
                 <ul className='detail_ul'>
                     <li><button className='detail_ul_bytton' onClick = {this.detail}>DETAIL</button></li>
                     <li><button className='detail_ul_bytton'>REVIEW</button></li>
@@ -122,6 +123,21 @@ class visual extends Component {
             </div>
         )
     }
+=======
+            <br/><br/>
+
+            <ul className='detail_ul'>
+                <li><button className='detail_ul_bytton' >DETAIL</button></li>
+                <li><button className='detail_ul_bytton'>REVIEW</button></li>
+                <li><button className='detail_ul_bytton' onClick = {music}>MUSIC</button></li>
+                <li><button className='detail_ul_bytton'>Q&A</button></li>
+            </ul>
+            <br></br>
+            <img src={radar_chart} className='radar_chart'/>
+            
+        </div>
+    )
+>>>>>>> 1023f43f4922aeffb8275f5fd6ecb227bdbfb127
 }
 
 export default visual
