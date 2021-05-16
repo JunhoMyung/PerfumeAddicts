@@ -1,0 +1,46 @@
+.logo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    position: sticky;
+}
+
+.main {
+    width: 100%;
+
+}
+
+
+ul { 
+    background-color: #735880; 
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    overflow: hidden; 
+}
+
+li { 
+    float: left; 
+}
+
+li a { 
+    display: block; 
+    background-color: #735880; 
+    color: #fff; 
+    padding: 10px;
+    padding-right: 30px; 
+    padding-left: 30px;
+    text-decoration: none;
+    text-align: center; 
+    font-family: "Lato", sans-serif;
+    font-size: 10pt;
+}
+
+
+li a:hover { 
+    background-color: #a188ac; 
+    color: white; 
+}
