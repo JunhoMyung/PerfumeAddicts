@@ -7,12 +7,27 @@ import {
     Musicbtn,
     Recommendbtn
 } from './music_style';
+import Modal from 'react-modal';
 
 class music extends Component {
 
-    state = {
-        upvote : true,
-        modal : false
+    constructor(){
+        super();
+        this.state = {
+            upvote : true,
+            modal : false,
+            showmodal : false,
+        }
+        this.handleOpenModal = this.handleOpenModal.bind(this);
+        this.handleCloseModal = this.handleCloseModal.bind(this);    
+    }
+
+    handleOpenModal () {
+        this.setState({ showModal: true });
+    }
+      
+    handleCloseModal () {
+        this.setState({ showModal: false });
     }
 
     upvote = () => {
@@ -37,17 +52,15 @@ class music extends Component {
         }
     }
 
-    handlemodal = () => {
-        if (this.state.modal){
-
-        }
+    componentWillMount() {
+        Modal.setAppElement('body');
     }
 
     render(){
         return (
             <div>
                 <MusicH1>Top Recommendations</MusicH1>
-                <table width = "80%" align = "center" border = "1px">
+                <table width = "80%" align = "center">
                     <tbody>
                         <tr>
                             <td width = "80%">
@@ -109,8 +122,14 @@ class music extends Component {
                         </tr>
                     </tbody>
                 </table>
-
-                <Recommendbtn>Recommend Music by Myself!</Recommendbtn>
+                <Recommendbtn onClick = {this.handleOpenModal}>Recommend Music by Myself!</Recommendbtn>
+                <Modal 
+                    isOpen={this.state.showModal}
+                    onRequestClose={this.handleCloseModal}
+                    shouldCloseOnOverlayClick={true}
+                >
+                    <button onClick={this.handleCloseModal}>Close Modal</button>
+                </Modal>
             </div>
         )
     }

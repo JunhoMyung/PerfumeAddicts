@@ -7,10 +7,7 @@
     color: white;
     display: block;
     text-align: center;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    
+    width: 100%;    
 }
 
 .tab_ul li{
@@ -44,12 +41,7 @@ img{
 
 .detail_ul{
     display: block;
-    
-    
     text-align: center;
-    padding: 0;
-    margin: 0;
-    
 }
 
 .detail_ul li{
