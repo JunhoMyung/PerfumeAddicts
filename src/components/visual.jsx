@@ -24,7 +24,6 @@ class visual extends Component {
         this.setState({page : "music"});
     }
 
-<<<<<<< HEAD
     detail = () => {
         this.setState({page : "detail"});
     }
