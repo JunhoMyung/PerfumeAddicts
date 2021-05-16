@@ -11,6 +11,8 @@ const main = () => {
     return (
         <div>
         <link href="http://fonts.cdnfonts.com/css/lemon-milk" rel="stylesheet"></link>
+        <link rel="preconnect" href="https://fonts.gstatic.com"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"></link>
             <img src={LOGO_Full} alt = "" className='logo'/>
             <ul>
                 <li><a href="/">HOME</a></li>
