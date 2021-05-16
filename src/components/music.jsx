@@ -1,12 +1,20 @@
-import React from 'react'
+import React, { Component } from "react";
+import ReactPlayer from 'react-player/youtube'
 
-const music = () => {
 
-    return (
-        <div>
-            music
-        </div>
-    )
+
+class music extends Component {
+
+    state = {
+    }
+
+    render(){
+        return (
+            <div>
+                music
+            </div>
+        )
+    }
 }
 
 export default music
