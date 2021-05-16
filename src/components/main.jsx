@@ -8,9 +8,9 @@ const main = () => {
     function handleclick(){
         window.location.href = "/filter";
     }
-
     return (
         <div>
+        <link href="http://fonts.cdnfonts.com/css/lemon-milk" rel="stylesheet"></link>
             <img src={LOGO_Full} alt = "" className='logo'/>
             <ul>
                 <li><a href="/">HOME</a></li>
@@ -24,6 +24,9 @@ const main = () => {
                 </ul>
             </ul>
             <img src={MAIN_PAGE} alt = "" className='main'/>
+            <div className="title">DISCOVER YOUR SCENTS WITH SENSES</div>
+            <div className="button" onClick={handleclick}></div>
+            <div className="button_text">Find My Perfume</div>
             <br/>
         </div>
     )
