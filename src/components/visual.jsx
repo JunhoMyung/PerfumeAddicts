@@ -4,6 +4,8 @@ import radar_chart from "../perfume_pictures/radar_chart.PNG"
 import React, { Component } from "react";
 import MyMusic from "./music.jsx";
 import ReactPlayer from 'react-player/youtube'
+import RadarChart from 'react-svg-radar-chart';
+import 'react-svg-radar-chart/build/css/index.css'
 
 class visual extends Component {
 
@@ -29,9 +31,48 @@ class visual extends Component {
     }
 
     render_tab = () => {
+        const data = [
+            {
+              data: {
+                citrus: 0.7,
+                woody: .8,
+                spicy: 0.9,
+                flower: 0.67,
+                fruit: 0.8
+              },
+              meta: { color: 'blue' }
+            },
+            {
+              data: {
+                citrus: 0.6,
+                woody: .85,
+                spicy: 0.5,
+                flower: 0.6,
+                fruit: 0.7
+              },
+              meta: { color: 'red' }
+            }
+          ];
+       
+          const captions = {
+            // columns
+            citrus: 'Citrus',
+            woody: 'Woody',
+            spicy: 'Spicy',
+            flower: 'Flower',
+            fruit: 'Fruit'
+          };
         if (this.state.page === "detail"){
             return(
-                <img src={radar_chart} className='radar_chart' alt = ""/> 
+                ////<img src={radar_chart} className='radar_chart' alt = ""/> 
+                <div className='radar_chart'>
+                    
+        <RadarChart
+            captions={captions}
+            data={data}
+            size={600}
+          />
+        </div>
             )
         }
         else if (this.state.page === "music"){
