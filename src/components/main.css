@@ -80,8 +80,8 @@ li a, .dropbtn {
     background-color: #735880; 
     color: #fff; 
     padding: 10px;
-    padding-right: 30px; 
-    padding-left: 30px;
+    padding-right: 25px; 
+    padding-left: 25px;
     text-decoration: none;
     text-align: center; 
     font-family: "Lato", sans-serif;
@@ -105,7 +105,7 @@ li.dropdown {
 .dropdown-content {
     display: none;
     position: absolute;
-    min-width: 157px;
+    min-width: 180px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 

@@ -62,7 +62,7 @@ class main extends Component {
                         <li><a href="/">BRANDS</a></li>
                         <li><a href="./filter">DISCOVER</a></li>
                         <ul style={{float: "right"}}>
-                            <li className="dropdown signin"><a>{user_name}</a>
+                            <li className="dropdown signin"><a><i class="fas fa-user-circle fa-lg"></i>&nbsp;&nbsp;{user_name}</a>
                                 <div className="dropdown-content">
                                     <a href="/">My Page</a>
                                     <a onClick={signOutWithGoogle}>Sign Out</a>
