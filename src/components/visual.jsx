@@ -101,11 +101,9 @@ class visual extends Component {
                                 </tr>
                                 </tbody>
                             </table>
-                            <td><button>BUY NOW</button> &emsp;
-                                <button>ADD TO CART</button>
-                            </td>
-                        </td>
-                        
+                            <button>BUY NOW</button> &emsp;
+                            <button>ADD TO CART</button>
+                        </td>            
                     </tr>
                     </tbody>
                 </table>
@@ -120,6 +118,7 @@ class visual extends Component {
                     <li><button className='detail_ul_bytton'>Q&A</button></li>
                 </ul>
                 <br></br>
+
                 {this.render_tab()}
             </div>
         )

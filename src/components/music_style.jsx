@@ -23,30 +23,15 @@ export const Musiccontent = styled.div`
     text-align: justify;
 `;
 
-export const Musicbtn= styled.button`
-    background-color: #ffffff;
-    border: transparent;   
-    transform: translateY(25%);
-    text-align: right;
-    font-size: 1.5rem;
-    &:hover {
-        cursor: pointer;
-      }
-`;
+export const Marginbtn = styled.div`
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+    margin-bottom: 3rem;
+`
 
-export const Recommendbtn= styled.button`
-    background-color: #ffffff;
-    font-size: 1.3rem;
-    margin-left: 2rem;
-    margin-top: 3rem;
-    border-radius: 5px;
-    padding: 10px;
-    border: 2px solid #2d2d2d;
-    margin-bottom: 4rem;
-    &:hover {
-        background: #2d2d2d;
-        transition: 0.2s ease-out;
-        cursor: pointer;
-        color: #fff;
-    }
-`;
+export const Modal_margin = styled.div`
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 3rem;
+`
