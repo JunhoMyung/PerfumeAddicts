@@ -1,4 +1,5 @@
 import React from 'react'
+import NavBar from './NavBar.jsx'
 
 const filter = () => {
 
@@ -8,6 +9,7 @@ const filter = () => {
 
     return (
         <div>
+        <NavBar />
         <button onClick = {handleclick}> perfume info </button>
         
 

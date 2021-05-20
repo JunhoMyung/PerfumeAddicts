@@ -6,6 +6,7 @@ import MyMusic from "./music.jsx";
 import ReactPlayer from 'react-player/youtube'
 import RadarChart from 'react-svg-radar-chart';
 import 'react-svg-radar-chart/build/css/index.css'
+import NavBar from "./NavBar.jsx"
 
 class visual extends Component {
 
@@ -84,16 +85,8 @@ class visual extends Component {
     render(){
         return (
             <div>
-                <header className='header'><h1><i>Perdict</i></h1></header>
-                <ul className='tab_ul'>
-                    <li>HOME</li>
-                    <li>BEST</li>
-                    <li>BRANDS</li>
-                    <li>SEARCH</li>
-                    <li>MY PAGE</li>
-                </ul>
+                <NavBar />
                 <br/><br/>
-    
                 <table>
                     <tbody>
                     <tr>
