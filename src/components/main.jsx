@@ -5,6 +5,8 @@ import MAIN_PAGE from "../perfume_pictures/MAIN_PAGE.png"
 import 'firebase/auth';
 import {auth, signInWithGoogle, signOutWithGoogle} from "./firebase.jsx";
 import {Link} from 'react-router-dom'
+import firebase from 'firebase';
+import { FilterTiltShiftTwoTone } from '@material-ui/icons';
 
 class main extends Component {
     constructor() {
@@ -21,6 +23,7 @@ class main extends Component {
       }
     
     render() {
+        let button;
         if (this.state.currentUser === null) {
             return (
                 <div>
