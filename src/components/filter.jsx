@@ -29,12 +29,12 @@ const filter = () => {
             }
             for (let k = 0; remove.length; k ++){
                 delete (tobeshown[tobeshown.index(k)])
-            remove = []    
-                }
-        console.log(tobeshown);
+            remove = []
+        }
+        console.log(tobeshown, 'fin');
         }
     }
-
+    
     function handleclick(){
         window.location.href = "/visual";
     }
