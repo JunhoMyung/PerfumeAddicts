@@ -4,7 +4,7 @@ import NavBar from './NavBar.jsx'
 
 const filter = () => {
     // perfume_list = [[perfume_name, [tobefiltered_metric_list], img], [], []]
-    const perfume_list = [["ck", ["citrus", "metallic"], "img"], ["ck2", ["woody", "metallic"], "img"], ["ck", ["metallic"], "img"]];
+    var perfume_list = [["ck", ["citrus", "metallic"], "img"], ["ck2", ["woody", "metallic"], "img"], ["ck3", ["metallic"], "img"]];
     // checked elements to be filtered
     var filter_list = ["citrus"];
     var showlist = [];
@@ -14,9 +14,19 @@ const filter = () => {
         var tobeshown = perfume_list;
         for (let i = 0; filter_list.length; i++){
             for (let j = 0; tobeshown.length; j++){
-                if (filter_list[i] in tobeshown[j][1]){
-                    remove.append(j)
-                }}
+                console.log(tobeshown);
+                console.log(tobeshown[0][1], 'herehre');
+                for (let ind = 0; tobeshown[j][i].length; ind++){
+                    if (filter_list[i] == tobeshown[j][1][ind]){
+                        // var z = json.loads(remove);
+                        // z.update(j);
+                        remove.push(j);
+                    }
+                }
+                // if (filter_list[i] in tobeshown[j][1]){
+                //     remove.append(j)
+                // }
+            }
             for (let k = 0; remove.length; k ++){
                 delete (tobeshown[tobeshown.index(k)])
             remove = []    
