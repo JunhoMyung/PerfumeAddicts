@@ -14,23 +14,24 @@ const filter = () => {
         var tobeshown = perfume_list;
         for (let i = 0; filter_list.length; i++){
             for (let j = 0; tobeshown.length; j++){
-                console.log(tobeshown);
-                console.log(tobeshown[0][1], 'citrus metallic');
                 for (let ind = 0; tobeshown[j][1].length; ind++){
                     if (filter_list[i] === tobeshown[j][1][ind]){
                         // var z = json.loads(remove);
                         // z.update(j);
                         remove.push(j);
-                        console.log(remove, 'h');
                     }
                 }
             }
+            console.log(remove, 'h');
             for (let k = 0; remove.length; k ++){
                 delete (tobeshown[tobeshown.index(k)])
                 console.log(tobeshown);
             remove = []
             }
         console.log(tobeshown, 'fin');
+        }
+        for (let i = 0; i = 3; i ++){
+            console.log(i)
         }
     }
     
