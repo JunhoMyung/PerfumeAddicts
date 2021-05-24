@@ -1,3 +1,4 @@
+import { ScreenLockPortraitSharp } from '@material-ui/icons';
 import React from 'react'
 import NavBar from './NavBar.jsx'
 
@@ -148,6 +149,8 @@ const filter = () => {
         }
 
         console.log(showlist);
+        console.log(filter_list);
+
         showlist = [];
     }
 
@@ -156,8 +159,26 @@ const filter = () => {
         window.location.href = "/visual";
     }
 
-    return (
+//     function checkbox(){
+//         document.getElementById("choice_musk").onclick = function(){
+//             if (filter_list.includes('musk')){
+//                 filter_list.remove('musk');
+//             }
+//             filter_list.push('musk');
+//         }
+//     }
 
+// checkbox()
+
+
+    // this.state = []
+    // changestate = () => {
+    //     this.setState(['musk'])
+    //     console.log(this)
+    // }
+
+    return (
+        
         <div>
         <button onClick = {nextpage}> do filter </button>
 
@@ -171,7 +192,8 @@ const filter = () => {
 
         {/* clickable image here for 16 options, if image clicked --> perfume info page redirect.*/}
         <li class="choice1">
-        <input name="input1" type="checkbox" value="1" id="choice_musk"></input>
+        <input name="input1" type="checkbox" value="1" id="choice_musk" ></input>
+        {/* onClick = {this.changestate} */}
         <label for="choice_musk" id="musk"> Musk </label>
         </li>
 
