@@ -1,26 +1,41 @@
 import './visual.css'
 import Perfume1 from "../perfume_pictures/Perfume1.jpg"
-import radar_chart from "../perfume_pictures/radar_chart.PNG"
 import React, { Component } from "react";
 import MyMusic from "./music.jsx";
 import ReactPlayer from 'react-player/youtube'
 import RadarChart from 'react-svg-radar-chart';
 import 'react-svg-radar-chart/build/css/index.css'
 import NavBar from "./NavBar.jsx"
+import firebase from './firebase';
+import { ThreeSixtySharp } from '@material-ui/icons';
+
 
 class visual extends Component {
 
-    state = {
-        page : "detail",
-        info : {
-            id: 1,
-            name: "BLEU DE CHANEL",
-            price: ["$75 | ","$100",],
-            sizes: ["1.7 mL", "3.4 mL"]
-        },
-        total_price : 0,
-        tab_state : 0,
-        url: "https://www.youtube.com/watch?v=UDDMYw_IZnE&ab_channel=DopeLyrics"
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            page : "detail",
+            info : {
+                id: 1,
+                name: "BLEU DE CHANEL",
+                price: ["$75 | ","$100",],
+                sizes: ["1.7 mL", "3.4 mL"]
+            },
+            total_price : 0,
+            tab_state : 0,
+            url: "",
+        };        
+        this.componentDidMount = this.componentDidMount.bind(this) 
+
+    }
+
+    componentDidMount = () => {
+        let current_component = this
+        firebase.database().ref('/'+ this.state.info.name +'/').orderByChild('vote').on("child_added", function(snapshot) {
+            current_component.setState({url: snapshot.val().url})
+        });
     }
 
     music = () => {

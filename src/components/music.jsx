@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Music() {
     
-    const perfume_name = "Blue De Chanel"
+    const perfume_name = "BLEU DE CHANEL"
     const classes = useStyles();
     const [open, setOpen] = useState(false);
     const [title, setTitle] = useState('')
