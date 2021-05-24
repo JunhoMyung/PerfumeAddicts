@@ -4,7 +4,8 @@ import {
     MusicH2,
     Musiccontent,
     MusicH3,
-    Marginbtn
+    Marginbtn,
+    ReviewTable
 } from './music_style';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
@@ -12,7 +13,7 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
-import { db } from './firebase';
+import firebase from './firebase';
 
 const useStyles = makeStyles((theme) => ({
     modal: {
@@ -33,14 +34,15 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Music() {
     
+    const perfume_name = "Blue De Chanel"
     const classes = useStyles();
     const [open, setOpen] = useState(false);
-    const [vote, setVote] = useState(false);
     const [title, setTitle] = useState('')
     const [artist, setArtist] = useState('')
     const [url, setURL] = useState('')
     const [description, setDescription] = useState('')
-
+    const review_order = [];
+    const key_order = [];
 
     const handleOpen = () => {
         setOpen(true);
@@ -50,15 +52,63 @@ export default function Music() {
         setOpen(false);
     };
 
-    const handlevote = () => {
-        setVote((prev) => !prev)
+    const returnvote = (value) => {
+        if (firebase.auth().currentUser === null){
+            return (<i className="far fa-thumbs-up"></i>)
+        }
+        else if(!Object.values(value.voteID).includes(firebase.auth().currentUser.email)){
+            return(
+                <i className="far fa-thumbs-up"></i>
+            )
+        }
+        else{
+            return(
+                <i className="fas fa-thumbs-up"></i>
+            )
+        }
     }
 
-    const returnvote = () => {
-        if(vote){
-            return(
-                <div>thumbs up</div>
-            )
+    const handleVote = (value, index) => {
+        //console.log([...key_order].reverse()[index])
+        if (firebase.auth().currentUser === null){
+            alert("Please sign in to vote")
+        }
+        else if(!Object.values(value.voteID).includes(firebase.auth().currentUser.email)) {
+            var new_data = {
+                title: value.title,
+                artist: value.artist,
+                url: value.url,
+                description: value.description,
+                vote: value.vote + 1,
+                voteID: value.voteID
+            }
+            var updates = {};
+            updates['/'+ perfume_name +'/' + [...key_order].reverse()[index]] = new_data;
+            firebase.database().ref().update(updates);
+            firebase.database().ref('/'+ perfume_name +'/'+ [...key_order].reverse()[index] + '/voteID/').push(firebase.auth().currentUser.email);
+        }
+        else {
+            var new_data = {
+                title: value.title,
+                artist: value.artist,
+                url: value.url,
+                description: value.description,
+                vote: value.vote - 1,
+                voteID: value.voteID
+            }
+            var updates = {};
+            updates['/'+ perfume_name +'/' + [...key_order].reverse()[index]] = new_data;
+            firebase.database().ref().update(updates);
+            var temp = firebase.database().ref('/'+ perfume_name +'/'+ [...key_order].reverse()[index] + '/voteID/')
+            temp.get().then((snapshot) =>{
+                var keys = Object.keys(snapshot.val());
+                snapshot.forEach((child) => {
+                    //console.log(child.val())
+                    if(child.val() === firebase.auth().currentUser.email){
+                        firebase.database().ref('/'+ perfume_name +'/'+ [...key_order].reverse()[index] + '/voteID/' + child.key).remove()
+                    }
+                })
+            })
         }
     }
 
@@ -68,80 +118,55 @@ export default function Music() {
     }
 
     const updateDB = () => {
-        const newKey = db.ref('/record/').push();
+        const newKey = firebase.database().ref('/'+ perfume_name +'/').push();
         newKey.set({
             title: title,
             artist: artist,
             url: url,
-            description: description
+            description: description,
+            vote: 0,
+            voteID: {
+                user1: "placeholder"
+            }
         });
+        setTitle("");
+        setArtist("");
+        setURL("");
+        setDescription("");
     }
+
+    const sortbyvote = () => {
+        firebase.database().ref('/'+ perfume_name +'/').orderByChild('vote').on("child_added", function(snapshot) {
+            review_order.push(snapshot.val());
+            key_order.push(snapshot.key);
+        });
+
+    }
+
+
 
     return (
         <div>
             <MusicH1>Top Recommendations</MusicH1>
-            <table width = "80%" align = "center">
-                <tbody>
-                    <tr>
-                        <td width = "80%">
-                            <MusicH2>Perfect - Ed Sheeran</MusicH2>
-                        </td>
-                        <td width = "15%">
-                            <MusicH3>23 Likes</MusicH3>
-                        </td>
-                        <td>
-                            <Button onClick = {handlevote}>{returnvote}</Button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <br></br>
-            <table width = "70%" align = "center">
-                <tbody>
-                    <tr>
-                        <td>
-                            <Musiccontent>ID: Perfume Addict</Musiccontent>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <Musiccontent>
-                                The scent from patchouli and Iris makes me feel as if I’m in a fresh forest full of flowers. It directly resembled me of the MV of perfect, which starts from a mountain!
-                            </Musiccontent>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table width = "80%" align = "center">
-                <tbody>
-                    <tr>
-                        <td width = "80%">
-                            <MusicH2>Perfect - Ed Sheeran</MusicH2>
-                        </td>
-                        <td width = "15%">
-                            <MusicH3>23 Likes</MusicH3>
-                        </td>
-                        <td>
-                            <Button onClick = {handlevote}>{returnvote}</Button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <br></br>
-            <table width = "70%" align = "center">
-                <tbody>
-                    <tr>
-                        <td>
-                            <Musiccontent>ID: Perfume Addict</Musiccontent>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <Musiccontent>The scent from patchouli and Iris makes me feel as if I’m in a fresh forest full of flowers. It directly resembled me of the MV of perfect, which starts from a mountain!</Musiccontent>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            {sortbyvote()}
+            {[...review_order].reverse().map((value, index) => {
+            return (
+                <ReviewTable  width = "80%">
+                    <tbody>
+                        <tr>
+                            <td width = "80%"><MusicH2>{value.title} - {value.artist}</MusicH2></td>
+                            <td>
+                                <MusicH3>Votes: {value.vote}</MusicH3>
+                            </td>
+                            <td>
+                                <MusicH3><Button onClick = {() => handleVote(value, index)}>{returnvote(value)}</Button></MusicH3>
+                            </td>
+                        </tr>
+                        <tr><Musiccontent>{value.description}</Musiccontent></tr>
+                    </tbody>
+                </ReviewTable>
+            )
+        })}
             <Marginbtn>
                 <Button variant="contained" onClick = {handleOpen} size="large">Recommend Music by Myself</Button>
             </Marginbtn>
