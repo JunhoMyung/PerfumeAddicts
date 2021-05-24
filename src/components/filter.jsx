@@ -293,9 +293,9 @@ const filter = () => {
 
                         if n%3 == 0
                         <tr>
-                            
+
                             <td width = "80%">
-                            // nth index img1
+                            // nth index img1`
                             </td>
 
                         </tr>
