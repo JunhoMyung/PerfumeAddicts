@@ -4,40 +4,76 @@ import NavBar from './NavBar.jsx'
 
 const filter = () => {
     // perfume_list = [[perfume_name, [tobefiltered_metric_list], img], [], []]
-    var perfume_list = [["ck", ["citrus", "metallic"], "img"], ["ck2", ["woody", "metallic"], "img"], ["ck3", ["metallic"], "img"]];
+    const perfume_list = [
+        {
+          "name": "a",
+          "ingredient": ["citrus", "metallic"]
+        },
+        {
+          "name": "b",
+          "ingredient": ["citrus"]
+        },
+        {
+          "name": "c",
+          "ingredient": ["woody"]
+        },
+        {
+          "name": "d",
+          "ingredient": ["metallic"]
+        },
+        {
+          "name": "e",
+          "ingredient": ["spicy"]
+        },
+        {
+            "name": "f",
+            "ingredient": ["citrus", "metallic"]
+          },
+          {
+            "name": "g",
+            "ingredient": ["citrus"]
+          },
+          {
+            "name": "h",
+            "ingredient": ["woody"]
+          },
+          {
+            "name": "i",
+            "ingredient": ["metallic"]
+          },
+          {
+            "name": "j",
+            "ingredient": ["spicy"]
+          }
+    ]
     // checked elements to be filtered
-    var filter_list = ["metallic"];
+
+    var filter_list = ["metallic", "citrus"];
     var showlist = [];
     var remove = [];
 
     function nextpage(){
         var tobeshown = perfume_list;
-        console.log(filter_list.length, tobeshown.length)
-        for (let i = 0; filter_list.length; i++){
-            for (let j = 0; tobeshown.length; j++){
-                for (let ind = 0; tobeshown[j][1].length; ind++){
-                    if (filter_list[i] === tobeshown[j][1][ind]){
-                        // var z = json.loads(remove);
-                        // z.update(j);
-                        remove.push(j);
-                        continue;
-                    }
-                console.log(remove, i, j, ind, tobeshown[j][1].length, 'hh')
+        for (let i = 0; i < tobeshown.length; i++){
+            for (let j = 0; j < filter_list.length; j++){
+                if (tobeshown[i]['ingredient'].includes(filter_list[j])){
+                    remove.push(i);
+                    break;
                 }
             }
         }
-            console.log(remove, 'jjh');
-            for (let k = 0; remove.length; k ++){
-                delete (tobeshown[tobeshown.index(k)])
-                console.log(tobeshown);
-            remove = []
+
+        // console.log(remove);
+        for (let i = 0; i < tobeshown.length; i++){
+            if (!remove.includes(i)){
+                showlist.push(tobeshown[i]['name']);
             }
-        console.log(tobeshown, 'fin');
-        for (let i = 0; i = 3; i ++){
-            console.log(i)
         }
+        
+        console.log(showlist);
     }
-    
+
+
     function handleclick(){
         window.location.href = "/visual";
     }
