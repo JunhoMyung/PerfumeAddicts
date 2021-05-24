@@ -12,6 +12,7 @@ const filter = () => {
 
     function nextpage(){
         var tobeshown = perfume_list;
+        console.log(filter_list.length, tobeshown.length)
         for (let i = 0; filter_list.length; i++){
             for (let j = 0; tobeshown.length; j++){
                 for (let ind = 0; tobeshown[j][1].length; ind++){
@@ -19,17 +20,19 @@ const filter = () => {
                         // var z = json.loads(remove);
                         // z.update(j);
                         remove.push(j);
+                        continue;
                     }
+                console.log(remove, i, j, ind, tobeshown[j][1].length, 'hh')
                 }
             }
-            console.log(remove, 'h');
+        }
+            console.log(remove, 'jjh');
             for (let k = 0; remove.length; k ++){
                 delete (tobeshown[tobeshown.index(k)])
                 console.log(tobeshown);
             remove = []
             }
         console.log(tobeshown, 'fin');
-        }
         for (let i = 0; i = 3; i ++){
             console.log(i)
         }
