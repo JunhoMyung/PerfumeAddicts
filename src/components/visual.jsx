@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import MyMusic from "./music.jsx";
 import ReactPlayer from 'react-player/youtube'
 import RadarChart from 'react-svg-radar-chart';
-import 'react-svg-radar-chart/build/css/index.css'
+//import 'react-svg-radar-chart/build/css/index.css'
 import NavBar from "./NavBar.jsx"
 import firebase from './firebase';
 import { ThreeSixtySharp } from '@material-ui/icons';
@@ -56,7 +56,7 @@ class visual extends Component {
                 flower: 0.67,
                 fruit: 0.8
               },
-              meta: { color: 'blue' }
+              meta: { color: 'blue'}
             },
             {
               data: {
