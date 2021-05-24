@@ -6,45 +6,121 @@ const filter = () => {
     // perfume_list = [[perfume_name, [tobefiltered_metric_list], img], [], []]
     const perfume_list = [
         {
-          "name": "a",
-          "ingredient": ["citrus", "metallic"]
+          "name": "CK One",
+          "ingredient": ["woody", "citrus", "floral", "aromatic"]
         },
         {
-          "name": "b",
-          "ingredient": ["citrus"]
+          "name": "English Pear & Freesia",
+          "ingredient": ["floral", "honey", "minty"]
         },
         {
-          "name": "c",
-          "ingredient": ["woody"]
+          "name": "Do Son",
+          "ingredient": ["floral", "citrus", "musk"]
         },
         {
-          "name": "d",
-          "ingredient": ["metallic"]
+          "name": "Un Jardin En Mediterranee",
+          "ingredient": ["citrus", "green", "floral", "woody"]
         },
         {
-          "name": "e",
-          "ingredient": ["spicy"]
+          "name": "Voyage d'Hermes",
+          "ingredient": ["aromatic", "citrus", "musk", "woody"]
         },
         {
-            "name": "f",
-            "ingredient": ["citrus", "metallic"]
+            "name": "La Vie Est Belle",
+            "ingredient": ["floral", "minty", "powdery"]
           },
           {
-            "name": "g",
-            "ingredient": ["citrus"]
+            "name": "Cherry Blossom",
+            "ingredient": ["floral", "musk"]
           },
           {
-            "name": "h",
-            "ingredient": ["woody"]
+            "name": "A La Rose ",
+            "ingredient": ["citrus", "musk", "woody", "floral"]
           },
           {
-            "name": "i",
-            "ingredient": ["metallic"]
+            "name": "Modern Princess",
+            "ingredient": ["floral", "honey"]
           },
           {
-            "name": "j",
-            "ingredient": ["spicy"]
-          }
+            "name": "Baccarat Rouge",
+            "ingredient": ["woody", "spicy", "aromatic", "oriental"]
+          },
+          {
+            "name": "Alien",
+            "ingredient": ["floral", "powdery", "woody"]
+          },
+          {
+            "name": "Tobacco Vanille",
+            "ingredient": ["oriental", "powdery", "spicy", "dry"]
+          },
+          {
+            "name": "Aventus",
+            "ingredient": ["woody", "green", "musk", "citrus"]
+          },
+          {
+            "name": "Coco Mademoiselle",
+            "ingredient": ["citrus", "woody", "floral", "spicy"]
+          },
+          {
+            "name": "Black Opium",
+            "ingredient": ["floral", "powdery", "woody"]
+          },
+          {
+              "name": "Black Orchid",
+              "ingredient": ["oriental", "woody", "floral"]
+            },
+            {
+              "name": "La Nuit de I'Homme",
+              "ingredient": ["aromatic", "spicy", "woody", "citrus"]
+            },
+            {
+              "name": "Rock Volume One",
+              "ingredient": ["leathery", "metallic", "aromatic"]
+            },
+            {
+              "name": "Fahrenheit",
+              "ingredient": ["leathery", "woody"]
+            },
+            {
+              "name": "Acqua di Giò Profumo",
+              "ingredient": ["aromatic", "marine", "minty"]
+            },
+            {
+                "name": "Sailing Day",
+                "ingredient": ["marine", "woody", "watery"]
+              },
+              {
+                "name": "Snow Mint",
+                "ingredient": ["green", "minty", "aromatic"]
+              },
+              {
+                "name": "Aqva Pour Homme Atlantiqve ",
+                "ingredient": ["minty", "watery", "marine", "citrus"]
+              },
+              {
+                "name": "Aqua Allegoria Herba Fresca",
+                "ingredient": ["minty", "green", "citrus"]
+              },
+              {
+                "name": "Poolside Breeze",
+                "ingredient": ["watery", "floral"]
+              },
+              {
+                "name": "Luna Rossa Carbon",
+                "ingredient": ["spicy", "metallic", "aromatic"]
+              },
+              {
+                  "name": "Radish Vetiver ",
+                  "ingredient": ["dry", "green", "woody"]
+                },
+                {
+                  "name": "Dry Wood Ramon",
+                  "ingredient": ["dry", "woody", "spicy"]
+                },
+                {
+                  "name": "Honey Oud",
+                  "ingredient": ["honey", "floral"]
+                }
     ]
     // checked elements to be filtered
 
@@ -52,6 +128,7 @@ const filter = () => {
     var showlist = [];
     var remove = [];
 
+    //filtering 
     function nextpage(){
         var tobeshown = perfume_list;
         for (let i = 0; i < tobeshown.length; i++){
@@ -69,8 +146,9 @@ const filter = () => {
                 showlist.push(tobeshown[i]['name']);
             }
         }
-        
+
         console.log(showlist);
+        showlist = [];
     }
 
 
