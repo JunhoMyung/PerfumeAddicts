@@ -16,12 +16,21 @@
 
 .button {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-size: 20pt;
+    white-space: nowrap;
+    text-align: center;
+    font-family: "Lato", sans-serif;
     top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 320px;
     height: 70px;
     background: #61466F;
+    color: white;
     border-radius: 25px;
     cursor: pointer;
 }
@@ -29,21 +38,6 @@
 .button:hover { 
     background: #846891; 
     color: white; 
-}
-
-
-.button_text {
-    position: absolute;
-    display: flex;
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 20pt;
-    white-space: nowrap;
-    text-align: center;
-    font-family: "Lato", sans-serif;
-    vertical-align: middle;
 }
 
 .title {

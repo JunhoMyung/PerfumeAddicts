@@ -15,9 +15,8 @@ class main extends Component {
                     <img src={MAIN_PAGE} alt = "" className='main'/>
                     <div className="title">DISCOVER YOUR SCENTS WITH SENSES</div>
                     <Link to="./filter">
-                        <div className="button"></div>
+                        <div className="button">Find My Perfume</div>
                     </Link>
-                    <div className="button_text">Find My Perfume</div>
                     <br/>
                     <Overlay />
                 </div>

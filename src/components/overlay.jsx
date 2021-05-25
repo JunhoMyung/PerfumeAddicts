@@ -16,6 +16,7 @@ import ELEVEN from "../filter_icons/11.png"
 import TWELVE from "../filter_icons/12.png"
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
+import {Link} from 'react-router-dom'
 
 
 
@@ -29,7 +30,8 @@ const useStyles = makeStyles((theme) => ({
     border: '2px solid #000',
     boxShadow: theme.shadows[5],
     padding: theme.spacing(5, 10, 5),
-    overflow: 'scroll'
+    overflow: 'scroll',
+    overflowX: "hidden"
   },
   modal: {
     display: 'absolute',
@@ -199,7 +201,12 @@ export default function SimpleModal() {
                 </td>
               </tr>
             </tbody>
-          </table>        
+          </table>
+          <Link to="./filter">
+            <div className="button2">Explore</div>     
+          </Link>
+          <br/>   
+          <br/>     
       </div>
     </Fade>
   );
