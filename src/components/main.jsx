@@ -85,14 +85,12 @@ const useStyles = makeStyles(theme => ({
                 <img src={ABOUT_PIC} alt = "" className="about_pic"/>
                 <div className="sub_title">REMOTELY SELECT PERFUME</div>
                 <div className="main_title">
-                        Visualize Scents to 
+                        Easily Feel Scents 
                         <br/>
-                        Easily Feel Them
+                        with Perdict
                 </div>
                 <div className="content1">
                     It is hard to buy perfumes online, right?
-                    <br/>
-                    By only reading words, you will never fully get the scents.
                     <br/>
                     Perdict is here to guide you to the perfume world.
                     <br/>
@@ -101,9 +99,36 @@ const useStyles = makeStyles(theme => ({
             </div>
             <div className="service">
                 <div className="service_title">OUR SERVICES</div>
-                <div className="service1"><img src={MAIN_FILTER} alt = "" className="service_pic1"/></div>
-                <div className="service2"><img src={MAIN_VISUAL} alt = "" className="service_pic2"/></div>
-                <div className="service3"><img src={MAIN_INTERACT} alt = "" className="service_pic3"/></div>
+                <div className="service1"><img src={MAIN_FILTER} alt = "" className="service_pic1"/>
+                    <div className="service1_1">Unique Filter</div>
+                    <div className="service1_2">
+                        New to the perfume world?
+                        <br/>
+                        Easily get started by
+                        <br/>
+                        removing scents you hate.
+                    </div>
+                </div>
+                <div className="service2"><img src={MAIN_VISUAL} alt = "" className="service_pic2"/>
+                    <div className="service2_1">Visualize</div>
+                    <div className="service2_2">
+                        Hard to understand scent online?
+                        <br/>
+                        Visualize the scent with us.
+                        <br/>
+                        Feel them using your senses.
+                    </div>
+                </div>
+                <div className="service3"><img src={MAIN_INTERACT} alt = "" className="service_pic3"/>
+                    <div className="service3_1">Interact</div>
+                    <div className="service3_2">
+                        Is perfume shopping for you?
+                        <br/>
+                        Interact with other users.
+                        <br/>
+                        Share your opinion with music.
+                    </div>
+                </div>
             </div>
             <div className="join">
                 <img src={JOIN} alt = "" className="join_pic"/>
@@ -112,6 +137,13 @@ const useStyles = makeStyles(theme => ({
                         Sign Up to Personally
                         <br/>
                         Explore Perfumes
+                </div>
+                <div className="content3">
+                    Use your google account to easily sign in.
+                    <br/>
+                    You are now ready to choose perfumes and compare them.
+                    <br/>
+                    Interact with other users by sharing your experience.
                 </div>
             </div>
             <MuiThemeProvider theme={theme}>

@@ -139,7 +139,7 @@ li.dropdown {
     font-size: 15pt;
     color: #582D68; 
     position: absolute;
-    top: 140%;
+    top: 145%;
     left: 10%;
 }
 
@@ -149,7 +149,7 @@ li.dropdown {
     font-size: 40pt;
     color: black; 
     position: absolute;
-    top: 150%;
+    top: 155%;
     left: 10%;
 }
 
@@ -163,7 +163,7 @@ li.dropdown {
 }
 
 .content1 {
-    top: 177%;
+    top: 182%;
     left: 10%;
     font-family: "Lato", sans-serif;
     font-size: 13pt;
@@ -278,7 +278,7 @@ li.dropdown {
     font-weight: 1000;
     font-size: 15pt;
     color: #582D68; 
-    top: 15%;
+    top: 23%;
     right: 5%;
     white-space: nowrap;
     position: absolute;
@@ -291,8 +291,56 @@ li.dropdown {
     font-size: 40pt;
     color: black; 
     position: absolute;
-    top: 25%;
+    top: 33%;
     right: 5%;
     white-space: nowrap;
     text-align: right;
+}
+
+.content3 {
+    top: 60%;
+    right: 5%;
+    text-align: right;
+    font-family: "Lato", sans-serif;
+    font-size: 13pt;
+    position: absolute;
+}
+
+.service1_1 {
+    margin-top: 30px;
+    font-family: "Lato", sans-serif;
+    font-size: 15pt;
+    font-weight: 600;
+}
+
+.service2_1 {
+    margin-top: 30px;
+    font-family: "Lato", sans-serif;
+    font-size: 15pt;
+    font-weight: 600;
+}
+
+.service3_1 {
+    margin-top: 30px;
+    font-family: "Lato", sans-serif;
+    font-size: 15pt;
+    font-weight: 600;
+}
+
+.service1_2 {
+    margin-top: 20px;
+    font-family: "Lato", sans-serif;
+    font-size: 12pt;
+}
+
+.service2_2 {
+    margin-top: 20px;
+    font-family: "Lato", sans-serif;
+    font-size: 12pt;
+}
+
+.service3_2 {
+    margin-top: 20px;
+    font-family: "Lato", sans-serif;
+    font-size: 12pt;
 }
