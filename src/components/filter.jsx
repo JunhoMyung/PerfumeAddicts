@@ -184,7 +184,6 @@ const filter = () => {
 // checkbox()
 
 
-<<<<<<< HEAD
     // function show_perfume_() {
     //   var table = document.getElementById("resultTable");
     //   for (let i = 0; i < printlist.length; i++ ){
@@ -214,8 +213,7 @@ const filter = () => {
   //         }
   //     }
   // }
-=======
->>>>>>> 722fcfd3d1e1df2aaff93be60957fa732e2950ea
+
     // this.state = []
     // changestate = () => {
     //     this.setState(['musk'])
@@ -319,7 +317,7 @@ const filter = () => {
         </li> */}
 
 
-<<<<<<< HEAD
+
         <table id='resultTable'>
 
           <tr>
@@ -407,8 +405,6 @@ const filter = () => {
         })}   */}
         
 
-=======
->>>>>>> 722fcfd3d1e1df2aaff93be60957fa732e2950ea
         {/* <div class="cell box" style="flex-grow: 0;">
         <div class="card-section"> */}
 
