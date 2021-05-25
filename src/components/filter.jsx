@@ -1,6 +1,18 @@
 import { ScreenLockPortraitSharp } from '@material-ui/icons';
 import React from 'react'
 import NavBar from './NavBar.jsx'
+import Perfume1 from "../perfume_pictures/Perfume1.jpg"
+import Perfume2 from "../perfume_pictures/alarose.png"
+import Perfume3 from "../perfume_pictures/ckone.png"
+import Perfume4 from "../perfume_pictures/cherryblossom.png"
+import Perfume5 from "../perfume_pictures/doson.png"
+import Perfume6 from "../perfume_pictures/english_pear.png"
+import Perfume7 from "../perfume_pictures/voyage.png"
+import Perfume8 from "../perfume_pictures/unjardin.png"
+
+
+// const rootElement = document.getElementById("root");
+// ReactDOM.render(<App />, rootElement);
 
 // import ReactDOM from 'react-dom'
 // import { Router, Route, browserHistory, IndexRoute  } from 'react-router'
@@ -247,13 +259,26 @@ const filter = () => {
     //   }
     // }
   
-    function show_perfume_list(){
-      var lst = [];
-      lst = printlist
-      for (let i = 0; i < lst.length; i++){
-        console.log(lst[i], i);
-      }
+    var perfume_image_list = []; 
+    for (let i = 1; i < 28; i++){
+      perfume_image_list.push("Perfume" + String(i))
     }
+    console.log(perfume_image_list);
+
+
+  //   function show_perfume_list(){
+  //     var tobeshown = perfume_image_list;
+  //     var ele = document.getElementById('PerfumeTable');
+
+  //     for (let i = 0; i < tobeshown.length; i++){
+  //         for (let j = 0; j < filter_list.length; j++){
+  //             if (tobeshown[i]['ingredient'].includes(filter_list[j])){
+  //                 remove.push(i);
+  //                 break;
+  //             }
+  //         }
+  //     }
+  // }
     // this.state = []
     // changestate = () => {
     //     this.setState(['musk'])
@@ -267,16 +292,17 @@ const filter = () => {
 
         <NavBar />
         <button onClick = {handleclick}> perfume info </button>
-        
+        <script>
+        console.log('html');
+        </script>
 
         <div> filter </div>
         <h1> PERFUME FINDER </h1>
         <h2> Choose scents to avoid: </h2>
 
-        {/* clickable image here for 16 options, if image clicked --> perfume info page redirect.*/}
-        <li class="choice1">
+        
+        {/* <li class="choice1">
         <input name="input1" type="checkbox" value="1" id="choice_musk" ></input>
-        {/* onClick = {this.changestate} */}
         <label for="choice_musk" id="musk"> Musk </label>
         </li>
 
@@ -353,17 +379,61 @@ const filter = () => {
         <li class="choice16">
         <input name="input16" type="checkbox" value="16" id="choice_watery"></input>
         <label for="choice_watery" id="watery"> Watery </label>
-        </li>
+        </li> */}
 
 
         <table id='resultTable'>
+
           <tr>
             <td> Perfume List available </td>
           </tr>
+
+          <tr>
+          <td className='main_table'><img src={Perfume1} alt = "" /></td>
+          <td className='main_table'><img src={Perfume2} alt = "" /></td>
+          <td className='main_table'><img src={Perfume3} alt = "" /></td>
+          </tr>
+
+          <tr>
+          <td className='main_table'><img src={Perfume4} alt = "" /></td>
+          <td className='main_table'><img src={Perfume5} alt = "" /></td>
+          <td className='main_table'><img src={Perfume6} alt = "" /></td>
+          </tr>
+
+          <tr>
+          <td className='main_table'><img src={Perfume7} alt = "" /></td>
+          <td className='main_table'><img src={Perfume8} alt = "" /></td>
+          <td className='main_table'><img src={Perfume8} alt = "" /></td>
+          </tr>
+          
         </table>
 
-        <button onclick={show_perfume_list}> Show Perfume list available </button>
-        
+  
+
+        {/* <tr>
+        <td className='main_table'><img src={Perfume1} alt = "" /></td>
+        </tr>
+        <tr>
+        <td className='main_table'><img src={Perfume2} alt = "" /></td>
+        </tr>
+        <tr>
+        <td className='main_table'><img src={Perfume3} alt = "" /></td>
+        </tr>
+        <tr>
+        <td className='main_table'><img src={Perfume4} alt = "" /></td>
+        </tr>
+        <tr>
+        <td className='main_table'><img src={Perfume5} alt = "" /></td>
+        </tr>
+        <tr>
+        <td className='main_table'><img src={Perfume6} alt = "" /></td>
+        </tr>
+        <tr>
+        <td className='main_table'><img src={Perfume7} alt = "" /></td>
+        </tr>
+        <tr>
+        <td className='main_table'><img src={Perfume8} alt = "" /></td>
+        </tr> */}
 
         {/* <div id='root'></div> */}
         
@@ -414,6 +484,9 @@ const filter = () => {
 
         {/* </div>
         </div> */}
+   
+        <div id="root"> </div>
+ 
 
         </div>
         
