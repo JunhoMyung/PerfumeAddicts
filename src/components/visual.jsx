@@ -1,15 +1,14 @@
 import './visual.css'
 import Perfume1 from "../perfume_pictures/Perfume1.jpg"
-import radar_chart from "../perfume_pictures/radar_chart.PNG"
-import React, { Component } from "react"
-import MyMusic from "./music.jsx"
+import React, { Component } from "react";
+import MyMusic from "./music.jsx";
 import ReactPlayer from 'react-player/youtube'
-import RadarChart from 'react-svg-radar-chart'
-import perfume_info from './perfume_info.jsx'
-//import 'react-svg-radar-chart/build/css/index.css'
+import RadarChart from 'react-svg-radar-chart';
+import 'react-svg-radar-chart/build/css/index.css'
 import NavBar from "./NavBar.jsx"
 import firebase from './firebase';
 import { ThreeSixtySharp } from '@material-ui/icons';
+import perfume_info from './perfume_info.jsx'
 
 
 class visual extends Component {
@@ -41,10 +40,6 @@ class visual extends Component {
         console.log()
     }
 
-    Total_Price = (option) => {
-        this.state.info.total_price = option
-    }
-
     music = () => {
         this.setState({page : "music"});
     }
@@ -52,15 +47,8 @@ class visual extends Component {
     detail = () => {
         this.setState({page : "detail"});
     }
-/*
-                citrus: perfume_info[0].radar_chart.citrus,
-                woody: perfume_info[0].radar_chart.woody,
-                spicy: perfume_info[0].radar_chart.spicy,
-                flower: perfume_info[0].radar_chart.flower,
-                fruit: perfume_info[0].radar_chart.fruit
-*/
+
     render_tab = () => {
-        //console.log(perfume_info[0].radar_chart)
         const data = [
             {
               data: {
@@ -83,7 +71,8 @@ class visual extends Component {
             fruit: 'Fruit'
           };
         if (this.state.page === "detail"){
-            return( 
+            return(
+                ////<img src={radar_chart} className='radar_chart' alt = ""/> 
                 <div className='radar_chart'>
                     
         <RadarChart
@@ -118,14 +107,14 @@ class visual extends Component {
                                     <td className='inner_second_td'>
                                         <form>
                                         <select name='volume' id='volume' className='form'>
-                                            <option value='vol1' onClick={this.Total_Price(this.state.info.price[0])}>{this.state.info.sizes[0]}</option>
-                                            <option value='vol2' onClick={this.Total_Price(this.state.info.price[1])}>{this.state.info.sizes[1]}</option>
+                                            <option value='vol1'>{this.state.info.sizes[0]}</option>
+                                            <option value='vol2'>{this.state.info.sizes[1]}</option>
                                         </select>
                                     </form></td>   
                                 </tr>
                                 <tr>
-                                    <td><b>Price ($): </b></td>
-                                    <td className='inner_second_td'>{this.state.info.price[0]} | {this.state.info.price[1]}</td>   
+                                    <td><b>Price: </b></td>
+                                    <td className='inner_second_td'>{this.state.info.price}</td>   
                                 </tr>
                                 <tr>
                                     <td><b>Options:  </b></td>
@@ -148,8 +137,8 @@ class visual extends Component {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><b>Total ($):  </b></td>
-                                    <td className='inner_second_td'>{this.state.info.total_price}</td>
+                                    <td><b>Total:  </b></td>
+                                    <td className='inner_second_td'>${this.state.total_price}</td>
                                 </tr>
                                 </tbody>
                             </table>

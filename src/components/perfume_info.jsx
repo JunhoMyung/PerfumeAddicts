@@ -2,7 +2,7 @@ import { red } from "@material-ui/core/colors"
 
 const perfume_info = [
     {
-      "name": "CK One",
+      "name": "BLEU DE CHANEL",
       "pic_name": "Perfume1",
       "color": "red",
       "brand": "Calvin Klein",
