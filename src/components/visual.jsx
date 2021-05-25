@@ -56,7 +56,7 @@ class visual extends Component {
         const r = 255*((perfume_info[this.perfume_id.id].radar_chart.fruity + perfume_info[this.perfume_id.id].radar_chart.flowery) / 2);
         const g = 255*perfume_info[this.perfume_id.id].radar_chart.woody;
         const b = 255*perfume_info[this.perfume_id.id].radar_chart.citrus;
-        const a = 255*((perfume_info[this.perfume_id.id].radar_chart.woody + perfume_info[this.perfume_id.id].radar_chart.spicy) / 2);
+        const a = 1*((perfume_info[this.perfume_id.id].radar_chart.woody + perfume_info[this.perfume_id.id].radar_chart.spicy) / 2);
 
         const data = [
             {
