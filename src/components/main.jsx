@@ -2,6 +2,9 @@ import React, {Component} from 'react'
 import './main.css'
 import MAIN_PAGE from "../perfume_pictures/MAIN_PAGE.png"
 import ABOUT_PIC from "../perfume_pictures/about_pic.svg"
+import MAIN_FILTER from "../perfume_pictures/MAIN_filter.svg"
+import MAIN_INTERACT from "../perfume_pictures/MAIN_interact.svg"
+import MAIN_VISUAL from "../perfume_pictures/MAIN_visual.svg"
 import 'firebase/auth';
 import {Link} from 'react-router-dom'
 import NavBar from './NavBar.jsx'
@@ -31,9 +34,9 @@ class main extends Component {
                     </div>
                     <div className="service">
                         <div className="service_title">OUR SERVICES</div>
-                        <div className="service1"></div>
-                        <div className="service2"></div>
-                        <div className="service3"></div>
+                        <div className="service1"><img src={MAIN_FILTER} alt = "" className="service_pic1"/></div>
+                        <div className="service2"><img src={MAIN_VISUAL} alt = "" className="service_pic2"/></div>
+                        <div className="service3"><img src={MAIN_INTERACT} alt = "" className="service_pic3"/></div>
                     </div>
                     <div className="join"></div>
                     <Overlay />

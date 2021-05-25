@@ -189,6 +189,22 @@ li.dropdown {
     transition: all .2s ease-in-out;
     margin: 12.5% 3%;
     background-color: white;
+    text-align: center;
+}
+
+.service_pic1 {
+    margin-top: 12%;
+    height: 40%;
+}
+
+.service_pic2 {
+    margin-top: 12%;
+    height: 40%;
+}
+
+.service_pic3 {
+    margin-top: 12%;
+    height: 40%;
 }
 
 .service2 {
@@ -200,6 +216,7 @@ li.dropdown {
     transition: all .2s ease-in-out;
     margin: 12.5% 3%;
     background-color: white;
+    text-align: center;
 }
 
 .service3 {
@@ -211,6 +228,7 @@ li.dropdown {
     transition: all .2s ease-in-out;
     margin: 12.5% 3%;
     background-color: white;
+    text-align: center;
 }
 
 .service1:hover {
