@@ -138,7 +138,7 @@ li.dropdown {
     font-size: 15pt;
     color: #582D68; 
     position: absolute;
-    top: 135%;
+    top: 140%;
     left: 10%;
 }
 
@@ -148,7 +148,7 @@ li.dropdown {
     font-size: 40pt;
     color: black; 
     position: absolute;
-    top: 145%;
+    top: 150%;
     left: 10%;
 }
 
@@ -156,50 +156,72 @@ li.dropdown {
     height: 400px;
     text-align: right;
     position: relative;
-    left: 70%;
+    left: 73%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
 
 .service {
     height: 100vh;
-    background-color: white;
+    background-color:#fafafa;
     padding: 0px;
     margin: 0px;
+    display: flex;
+    justify-content: center;
 }
 
 .service_title {
-    padding-top: 5%;
+    padding-top: 4.5%;
     text-align: center;
     font-family: "Lato", sans-serif;
     font-weight: 1000;
     font-size: 30pt;
     color: black; 
+    position: absolute;
 }
 
 .service1 {
-    margin-top: 3%;
-    margin-left: 10%;
     height: 65%;
     width: 23%;
     border: 1px solid black;
     border-radius: 10%;
-    box-shadow: 0px 0px 20px lightgrey;
+    box-shadow: 0px 0px 5px lightgrey;
     transition: all .2s ease-in-out;
+    margin: 12.5% 3%;
+    background-color: white;
 }
 
 .service2 {
-    margin-top: 3%;
-    margin-left: 10%;
     height: 65%;
     width: 23%;
     border: 1px solid black;
     border-radius: 10%;
-    box-shadow: 0px 0px 20px lightgrey;
+    box-shadow: 0px 0px 5px lightgrey;
     transition: all .2s ease-in-out;
+    margin: 12.5% 3%;
+    background-color: white;
+}
+
+.service3 {
+    height: 65%;
+    width: 23%;
+    border: 1px solid black;
+    border-radius: 10%;
+    box-shadow: 0px 0px 5px lightgrey;
+    transition: all .2s ease-in-out;
+    margin: 12.5% 3%;
+    background-color: white;
 }
 
 .service1:hover {
+    transform: scale(1.05);
+}
+
+.service2:hover {
+    transform: scale(1.05);
+}
+
+.service3:hover {
     transform: scale(1.05);
 }
 
