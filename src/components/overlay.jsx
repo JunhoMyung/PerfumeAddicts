@@ -140,42 +140,49 @@ export default function SimpleModal() {
   const handleFilter = () =>{
     var temp_list = []
     if (imgColor1 !== "transparent"){
-      temp_list.push(0)
+      temp_list.push("fruity")
     }
     if (imgColor2 !== "transparent"){
-      temp_list.push(1)
+      temp_list.push("floral")
     }
     if (imgColor3 !== "transparent"){
-      temp_list.push(2)
+      temp_list.push("powdery")
     }
     if (imgColor4 !== "transparent"){
-      temp_list.push(3)
+      temp_list.push("citrus")
     }
     if (imgColor5 !== "transparent"){
-      temp_list.push(4)
+      temp_list.push("green")
     }
     if (imgColor6 !== "transparent"){
-      temp_list.push(5)
+      temp_list.push("water")
     }
     if (imgColor7 !== "transparent"){
-      temp_list.push(6)
+      temp_list.push("aromatic")
     }
     if (imgColor8 !== "transparent"){
-      temp_list.push(7)
+      temp_list.push("drywood")
     }
     if (imgColor9 !== "transparent"){
-      temp_list.push(8)
+      temp_list.push("mossywood")
     }
     if (imgColor10 !== "transparent"){
-      temp_list.push(9)
+      temp_list.push("musk")
     }
     if (imgColor11 !== "transparent"){
-      temp_list.push(10)
+      temp_list.push("softspicy")
     }
     if (imgColor12 !== "transparent"){
-      temp_list.push(11)
+      temp_list.push("sharpspicy")
     }
-    localStorage.setItem('deselect_item', temp_list)
+    let deselect_item = []
+    for (let i = 0; i < temp_list.length; i++){
+      deselect_item.push("index" + i)
+    }
+    for (let j = 0; j < temp_list.length; j++){
+      localStorage.setItem(deselect_item[j], temp_list[j])
+    }
+    localStorage.setItem("length", temp_list.length)
     setOpen(false);
   }
 
