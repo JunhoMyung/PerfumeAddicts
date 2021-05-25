@@ -38,7 +38,7 @@ const perfume_info = [
       "price": [27.00, 22.00],
       "volume": [100, 50],
       "radar_chart": {citrus: 0.9, spicy: 0.3, woody: 0.7, fruity: 0.3, flowery: 0.5},
-      "ingredient": ["woody", "citrus", "floral", "aromatic"]
+      "ingredient": ["citrus", "green", "drywood", "mossywood", "powdery"]
     },
     {
       "name": "English Pear & Freesia",
@@ -48,7 +48,7 @@ const perfume_info = [
       "price": [53.00, 29.00],
       "volume": [250, 100],
       "radar_chart": {"citrus": 0.0, "spicy": 0.1, "woody": 0.4, "fruity": 0.9, "flowery": 0.8},
-      "ingredient": ["floral", "honey", "minty"]
+      "ingredient": ["floral", "fruity", "water", "musk", "aromatic"]
     },
     {
       "name": "Do Son",
@@ -68,7 +68,7 @@ const perfume_info = [
       "price": [105.00, 85.50, 60.00],
       "volume": [100, 50, 30],
       "radar_chart": {"citrus": 0.8, "spicy": 0.2, "woody": 0.7, "fruity": 0.3, "flowery": 0.5},
-      "ingredient": ["citrus", "green", "floral", "woody"]
+      "ingredient": ["citrus", "aromatic", "floral", "mossywood"]
     },
     {
       "name": "Voyage d'Hermes",
@@ -78,7 +78,7 @@ const perfume_info = [
       "price": [126.00, 84.00],
       "volume": [100, 35],
       "radar_chart": {"citrus": 0.6, "spicy": 0.8, "woody": 0.6, "fruity": 0.1, "flowery": 0.1},
-      "ingredient": ["aromatic", "citrus", "musk", "woody"]
+      "ingredient": ["softspicy", "citrus", "green", "aromatic", "drywood"]
     },
     {
         "name": "La Vie Est Belle",
@@ -88,7 +88,7 @@ const perfume_info = [
         "price": [133.00, 100.00],
         "volume": [100, 50],
         "radar_chart": {"citrus": 0.1, "spicy": 0.5, "woody": 0.2, "fruity": 0.5, "flowery": 0.8},
-        "ingredient": ["floral", "minty", "powdery"]
+        "ingredient": ["fruity", "aromatic", "softspicy"]
       },
       {
         "name": "Cherry Blossom",
@@ -98,7 +98,7 @@ const perfume_info = [
         "price": [50.00, 65.00],
         "volume": [75, 100],
         "radar_chart": {"citrus": 0.1, "spicy": 0.2, "woody": 0.4, "fruity": 0.7, "flowery": 0.9},
-        "ingredient": ["floral", "musk"]
+        "ingredient": ["floral", "fruity", "musk"]
       },
       {
         "name": "A La Rose ",
@@ -108,7 +108,7 @@ const perfume_info = [
         "price": [164.00, 104.00],
         "volume": [70, 35],
         "radar_chart": {"citrus": 0.7, "spicy": 0.1, "woody": 0.5, "fruity": 0.3, "flowery": 0.9},
-        "ingredient": ["citrus", "musk", "woody", "floral"]
+        "ingredient": ["citrus", "musk", "drywood", "floral"]
       },
       {
         "name": "Modern Princess",
@@ -118,7 +118,7 @@ const perfume_info = [
         "price": [30.00, 55.00],
         "volume": [50, 100],
         "radar_chart": {"citrus": 0.3, "spicy": 0.4, "woody": 0.1, "fruity": 0.9, "flowery": 0.6},
-        "ingredient": ["floral", "honey"]
+        "ingredient": ["fruity", "aromatic", "floral"]
       },
       {
         "name": "Baccarat Rouge",
@@ -128,7 +128,7 @@ const perfume_info = [
         "price": [78.00, 99.00],
         "volume": [70, 100],
         "radar_chart": {"citrus": 0.0, "spicy": 0.7, "woody": 0.9, "fruity": 0.4, "flowery": 0.4},
-        "ingredient": ["woody", "spicy", "aromatic", "oriental"]
+        "ingredient": ["drywood", "softspicy", "aromatic"]
       },
       {
         "name": "Alien",
@@ -138,7 +138,7 @@ const perfume_info = [
         "price": [21.00, 35.00],
         "volume": [30, 50],
         "radar_chart": {"citrus": 0.0, "spicy": 0.0, "woody": 0.6, "fruity": 0.7, "flowery": 0.9},
-        "ingredient": ["floral", "powdery", "woody"]
+        "ingredient": ["floral", "powdery", "softspicy", "drywood"]
       },
       {
         "name": "Tobacco Vanille",
@@ -148,7 +148,7 @@ const perfume_info = [
         "price": [45.00, 80.00],
         "volume": [50, 100],
         "radar_chart": {"citrus": 0.0, "spicy": 0.6, "woody": 0.4, "fruity": 0.5, "flowery": 0.9},
-        "ingredient": ["oriental", "powdery", "spicy", "dry"]
+        "ingredient": ["softspicy", "powdery", "drywood"]
       },
       {
         "name": "Aventus",
@@ -158,7 +158,7 @@ const perfume_info = [
         "price": [26.00, 36.00, 50.00],
         "volume": [30, 75, 250],
         "radar_chart": {"citrus": 0.4, "spicy": 0.0, "woody": 0.6, "fruity": 0.9, "flowery": 0.5},
-        "ingredient": ["woody", "green", "musk", "citrus"]
+        "ingredient": ["drywood", "green", "musk", "citrus"]
       },
       {
         "name": "Coco Mademoiselle",
@@ -168,7 +168,7 @@ const perfume_info = [
         "price": [32.00, 50.00],
         "volume": [100, 250],
         "radar_chart": {"citrus": 0.9, "spicy": 0.5, "woody": 0.7, "fruity": 0.6, "flowery": 0.7},
-        "ingredient": ["citrus", "woody", "floral", "spicy"]
+        "ingredient": ["citrus", "drywood", "floral", "softspicy"]
       },
       {
         "name": "Black Opium",
@@ -178,7 +178,7 @@ const perfume_info = [
         "price": [40.00, 60.00, 75.00],
         "volume": [30, 50, 100],
         "radar_chart": {"citrus": 0.0, "spicy": 0.5, "woody": 0.5, "fruity": 0.4, "flowery": 0.8},
-        "ingredient": ["floral", "powdery", "woody"]
+        "ingredient": ["floral", "powdery", "drywood", "fruity"]
       },
       {
           "name": "Black Orchid",
@@ -188,7 +188,7 @@ const perfume_info = [
           "price": [65.00, 75.00],
           "volume": [40, 50],
           "radar_chart": {"citrus": 0.0, "spicy": 0.9, "woody": 0.7, "fruity": 0.6, "flowery": 0.4},
-          "ingredient": ["oriental", "woody", "floral"]
+          "ingredient": ["softspicy", "drywood", "floral"]
         },
         {
           "name": "La Nuit de I'Homme",
@@ -198,7 +198,7 @@ const perfume_info = [
           "price": [87.00, 100.00, 115.00],
           "volume": [40, 60, 100],
           "radar_chart": {"citrus": 0.5, "spicy": 0.8, "woody": 0.6, "fruity": 0.5, "flowery": 0.5},
-          "ingredient": ["aromatic", "spicy", "woody", "citrus"]
+          "ingredient": ["aromatic", "softspicy", "drywood", "citrus"]
         },
         {
           "name": "Rock Volume One",
@@ -208,7 +208,7 @@ const perfume_info = [
           "price": [27.00, 22.00],
           "volume": [100, 50],
           "radar_chart": {"citrus": 0.0, "spicy": 0.4, "woody":0.7 , "fruity": 0.0, "flowery": 0.5},
-          "ingredient": ["leathery", "metallic", "aromatic"]
+          "ingredient": ["musk", "sharpspicy"]
         },
         {
           "name": "Fahrenheit",
@@ -218,7 +218,7 @@ const perfume_info = [
           "price": [53.00, 29.00],
           "volume": [250, 100],
           "radar_chart": {"citrus": 0.0, "spicy": 0.5, "woody": 1.0, "fruity": 0.0, "flowery": 0.4},
-          "ingredient": ["leathery", "woody"]
+          "ingredient": ["musk", "drywood"]
         },
         {
           "name": "Acqua di Giò Profumo",
@@ -228,7 +228,7 @@ const perfume_info = [
           "price": [131.00, 94.00],
           "volume": [100, 50],
           "radar_chart": {"citrus": 0.4, "spicy": 0.7, "woody": 0.5, "fruity": 0.0, "flowery": 0.0},
-          "ingredient": ["aromatic", "marine", "minty"]
+          "ingredient": ["aromatic", "water"]
         },
         {
             "name": "Sailing Day",
@@ -238,7 +238,7 @@ const perfume_info = [
             "price": [30.00, 135.00],
             "volume": [10, 100],
             "radar_chart": {"citrus": 0.0, "spicy": 0.4, "woody": 0.7, "fruity": 0.2, "flowery": 0.3},
-            "ingredient": ["marine", "woody", "watery"]
+            "ingredient": ["mossywood", "water"]
           },
           {
             "name": "Snow Mint",
@@ -248,7 +248,7 @@ const perfume_info = [
             "price": [164.00, 104.00],
             "volume": [70, 35],
             "radar_chart": {"citrus": 0.0, "spicy": 0.6, "woody": 0.5, "fruity": 0.4, "flowery": 0.1},
-            "ingredient": ["green", "minty", "aromatic"]
+            "ingredient": ["green", "aromatic"]
           },
           {
             "name": "Aqva Pour Homme Atlantiqve ",
@@ -258,7 +258,7 @@ const perfume_info = [
             "price": [45.00, 80.00],
             "volume": [50, 100],
             "radar_chart": {"citrus": 0.5, "spicy": 0.4, "woody": 0.6, "fruity": 0.0, "flowery": 0.0},
-            "ingredient": ["minty", "watery", "marine", "citrus"]
+            "ingredient": ["aromatic", "water", "citrus"]
           },
           {
             "name": "Aqua Allegoria Herba Fresca",
@@ -268,7 +268,7 @@ const perfume_info = [
             "price": [32.00, 50.00],
             "volume": [100, 250],
             "radar_chart": {"citrus": 0.7, "spicy": 0.3, "woody": 0.5, "fruity": 0.0, "flowery": 0.4},
-            "ingredient": ["minty", "green", "citrus"]
+            "ingredient": ["green", "citrus", "aromatic"]
           },
           {
             "name": "Poolside Breeze",
@@ -278,7 +278,7 @@ const perfume_info = [
             "price": [21.00, 35.00],
             "volume": [30, 50],
             "radar_chart": {"citrus": 0.0, "spicy": 0.0, "woody": 0.5, "fruity": 0.0, "flowery": 0.5},
-            "ingredient": ["watery", "floral"]
+            "ingredient": ["water", "floral"]
           },
           {
             "name": "Luna Rossa Carbon",
@@ -288,7 +288,7 @@ const perfume_info = [
             "price": [126.00, 84.00],
             "volume": [100, 35],
             "radar_chart": {"citrus": 0.2, "spicy": 0.9, "woody": 0.1, "fruity": 0.0, "flowery": 0.7},
-            "ingredient": ["spicy", "metallic", "aromatic"]
+            "ingredient": ["sharpspicy", "aromatic"]
           },
           {
               "name": "Radish Vetiver ",
@@ -298,7 +298,7 @@ const perfume_info = [
               "price": [65.00, 75.00],
               "volume": [40, 50],
               "radar_chart": {"citrus": 0.0, "spicy": 0.2, "woody": 1.0, "fruity": 0.0, "flowery": 0.1},
-              "ingredient": ["dry", "green", "woody"]
+              "ingredient": ["drywood", "green"]
             },
             {
               "name": "Dry Wood Ramon",
@@ -308,7 +308,7 @@ const perfume_info = [
               "price": [164.00, 104.00],
               "volume": [70, 35],
               "radar_chart": {"citrus": 0.1, "spicy": 0.6, "woody": 0.9, "fruity": 0.0, "flowery": 0.0},
-              "ingredient": ["dry", "woody", "spicy"]
+              "ingredient": ["drywood", "sharpspicy"]
             },
             {
               "name": "Honey Oud",
@@ -318,7 +318,7 @@ const perfume_info = [
               "price": [45.00, 80.00],
               "volume": [50, 100],
               "radar_chart": {"citrus": 0.2, "spicy": 0.1, "woody": 0.1, "fruity": 0.8, "flowery": 0.2},
-              "ingredient": ["honey", "floral"]
+              "ingredient": ["powdery", "floral", "fruity"]
             }
 ]
 
