@@ -33,7 +33,7 @@ const perfume_info = [
     {
       "name": "CK One",
       "pic_name": <img src={Perfume1} alt = "" />,
-      "color": "red",
+      "color": "rgba(255*((0.3+0.5)/2), 255*0.7, 255*0.9, (0.3+0.7)/2)",
       "brand": "Calvin Klein",
       "price": [27.00, 22.00],
       "volume": [100, 50],

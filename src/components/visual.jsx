@@ -7,6 +7,7 @@ import 'react-svg-radar-chart/build/css/index.css'
 import NavBar from "./NavBar.jsx"
 import firebase from './firebase';
 import perfume_info from './perfume_info.jsx'
+import { SportsRugbySharp } from '@material-ui/icons';
 
 
 class visual extends Component {
@@ -52,6 +53,11 @@ class visual extends Component {
     }
 
     render_tab = () => {
+        const r = 255*((perfume_info[this.perfume_id.id].radar_chart.fruity + perfume_info[this.perfume_id.id].radar_chart.flowery) / 2);
+        const g = 255*perfume_info[this.perfume_id.id].radar_chart.woody;
+        const b = 255*perfume_info[this.perfume_id.id].radar_chart.citrus;
+        const a = 255*((perfume_info[this.perfume_id.id].radar_chart.woody + perfume_info[this.perfume_id.id].radar_chart.spicy) / 2);
+
         const data = [
             {
               data: {
@@ -61,10 +67,10 @@ class visual extends Component {
                 flower: perfume_info[this.perfume_id.id].radar_chart.flowery,
                 fruit: perfume_info[this.perfume_id.id].radar_chart.fruity
               },
-              meta: { color: perfume_info[this.perfume_id.id].color }
+                meta: { color: "rgba(" + r + "," + g + "," + b + "," + a + ")" }
             }
           ];
-       
+
           const captions = {
             // columns
             citrus: 'Citrus',
