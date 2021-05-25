@@ -3,6 +3,7 @@ import './main.css'
 import LOGO_Full from "../perfume_pictures/LOGO_Full.PNG"
 import 'firebase/auth';
 import {auth, signInWithGoogle, signOutWithGoogle} from "./firebase.jsx";
+import {Link} from 'react-router-dom'
 
 export class NavBar extends Component {
     constructor() {
@@ -22,7 +23,7 @@ export class NavBar extends Component {
         if (this.state.currentUser === null) {
             return (
                 <div>
-                    <img src={LOGO_Full} alt = "" className='logo'/>
+                        <img src={LOGO_Full} alt = "" className='logo' onClick={() => {window.location.href = "/"}}/>
                     <ul>
                         <li><a href="/">HOME</a></li>
                         <li><a href="/">ABOUT</a></li>

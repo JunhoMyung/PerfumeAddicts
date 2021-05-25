@@ -16,7 +16,6 @@ import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import Zoom from '@material-ui/core/Zoom';
 import PropTypes from "prop-types";
 import { createMuiTheme } from '@material-ui/core/styles';
-import purple from '@material-ui/core/colors/purple';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 
 
@@ -90,6 +89,15 @@ const useStyles = makeStyles(theme => ({
                         <br/>
                         Easily Feel Them
                 </div>
+                <div className="content1">
+                    It is hard to buy perfumes online, right?
+                    <br/>
+                    By only reading words, you will never fully get the scents.
+                    <br/>
+                    Perdict is here to guide you to the perfume world.
+                    <br/>
+                    We help you to utilize your senses to feel the fragrance.
+                </div>
             </div>
             <div className="service">
                 <div className="service_title">OUR SERVICES</div>
@@ -99,11 +107,11 @@ const useStyles = makeStyles(theme => ({
             </div>
             <div className="join">
                 <img src={JOIN} alt = "" className="join_pic"/>
-                <div className="sub_title2">REMOTELY SELECT PERFUME</div>
+                <div className="sub_title2">JOIN OUR WEBSITE</div>
                 <div className="main_title2">
-                        Visualize Scents to 
+                        Sign Up to Personally
                         <br/>
-                        Easily Feel Them
+                        Explore Perfumes
                 </div>
             </div>
             <MuiThemeProvider theme={theme}>

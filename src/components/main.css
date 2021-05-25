@@ -6,6 +6,7 @@
     margin-bottom: 10px;
     display: flex;
     position: sticky;
+    cursor: pointer;
 }
 
 .main {
@@ -161,6 +162,14 @@ li.dropdown {
     transform: translate(-50%, -50%);
 }
 
+.content1 {
+    top: 180%;
+    left: 10%;
+    font-family: "Lato", sans-serif;
+    font-size: 13pt;
+    position: absolute;
+}
+
 .service {
     height: 100vh;
     background-color:#fafafa;
@@ -190,12 +199,16 @@ li.dropdown {
     margin: 12.5% 3%;
     background-color: white;
     text-align: center;
+    position: relative;
 }
 
 .service_pic1 {
     margin-top: 18%;
     height: 40%;
+    position: relative;
 }
+
+
 
 .service_pic2 {
     margin-top: 18%;
@@ -252,10 +265,10 @@ li.dropdown {
 }
 
 .join_pic {
-    height: 350px;
+    height: 325px;
     text-align: right;
     position: relative;
-    left: 28%;
+    left: 27%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
@@ -265,10 +278,11 @@ li.dropdown {
     font-weight: 1000;
     font-size: 15pt;
     color: #582D68; 
-    top: 18%;
-    left: 72%;
+    top: 15%;
+    right: 5%;
     white-space: nowrap;
     position: absolute;
+    text-align: right;
 }
 
 .main_title2 {
@@ -278,7 +292,7 @@ li.dropdown {
     color: black; 
     position: absolute;
     top: 25%;
-    left: 60%;
+    right: 5%;
     white-space: nowrap;
     text-align: right;
 }
