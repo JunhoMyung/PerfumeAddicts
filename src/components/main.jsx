@@ -5,6 +5,7 @@ import ABOUT_PIC from "../perfume_pictures/about_pic.svg"
 import MAIN_FILTER from "../perfume_pictures/MAIN_filter.svg"
 import MAIN_INTERACT from "../perfume_pictures/MAIN_interact.svg"
 import MAIN_VISUAL from "../perfume_pictures/MAIN_visual.svg"
+import JOIN from "../perfume_pictures/JOIN.svg"
 import 'firebase/auth';
 import {Link} from 'react-router-dom'
 import NavBar from './NavBar.jsx'
@@ -82,7 +83,15 @@ const useStyles = makeStyles(theme => ({
                 <div className="service2"><img src={MAIN_VISUAL} alt = "" className="service_pic2"/></div>
                 <div className="service3"><img src={MAIN_INTERACT} alt = "" className="service_pic3"/></div>
             </div>
-            <div className="join"></div>
+            <div className="join">
+                <img src={JOIN} alt = "" className="join_pic"/>
+                <div className="sub_title2">REMOTELY SELECT PERFUME</div>
+                <div className="main_title2">
+                        Visualize Scents to 
+                        <br/>
+                        Easily Feel Them
+                </div>
+            </div>
             <ScrollTop {...props}>
                 <Fab color="secondary" size="small" aria-label="scroll back to top">
                 <KeyboardArrowUpIcon />

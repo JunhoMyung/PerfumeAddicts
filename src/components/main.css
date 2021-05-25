@@ -248,4 +248,37 @@ li.dropdown {
     background-color:#eeeeee;
     padding: 0px;
     margin: 0px;
+    position: relative;
+}
+
+.join_pic {
+    height: 350px;
+    text-align: right;
+    position: relative;
+    left: 28%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sub_title2 {
+    font-family: "Lato", sans-serif;
+    font-weight: 1000;
+    font-size: 15pt;
+    color: #582D68; 
+    top: 18%;
+    left: 72%;
+    white-space: nowrap;
+    position: absolute;
+}
+
+.main_title2 {
+    font-family: "Lato", sans-serif;
+    font-weight: 1000;
+    font-size: 40pt;
+    color: black; 
+    position: absolute;
+    top: 25%;
+    left: 60%;
+    white-space: nowrap;
+    text-align: right;
 }
