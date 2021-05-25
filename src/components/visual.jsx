@@ -29,7 +29,8 @@ class visual extends Component {
             tab_state : 0,
             url: "",
             music_title: "",
-            music_artist: ""
+            music_artist: "",
+            wishlist: []
         };        
         this.componentDidMount = this.componentDidMount.bind(this) 
 
@@ -128,6 +129,28 @@ class visual extends Component {
         this.setState({total_price: 0})
     }
 
+    wishlist = () => {
+        if (firebase.auth().currentUser === null){
+            alert("Sign in to add to wishlist")
+        }
+        else{
+            firebase.database().ref('/'+ firebase.auth().currentUser.displayName +'/').get().then((snapshot)=> {
+                if (snapshot.exists()){
+                    if (!Object.values(snapshot.val()).includes(this.perfume_id.id)){
+                        firebase.database().ref('/'+ firebase.auth().currentUser.displayName +'/').push(this.perfume_id.id);
+                    }
+                    else{
+                        alert("Already in wishlist")
+                    }
+                }
+                else{
+                    firebase.database().ref('/'+ firebase.auth().currentUser.displayName +'/').push(this.perfume_id.id);
+                    alert("Successfully added")
+                }
+            })            
+        }
+    }
+
     render(){
         //console.log(this.state.current_price)
         //const current_price = this.state.current_price
@@ -139,7 +162,6 @@ class visual extends Component {
                 <table>
                     <tbody>
                     <tr>
-                        {console.log(this.perfume_id)}
                         <td className='main_table'>{perfume_info[this.perfume_id.id].pic_name}</td>
                         <td className='main_table'>
                             <h3><b>{this.state.info.name} &emsp;</b></h3>
@@ -178,7 +200,7 @@ class visual extends Component {
                                 </tbody>
                             </table>
                             <button>BUY NOW</button> &emsp;
-                            <button>ADD TO CART</button>
+                            <button onClick = {this.wishlist}>ADD TO WISH-LIST</button>
                         </td>            
                     </tr>
                     </tbody>
