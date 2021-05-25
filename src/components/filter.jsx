@@ -125,6 +125,7 @@ const filter = () => {
   ]
 
     // checked elements to be filtered
+    // when img file of 12 icons clicked --> the value should be added to the filter_list file
 
     var filter_list = ["metallic", "citrus"];
     var showlist = [];
@@ -177,7 +178,7 @@ const filter = () => {
     //     this.setState(['musk'])
     //     console.log(this)
     // }
-
+    var lst = [];
     return (
         
         <div>
@@ -273,6 +274,10 @@ const filter = () => {
         <label for="choice_watery" id="watery"> Watery </label>
         </li>
 
+        <table id='resultTable'>
+          <td> Perfume List available </td>
+        </table>
+
 
 
         {/* perfumeimg_list = [
@@ -285,6 +290,12 @@ const filter = () => {
                 voteID: value.voteID
             }] */}
 
+
+        {/* <script>
+        for (var i = 0; i < lst.length; i++) {
+            document.write('<tr><td>' +  + '</td><td>' +  + '</td><td>' + jobs[i].salary + '</td></tr>');
+          }
+        </script> */}
 
             {/* {[perfumeimg_list].map((img, index) => {
             return (
