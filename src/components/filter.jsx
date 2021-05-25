@@ -89,10 +89,10 @@ export default function Filter() {
       let children = []
       for (var j = 0; j < 4; j++){
         if((i*4+j)<= (displayList.length - 1)){          
-          children.push(<td>{perfume_info[displayList[i*4 + j]].pic_name}<br/>{perfume_info[displayList[i*4 + j]].name}</td>)
+          children.push(<td className = "filterpadding">{perfume_info[displayList[i*4 + j]].pic_name}<br/><br/>{perfume_info[displayList[i*4 + j]].name}</td>)
         }
         else{
-          children.push(<td></td>)
+          children.push(<td className = "filterpadding"></td>)
         }
       }
       table.push(<tr>{children}</tr>)
@@ -104,9 +104,9 @@ export default function Filter() {
         <div>
           <NavBar/>
           <Overlay/>
-          <table>
+          <div className = "filtertable">
             {display()}
-          </table>
+          </div>
         </div>
     )
 }
