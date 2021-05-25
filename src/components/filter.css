@@ -5,11 +5,11 @@
 }
 
 
-table{
+.resultTable{
     border-spacing: 0;
     border-collapse: collapse;
    }
-   table td {          
+.resultTable td {          
     border: 1px solid #000;
     padding: 20px 30px;
    }

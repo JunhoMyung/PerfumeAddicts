@@ -46,7 +46,7 @@ table.overlaytable {
     transform: translate(-50%, 625%);
     width: 200px;
     height: 50px;
-    background: #61466F;
+    background: #724d85;
     border-radius: 25px;
     cursor: pointer;
     text-align: center;
@@ -55,6 +55,6 @@ table.overlaytable {
 }
 
 .button2:hover { 
-    background: #846891; 
+    background: #8f709e; 
     color: white; 
 }
