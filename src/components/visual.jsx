@@ -6,7 +6,6 @@ import RadarChart from 'react-svg-radar-chart';
 import 'react-svg-radar-chart/build/css/index.css'
 import NavBar from "./NavBar.jsx"
 import firebase from './firebase';
-import { ThreeSixtySharp } from '@material-ui/icons';
 import perfume_info from './perfume_info.jsx'
 
 
@@ -29,6 +28,8 @@ class visual extends Component {
             total_price : 0,
             tab_state : 0,
             url: "",
+            music_title: "",
+            music_artist: ""
         };        
         this.componentDidMount = this.componentDidMount.bind(this) 
 
@@ -37,9 +38,8 @@ class visual extends Component {
     componentDidMount = () => {
         let current_component = this
         firebase.database().ref('/'+ this.state.info.name +'/').orderByChild('vote').on("child_added", function(snapshot) {
-            current_component.setState({url: snapshot.val().url})
+            current_component.setState({url: snapshot.val().url, music_title: snapshot.val().title, music_artist: snapshot.val().artist})
         });
-        console.log()
     }
 
     music = () => {
@@ -184,7 +184,7 @@ class visual extends Component {
                     </tbody>
                 </table>
     
-                &emsp; &emsp; Currently playing: Perfect - Ed Sheeran
+                &emsp; &emsp; Currently playing: {this.state.music_title} - {this.state.music_artist}
                 <ReactPlayer url = {this.state.url} controls = {true} playing = {true} width="340px" height="200px" volume = {0.2}/>
                 <br/><br/>
                 <ul className='detail_ul'>

@@ -5,6 +5,7 @@ import ABOUT_PIC from "../perfume_pictures/about_pic.svg"
 import MAIN_FILTER from "../perfume_pictures/MAIN_filter.svg"
 import MAIN_INTERACT from "../perfume_pictures/MAIN_interact.svg"
 import MAIN_VISUAL from "../perfume_pictures/MAIN_visual.svg"
+import JOIN from "../perfume_pictures/JOIN.svg"
 import 'firebase/auth';
 import {Link} from 'react-router-dom'
 import NavBar from './NavBar.jsx'
@@ -14,9 +15,21 @@ import Fab from '@material-ui/core/Fab';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import Zoom from '@material-ui/core/Zoom';
 import PropTypes from "prop-types";
-import Toolbar from "@material-ui/core/Toolbar";
+import { createMuiTheme } from '@material-ui/core/styles';
+import purple from '@material-ui/core/colors/purple';
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 
 
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#A586B4",
+    },
+    secondary: {
+      main: '#f44336',
+    },
+  },
+});
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -84,12 +97,22 @@ const useStyles = makeStyles(theme => ({
                 <div className="service2"><img src={MAIN_VISUAL} alt = "" className="service_pic2"/></div>
                 <div className="service3"><img src={MAIN_INTERACT} alt = "" className="service_pic3"/></div>
             </div>
-            <div className="join"></div>
+            <div className="join">
+                <img src={JOIN} alt = "" className="join_pic"/>
+                <div className="sub_title2">REMOTELY SELECT PERFUME</div>
+                <div className="main_title2">
+                        Visualize Scents to 
+                        <br/>
+                        Easily Feel Them
+                </div>
+            </div>
+            <MuiThemeProvider theme={theme}>
             <ScrollTop {...props}>
                 <Fab color="primary" size="small" aria-label="scroll back to top">
                 <KeyboardArrowUpIcon />
                 </Fab>
             </ScrollTop>
+            </MuiThemeProvider>
         </React.Fragment>
     )
 }
