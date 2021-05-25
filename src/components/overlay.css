@@ -14,6 +14,22 @@
     text-align: center;
 }
 
+.overlaytitle2 {
+    color: black;
+    font-family: 'LEMON MILK', sans-serif;
+    font-weight: bold;
+    font-size: 25pt;
+    white-space: nowrap;
+    padding-bottom: 20pt;
+    text-align: center;
+}
+
+.overlaysubtitle {
+    color: black;
+    font-family: 'LEMON MILK', sans-serif;
+    font-size: 20pt;
+}
+
 table.overlaytable {
     margin-left: auto;
     margin-right: auto;

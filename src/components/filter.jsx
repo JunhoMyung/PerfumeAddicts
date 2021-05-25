@@ -1,4 +1,4 @@
-import { ScreenLockPortraitSharp } from '@material-ui/icons';
+import Overlay from './overlay.jsx'
 import './filter.css'
 import React from 'react'
 import NavBar from './NavBar.jsx'
@@ -253,7 +253,7 @@ const filter = () => {
         console.log('html');
         </script>
 
-        <div> filter </div>
+        <Overlay />
         <h1> PERFUME FINDER </h1>
         <h2> Choose scents to avoid: </h2>
 

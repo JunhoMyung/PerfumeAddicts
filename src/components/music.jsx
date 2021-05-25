@@ -14,22 +14,28 @@ import Fade from '@material-ui/core/Fade';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import firebase from './firebase';
+import './overlay.css'
 
 const useStyles = makeStyles((theme) => ({
-    modal: {
+    paper: {
+        position: 'absolute',
+        height: "80%",
+        width: "120%",
+        backgroundColor: '#ffffff',
+        border: '2px solid #000',
+        boxShadow: theme.shadows[5],
+        padding: theme.spacing(5, 10, 5),
+        overflow: 'scroll',
+        overflowX: "hidden"
+      },
+      modal: {
         display: 'absolute',
         width: "50%",
         alignItems: 'center',
-        marginLeft: '25%',
-        marginTop: '12%',
-        border: '100px'
-    },
-    paper: {
-      backgroundColor: theme.palette.background.paper,
-      border: '2px solid #000',
-      boxShadow: theme.shadows[5],
-      padding: theme.spacing(2, 4, 3),
-    },
+        marginLeft: '15%',
+        marginTop: "5%",
+        border: '100px',
+      },
 }));
 
 export default function Music() {
@@ -44,6 +50,16 @@ export default function Music() {
     const [update, setUpdate] = useState(0)
     const [review_order, setReviewOrder] = useState([]);
     const [key_order, setKeyOrder] = useState([]);
+    const [showmore, setShowMore] = useState(false);
+
+
+    const show_more = () => {
+        setShowMore(true)
+    }
+
+    const show_less = () => {
+        setShowMore(false)
+    }
 
     const handleOpen = () => {
         setOpen(true);
@@ -114,6 +130,7 @@ export default function Music() {
     }
 
     const onsubmit = () => {
+
         setOpen(false);
         updateDB();
     }
@@ -152,6 +169,70 @@ export default function Music() {
     useEffect(() => {
         sortbyvote()
     })
+
+    const printRecommendation = () => {
+        if (review_order.length === 0){
+            return(
+                <div>
+                    No Recommendation Present
+                </div>
+            )
+        }
+        else if (showmore === false){
+            return(
+                <div>
+                    {[...review_order].reverse().map((value, index) => {
+                        if (index < 3){
+                            return (
+                                <ReviewTable  width = "80%">
+                                    <tbody>
+                                        <tr>
+                                            <td width = "80%"><MusicH2>{value.title} - {value.artist}</MusicH2></td>
+                                            <td>
+                                                <MusicH3>Votes: {value.vote}</MusicH3>
+                                            </td>
+                                            <td>
+                                                <MusicH3><Button onClick = {() => handleVote(value, index)}>{returnvote(value)}</Button></MusicH3>
+                                            </td>
+                                        </tr>
+                                        <tr><Musiccontent>{value.description}</Musiccontent></tr>
+                                    </tbody>
+                                </ReviewTable>
+                            )
+                        }
+                    })}
+                    <button onClick = {show_more}>show more</button>
+                </div>
+            )
+        }
+        else{
+            return (
+                <div>
+                    {[...review_order].reverse().map((value, index) => {
+                        return (
+                            <ReviewTable  width = "80%">
+                                <tbody>
+                                    <tr>
+                                        <td width = "80%"><MusicH2>{value.title} - {value.artist}</MusicH2></td>
+                                        <td>
+                                            <MusicH3>Votes: {value.vote}</MusicH3>
+                                        </td>
+                                        <td>
+                                            <MusicH3><Button onClick = {() => handleVote(value, index)}>{returnvote(value)}</Button></MusicH3>
+                                        </td>
+                                    </tr>
+                                    <tr><Musiccontent>{value.description}</Musiccontent></tr>
+                                </tbody>
+                            </ReviewTable>
+                        )
+                    
+                    })}
+                    <button onClick = {show_less}>show less</button>
+                </div>
+            )
+        }
+
+    }
     
 
     
@@ -159,24 +240,7 @@ export default function Music() {
     return (
         <div>
             <MusicH1>Top Recommendations</MusicH1>
-            {[...review_order].reverse().map((value, index) => {
-            return (
-                <ReviewTable  width = "80%">
-                    <tbody>
-                        <tr>
-                            <td width = "80%"><MusicH2>{value.title} - {value.artist}</MusicH2></td>
-                            <td>
-                                <MusicH3>Votes: {value.vote}</MusicH3>
-                            </td>
-                            <td>
-                                <MusicH3><Button onClick = {() => handleVote(value, index)}>{returnvote(value)}</Button></MusicH3>
-                            </td>
-                        </tr>
-                        <tr><Musiccontent>{value.description}</Musiccontent></tr>
-                    </tbody>
-                </ReviewTable>
-            )
-        })}
+            {printRecommendation()}
             <Marginbtn>
                 <Button variant="contained" onClick = {handleOpen} size="large">Recommend Music by Myself</Button>
             </Marginbtn>
@@ -194,15 +258,12 @@ export default function Music() {
             >
                 <Fade in={open}>
                     <div className={classes.paper}>
-                        Title 
+                        <div className = "overlaytitle2">RECOMMEND MUSIC</div>
+                        <div className = "overlaysubtitle">Title</div>
                         <TextField 
-                            style={{ margin: 8 }}
                             required 
                             id="music_title" 
-                            label="Title" 
-                            // helperText="Full width!"
                             fullWidth
-                            margin="normal"
                             onChange = {event => setTitle(event.target.value)}
                         />
                         Artist
