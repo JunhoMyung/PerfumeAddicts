@@ -23,4 +23,3 @@ class main extends Component {
     }
 
 export default main
-
