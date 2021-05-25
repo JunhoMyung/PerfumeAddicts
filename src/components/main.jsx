@@ -80,9 +80,9 @@ const useStyles = makeStyles(theme => ({
             </div>
             <div className="service">
                 <div className="service_title">OUR SERVICES</div>
-                <div className="service1"></div>
-                <div className="service2"></div>
-                <div className="service3"></div>
+                <div className="service1"><img src={MAIN_FILTER} alt = "" className="service_pic1"/></div>
+                <div className="service2"><img src={MAIN_VISUAL} alt = "" className="service_pic2"/></div>
+                <div className="service3"><img src={MAIN_INTERACT} alt = "" className="service_pic3"/></div>
             </div>
             <div className="join"></div>
             <ScrollTop {...props}>
