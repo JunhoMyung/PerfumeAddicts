@@ -29,7 +29,12 @@ class main extends Component {
                                 Easily Feel Them
                         </div>
                     </div>
-                    <div className="service"></div>
+                    <div className="service">
+                        <div className="service_title">OUR SERVICES</div>
+                        <div className="service1"></div>
+                        <div className="service2"></div>
+                        <div className="service3"></div>
+                    </div>
                     <div className="join"></div>
                     <Overlay />
                 </div>
