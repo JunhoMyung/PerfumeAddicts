@@ -336,6 +336,7 @@ const filter = () => {
           <td className='main_table'><img src={Perfume6} alt = "" /></td>
           </tr>
 
+
           <tr>
           <td className='main_table'><img src={Perfume7} alt = "" /></td>
           <td className='main_table'><img src={Perfume8} alt = "" /></td>
