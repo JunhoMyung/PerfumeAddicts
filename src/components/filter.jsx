@@ -1,4 +1,5 @@
 import { ScreenLockPortraitSharp } from '@material-ui/icons';
+import './filter.css'
 import React from 'react'
 import NavBar from './NavBar.jsx'
 import Perfume1 from "../perfume_pictures/aventus creed.png"
@@ -337,13 +338,12 @@ const filter = () => {
         <label for="choice_watery" id="watery"> Watery </label>
         </li> */}
 
-
+          <tr>
+            <td> <h1> Perfume List available </h1></td>
+          </tr>
 
         <table id='resultTable'>
 
-          <tr>
-            <td> Perfume List available </td>
-          </tr>
 
           <tr>
           <td className='main_table'><img src={Perfume1} alt = "" /></td>
