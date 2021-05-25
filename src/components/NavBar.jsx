@@ -31,7 +31,7 @@ export class NavBar extends Component {
                         <li><a href="/">BRANDS</a></li>
                         <li><a href="./filter">DISCOVER</a></li>
                         <ul style={{float: "right"}}>
-                            <li onClick={signInWithGoogle} className="signin"><a>SIGN IN WITH GOOGLE</a></li>
+                            <li onClick={signInWithGoogle} className="signin" href="# "><a href="# ">SIGN IN WITH GOOGLE</a></li>
                         </ul>
                     </ul>
                 </div>
@@ -50,10 +50,10 @@ export class NavBar extends Component {
                         <li><a href="/">BRANDS</a></li>
                         <li><a href="./filter">DISCOVER</a></li>
                         <ul style={{float: "right"}}>
-                            <li className="dropdown signin"><a><i className="fas fa-user-circle fa-lg"></i>&nbsp;&nbsp;{user_name}</a>
+                            <li className="dropdown signin"><a href="# "><i className="fas fa-user-circle fa-lg"></i>&nbsp;&nbsp;{user_name}</a>
                                 <div className="dropdown-content">
                                     <a href="/">My Page</a>
-                                    <a onClick={() => {signOutWithGoogle(); window.location.reload();}}>Sign Out</a>
+                                    <a onClick={() => {signOutWithGoogle(); window.location.reload();}} href="# ">Sign Out</a>
                                 </div>
                             </li>
                         </ul>

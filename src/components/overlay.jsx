@@ -16,9 +16,6 @@ import ELEVEN from "../filter_icons/11.png"
 import TWELVE from "../filter_icons/12.png"
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
-import {Link} from 'react-router-dom'
-
-
 
 
 const useStyles = makeStyles((theme) => ({
@@ -202,9 +199,7 @@ export default function SimpleModal() {
               </tr>
             </tbody>
           </table>
-          <Link to="./filter">
-            <div className="button2">Explore</div>     
-          </Link>
+          <div className="button2" onClick = {()=>setOpen(false)}>Explore</div>     
           <br/>   
           <br/>     
       </div>
