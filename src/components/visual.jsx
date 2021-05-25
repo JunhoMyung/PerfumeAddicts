@@ -1,5 +1,4 @@
 import './visual.css'
-import Perfume1 from "../perfume_pictures/Perfume1.jpg"
 import React, { Component } from "react";
 import MyMusic from "./music.jsx";
 import ReactPlayer from 'react-player/youtube'
@@ -25,6 +24,8 @@ class visual extends Component {
                 price: perfume_info[this.perfume_id.id].price,
                 sizes: perfume_info[this.perfume_id.id].volume
             },
+            current_price: perfume_info[this.perfume_id.id].price[0],
+            quantity: "",
             total_price : 0,
             tab_state : 0,
             url: "",
@@ -53,13 +54,13 @@ class visual extends Component {
         const data = [
             {
               data: {
-                citrus: perfume_info[0].radar_chart.citrus,
-                woody: perfume_info[0].radar_chart.woody,
-                spicy: perfume_info[0].radar_chart.spicy,
-                flower: perfume_info[0].radar_chart.flowery,
-                fruit: perfume_info[0].radar_chart.fruity
+                citrus: perfume_info[this.perfume_id.id].radar_chart.citrus,
+                woody: perfume_info[this.perfume_id.id].radar_chart.woody,
+                spicy: perfume_info[this.perfume_id.id].radar_chart.spicy,
+                flower: perfume_info[this.perfume_id.id].radar_chart.flowery,
+                fruit: perfume_info[this.perfume_id.id].radar_chart.fruity
               },
-              meta: { color: perfume_info[0].color }
+              meta: { color: perfume_info[this.perfume_id.id].color }
             }
           ];
        
@@ -90,8 +91,47 @@ class visual extends Component {
             )
         }
     }
+
+    changePrice = (event) => {
+        let value = event.target.value
+        //console.log("value = " + value)
+        var index = 0
+        if (value == 1)
+            {
+                //console.log("Yes")
+                index = 1
+            }
+        this.setState({current_price: this.state.info.price[index]})
+        
+    }
+
+    changeTotalPrice = (event) => {
+        let quantity = event.target.value
+        this.setState({quantity: quantity})
+
+        
+    }
+
+    changeQuantity = (event) => {
+        if (event.key === 'Enter')
+        {
+            
+            //event.stopPropagation()
+            let quantity = event.target.value
+            let tp = this.state.total_price + quantity * this.state.current_price
+            this.setState({total_price: tp, quantity: ""})
+            event.preventDefault()
+        }
+    }
+
+    reset = () => {
+        this.setState({total_price: 0})
+    }
+
     render(){
-        console.log(localStorage.getItem('perfume_id'))
+        //console.log(this.state.current_price)
+        //const current_price = this.state.current_price
+        //const quantity = this.state.quantity
         return (
             <div>
                 <NavBar />
@@ -99,7 +139,7 @@ class visual extends Component {
                 <table>
                     <tbody>
                     <tr>
-                        <td className='main_table'>{perfume_info[0].pic_name}</td>
+                        <td className='main_table'>{perfume_info[this.perfume_id.id].pic_name}</td>
                         <td className='main_table'>
                             <h3><b>{this.state.info.name} &emsp;</b></h3>
                             <table>
@@ -108,39 +148,31 @@ class visual extends Component {
                                     <td><b>Volume:  </b></td>
                                     <td className='inner_second_td'>
                                         <form>
-                                        <select name='volume' id='volume' className='form'>
-                                            <option value='vol1'>{this.state.info.sizes[0]}</option>
-                                            <option value='vol2'>{this.state.info.sizes[1]}</option>
+                                        <select name='volume' id='volume' className='form' onChange={this.changePrice}>
+                                            <option value={0} >{this.state.info.sizes[0]}</option>
+                                            <option value={1} >{this.state.info.sizes[1]}</option>
                                         </select>
                                     </form></td>   
                                 </tr>
                                 <tr>
                                     <td><b>Price: </b></td>
-                                    <td className='inner_second_td'>${perfume_info[0].price[0]} | {perfume_info[0].price[1]}</td>   
+                                    <td className='inner_second_td'>${this.state.current_price}</td>   
                                 </tr>
-                                <tr>
-                                    <td><b>Options:  </b></td>
-                                    <td className='inner_second_td'>
-                                        <form>
-                                            <select name='options' id='options' className='form'>
-                                                <option value='option1'>Option 1</option>
-                                                <option value='option1'>Option 1</option>
-                                                <option value='option1'>Option 1</option>
-                                            </select>
-                                        </form>
-                                    </td>
-                                </tr>
+                                
                                 <tr>
                                     <td><b>Quantity:  </b></td>
                                     <td className='inner_second_td'>
-                                        <form action="/action_page.php">
-                                            <input type="text" id="quantity" name="quantity" className='form'/>
+                                        <form>
+                                            <input type="text" id="quantity" name="quantity" className='quantity' value={this.state.quantity} onChange={this.changeTotalPrice} onKeyDown={this.changeQuantity} />
                                         </form>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td><b>Total:  </b></td>
-                                    <td className='inner_second_td'>${this.state.total_price}</td>
+                                    <td className='inner_second_td'>${this.state.total_price} &emsp; &emsp; 
+                                    <button className='reset' onClick={this.reset}>Reset</button>
+                                    </td>
+                                   
                                 </tr>
                                 </tbody>
                             </table>
