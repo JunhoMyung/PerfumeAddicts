@@ -9,7 +9,9 @@ import Overlay from './overlay.jsx'
 
 
 class main extends Component {
+    
     render() {
+        localStorage.setItem('perfume_id', 0)
             return (
                 <div>
                     <NavBar />

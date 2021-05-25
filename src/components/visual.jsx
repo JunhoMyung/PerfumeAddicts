@@ -12,17 +12,18 @@ import perfume_info from './perfume_info.jsx'
 
 
 class visual extends Component {
-
+    
     constructor(props) {
         super(props);
-
+        this.perfume_id = {
+            id: localStorage.getItem('perfume_id'),
+        }
         this.state = {
             page : "detail",
             info : {
-                id: 1,
-                name: perfume_info[0].name,
-                price: perfume_info[0].price,
-                sizes: perfume_info[0].volume
+                name: perfume_info[this.perfume_id.id].name,
+                price: perfume_info[this.perfume_id.id].price,
+                sizes: perfume_info[this.perfume_id.id].volume
             },
             total_price : 0,
             tab_state : 0,
@@ -90,6 +91,7 @@ class visual extends Component {
         }
     }
     render(){
+        console.log(localStorage.getItem('perfume_id'))
         return (
             <div>
                 <NavBar />
@@ -97,7 +99,7 @@ class visual extends Component {
                 <table>
                     <tbody>
                     <tr>
-                        <td className='main_table'><img src={Perfume1} alt = "" /></td>
+                        <td className='main_table'>{perfume_info[0].pic_name}</td>
                         <td className='main_table'>
                             <h3><b>{this.state.info.name} &emsp;</b></h3>
                             <table>
@@ -114,7 +116,7 @@ class visual extends Component {
                                 </tr>
                                 <tr>
                                     <td><b>Price: </b></td>
-                                    <td className='inner_second_td'>{this.state.info.price}</td>   
+                                    <td className='inner_second_td'>${perfume_info[0].price[0]} | {perfume_info[0].price[1]}</td>   
                                 </tr>
                                 <tr>
                                     <td><b>Options:  </b></td>
