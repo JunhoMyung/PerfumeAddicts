@@ -14,39 +14,35 @@ import NINE from "../filter_icons/9.png"
 import TEN from "../filter_icons/10.png"
 import ELEVEN from "../filter_icons/11.png"
 import TWELVE from "../filter_icons/12.png"
+import Backdrop from '@material-ui/core/Backdrop';
+import Fade from '@material-ui/core/Fade';
 
 
 
-function rand() {
-  return Math.round(Math.random() * 20) - 10;
-}
-
-function getModalStyle() {
-  const top = 50 + rand();
-  const left = 50 + rand();
-
-  return {
-    top: `${top}%`,
-    left: `${left}%`,
-    transform: `translate(-${top}%, -${left}%)`,
-  };
-}
 
 const useStyles = makeStyles((theme) => ({
   paper: {
     position: 'absolute',
-    height: 400,
+    height: "80%",
+    width: "120%",
     backgroundColor: '#b1b2b0',
     border: '2px solid #000',
     boxShadow: theme.shadows[5],
     padding: theme.spacing(5, 10, 5),
     overflow: 'scroll'
   },
+  modal: {
+    display: 'absolute',
+    width: "50%",
+    alignItems: 'center',
+    marginLeft: '15%',
+    marginTop: "5%",
+    border: '100px'
+  },
 }));
 
 export default function SimpleModal() {
   const classes = useStyles();
-  const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
   
   const handleOpen = () => {
@@ -143,67 +139,69 @@ export default function SimpleModal() {
   }
 
   const body = (
-    <div style={modalStyle} className={classes.paper}>
-        <div className='overlaytitle'>CHOOSE SCENTS YOU AVOID</div>
-        <table className = "overlaytable" width = "700px">
-          <tbody>
-            <tr>
-              <td align = 'center'>
-                <img src={ONE} style={{tintColor: imgColor1, opacity: imgOpacity1}}
-                        onClick={SelectedIcon1} alt = "" className='icon'/>
-              </td>
-              <td align = 'center'>
-                <img src={TWO} style={{tintColor: imgColor2, opacity: imgOpacity2}}
-                        onClick={SelectedIcon2} alt = "" className='icon'/>
-              </td>
-              <td align = 'center'>
-                <img src={THREE} style={{tintColor: imgColor3, opacity: imgOpacity3}}
-                        onClick={SelectedIcon3} alt = "" className='icon'/>
-              </td>
-              <td align = 'center'>
-                <img src={FOUR} style={{tintColor: imgColor4, opacity: imgOpacity4}}
-                        onClick={SelectedIcon4} alt = "" className='icon'/>
-              </td>
-            </tr>
-            <tr>
-              <td align = 'center'>
-                <img src={FIVE} style={{tintColor: imgColor5, opacity: imgOpacity5}}
-                        onClick={SelectedIcon5} alt = "" className='icon'/>
-              </td>
-              <td align = 'center'>
-                <img src={SIX} style={{tintColor: imgColor6, opacity: imgOpacity6}}
-                        onClick={SelectedIcon6} alt = "" className='icon'/>
-              </td>
-              <td align = 'center'>
-                <img src={SEVEN} style={{tintColor: imgColor7, opacity: imgOpacity7}}
-                        onClick={SelectedIcon7} alt = "" className='icon'/>
-              </td>
-              <td align = 'center'>
-                <img src={EIGHT} style={{tintColor: imgColor8, opacity: imgOpacity8}}
-                        onClick={SelectedIcon8} alt = "" className='icon'/>
-              </td>
-            </tr>
-            <tr>
-              <td align = 'center'>
-                <img src={NINE} style={{tintColor: imgColor9, opacity: imgOpacity9}}
-                        onClick={SelectedIcon9} alt = "" className='icon'/>  
-              </td>
-              <td align = 'center'>
-                <img src={TEN} style={{tintColor: imgColor10, opacity: imgOpacity10}}
-                        onClick={SelectedIcon10} alt = "" className='icon'/>
-              </td>   
-              <td align = 'center'>
-                <img src={ELEVEN} style={{tintColor: imgColor11, opacity: imgOpacity11}}
-                        onClick={SelectedIcon11} alt = "" className='icon'/>
-              </td>
-              <td align = 'center'>
-                <img src={TWELVE} style={{tintColor: imgColor12, opacity: imgOpacity12}}
-                        onClick={SelectedIcon12} alt = "" className='icon'/>
-              </td>
-            </tr>
-          </tbody>
-        </table>        
-    </div>
+    <Fade in={open}>
+      <div className={classes.paper}>
+          <div className='overlaytitle'>CHOOSE SCENTS YOU AVOID</div>
+          <table className = "overlaytable" width = "100%">
+            <tbody>
+              <tr>
+                <td align = 'center'>
+                  <img src={ONE} style={{tintColor: imgColor1, opacity: imgOpacity1}}
+                          onClick={SelectedIcon1} alt = "" className='icon'/>
+                </td>
+                <td align = 'center'>
+                  <img src={TWO} style={{tintColor: imgColor2, opacity: imgOpacity2}}
+                          onClick={SelectedIcon2} alt = "" className='icon'/>
+                </td>
+                <td align = 'center'>
+                  <img src={THREE} style={{tintColor: imgColor3, opacity: imgOpacity3}}
+                          onClick={SelectedIcon3} alt = "" className='icon'/>
+                </td>
+                <td align = 'center'>
+                  <img src={FOUR} style={{tintColor: imgColor4, opacity: imgOpacity4}}
+                          onClick={SelectedIcon4} alt = "" className='icon'/>
+                </td>
+              </tr>
+              <tr>
+                <td align = 'center'>
+                  <img src={FIVE} style={{tintColor: imgColor5, opacity: imgOpacity5}}
+                          onClick={SelectedIcon5} alt = "" className='icon'/>
+                </td>
+                <td align = 'center'>
+                  <img src={SIX} style={{tintColor: imgColor6, opacity: imgOpacity6}}
+                          onClick={SelectedIcon6} alt = "" className='icon'/>
+                </td>
+                <td align = 'center'>
+                  <img src={SEVEN} style={{tintColor: imgColor7, opacity: imgOpacity7}}
+                          onClick={SelectedIcon7} alt = "" className='icon'/>
+                </td>
+                <td align = 'center'>
+                  <img src={EIGHT} style={{tintColor: imgColor8, opacity: imgOpacity8}}
+                          onClick={SelectedIcon8} alt = "" className='icon'/>
+                </td>
+              </tr>
+              <tr>
+                <td align = 'center'>
+                  <img src={NINE} style={{tintColor: imgColor9, opacity: imgOpacity9}}
+                          onClick={SelectedIcon9} alt = "" className='icon'/>  
+                </td>
+                <td align = 'center'>
+                  <img src={TEN} style={{tintColor: imgColor10, opacity: imgOpacity10}}
+                          onClick={SelectedIcon10} alt = "" className='icon'/>
+                </td>   
+                <td align = 'center'>
+                  <img src={ELEVEN} style={{tintColor: imgColor11, opacity: imgOpacity11}}
+                          onClick={SelectedIcon11} alt = "" className='icon'/>
+                </td>
+                <td align = 'center'>
+                  <img src={TWELVE} style={{tintColor: imgColor12, opacity: imgOpacity12}}
+                          onClick={SelectedIcon12} alt = "" className='icon'/>
+                </td>
+              </tr>
+            </tbody>
+          </table>        
+      </div>
+    </Fade>
   );
 
   return (
@@ -212,10 +210,16 @@ export default function SimpleModal() {
         Filter
       </button>
       <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
+          aria-labelledby="transition-modal-title"
+          aria-describedby="transition-modal-description"
+          className={classes.modal}
+          open={open}
+          onClose={handleClose}
+          closeAfterTransition
+          BackdropComponent={Backdrop}
+          BackdropProps={{
+          timeout: 500,
+          }}
       >
         {body}
       </Modal>
