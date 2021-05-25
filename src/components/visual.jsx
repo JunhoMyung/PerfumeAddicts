@@ -8,20 +8,37 @@ import RadarChart from 'react-svg-radar-chart'
 import perfume_info from './perfume_info.jsx'
 //import 'react-svg-radar-chart/build/css/index.css'
 import NavBar from "./NavBar.jsx"
+import firebase from './firebase';
+import { ThreeSixtySharp } from '@material-ui/icons';
+
 
 class visual extends Component {
 
-    state = {
-        page : "detail",
-        info : {
-            id: 1,
-            name: perfume_info[0].name,
-            price: perfume_info[0].price,
-            sizes: perfume_info[0].volume
-        },
-        total_price: 0,
-        tab_state : 0,
-        url: "https://www.youtube.com/watch?v=UDDMYw_IZnE&ab_channel=DopeLyrics"
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            page : "detail",
+            info : {
+                id: 1,
+                name: perfume_info[0].name,
+                price: perfume_info[0].price,
+                sizes: perfume_info[0].volume
+            },
+            total_price : 0,
+            tab_state : 0,
+            url: "",
+        };        
+        this.componentDidMount = this.componentDidMount.bind(this) 
+
+    }
+
+    componentDidMount = () => {
+        let current_component = this
+        firebase.database().ref('/'+ this.state.info.name +'/').orderByChild('vote').on("child_added", function(snapshot) {
+            current_component.setState({url: snapshot.val().url})
+        });
+        console.log()
     }
 
     Total_Price = (option) => {

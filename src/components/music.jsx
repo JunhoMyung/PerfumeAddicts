@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
     MusicH1,
     MusicH2,
@@ -34,15 +34,16 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Music() {
     
-    const perfume_name = "Blue De Chanel"
+    const perfume_name = "BLEU DE CHANEL"
     const classes = useStyles();
     const [open, setOpen] = useState(false);
     const [title, setTitle] = useState('')
     const [artist, setArtist] = useState('')
     const [url, setURL] = useState('')
     const [description, setDescription] = useState('')
-    const review_order = [];
-    const key_order = [];
+    const [update, setUpdate] = useState(0)
+    const [review_order, setReviewOrder] = useState([]);
+    const [key_order, setKeyOrder] = useState([]);
 
     const handleOpen = () => {
         setOpen(true);
@@ -69,7 +70,6 @@ export default function Music() {
     }
 
     const handleVote = (value, index) => {
-        //console.log([...key_order].reverse()[index])
         if (firebase.auth().currentUser === null){
             alert("Please sign in to vote")
         }
@@ -86,6 +86,7 @@ export default function Music() {
             updates['/'+ perfume_name +'/' + [...key_order].reverse()[index]] = new_data;
             firebase.database().ref().update(updates);
             firebase.database().ref('/'+ perfume_name +'/'+ [...key_order].reverse()[index] + '/voteID/').push(firebase.auth().currentUser.email);
+            setUpdate(update => update + 1)
         }
         else {
             var new_data = {
@@ -103,12 +104,12 @@ export default function Music() {
             temp.get().then((snapshot) =>{
                 var keys = Object.keys(snapshot.val());
                 snapshot.forEach((child) => {
-                    //console.log(child.val())
                     if(child.val() === firebase.auth().currentUser.email){
                         firebase.database().ref('/'+ perfume_name +'/'+ [...key_order].reverse()[index] + '/voteID/' + child.key).remove()
                     }
                 })
             })
+            setUpdate(update => update + 1)
         }
     }
 
@@ -136,19 +137,28 @@ export default function Music() {
     }
 
     const sortbyvote = () => {
+        var temp1 = []
+        var temp2 = []
         firebase.database().ref('/'+ perfume_name +'/').orderByChild('vote').on("child_added", function(snapshot) {
-            review_order.push(snapshot.val());
-            key_order.push(snapshot.key);
+            temp1.push(snapshot.val())
+            temp2.push(snapshot.key)
+            // review_order.push(snapshot.val());
+            // key_order.push(snapshot.key);
         });
-
+        setReviewOrder(temp1)
+        setKeyOrder(temp2)
     }
 
+    useEffect(() => {
+        sortbyvote()
+    })
+    
 
+    
 
     return (
         <div>
             <MusicH1>Top Recommendations</MusicH1>
-            {sortbyvote()}
             {[...review_order].reverse().map((value, index) => {
             return (
                 <ReviewTable  width = "80%">
