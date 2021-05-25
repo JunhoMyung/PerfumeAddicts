@@ -4,6 +4,8 @@ import MAIN_PAGE from "../perfume_pictures/MAIN_PAGE.png"
 import 'firebase/auth';
 import {Link} from 'react-router-dom'
 import NavBar from './NavBar.jsx'
+import Overlay from './overlay.jsx'
+
 
 class main extends Component {
     render() {
@@ -17,6 +19,7 @@ class main extends Component {
                     </Link>
                     <div className="button_text">Find My Perfume</div>
                     <br/>
+                    <Overlay />
                 </div>
             )
         }

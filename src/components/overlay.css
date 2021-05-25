@@ -1,0 +1,15 @@
+.icon {
+    max-height: 40%;
+    max-width: 40%;
+    cursor: pointer;
+}
+
+.overlaytitle {
+    color: white;
+    font-family: 'LEMON MILK', sans-serif;
+    font-weight: bold;
+    font-size: 25pt;
+    white-space: nowrap;
+    padding-bottom: 20pt;
+    text-align: center;
+}
