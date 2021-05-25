@@ -1,4 +1,3 @@
-import { red } from "@material-ui/core/colors"
 import Perfume1 from "../perfume_pictures/350x250/Perfume1.png"
 import Perfume2 from "../perfume_pictures/350x250/Perfume2.png"
 import Perfume3 from "../perfume_pictures/350x250/Perfume3.png"
