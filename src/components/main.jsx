@@ -14,6 +14,8 @@ import Fab from '@material-ui/core/Fab';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import Zoom from '@material-ui/core/Zoom';
 import PropTypes from "prop-types";
+import Toolbar from "@material-ui/core/Toolbar";
+
 
 
 const useStyles = makeStyles(theme => ({
@@ -55,13 +57,13 @@ const useStyles = makeStyles(theme => ({
     children: PropTypes.element.isRequired
   };
   
-
   export default function main(props) {
 
     localStorage.setItem('perfume_id', 0)
     return (
-        <div>
-            <NavBar />
+        <React.Fragment>
+            <div id="back-to-top-anchor" />
+            <NavBar/>
             <img src={MAIN_PAGE} alt = "" className='main'/>
             <div className="title">DISCOVER YOUR SCENTS WITH SENSES</div>
             <Link to="./filter">
@@ -84,11 +86,11 @@ const useStyles = makeStyles(theme => ({
             </div>
             <div className="join"></div>
             <ScrollTop {...props}>
-                <Fab color="secondary" size="small" aria-label="scroll back to top">
+                <Fab color="primary" size="small" aria-label="scroll back to top">
                 <KeyboardArrowUpIcon />
                 </Fab>
             </ScrollTop>
-        </div>
+        </React.Fragment>
     )
 }
 
