@@ -14,6 +14,7 @@ import Fade from '@material-ui/core/Fade';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import firebase from './firebase';
+import perfume_info from './perfume_info.jsx'
 import './overlay.css'
 
 const useStyles = makeStyles((theme) => ({
@@ -39,8 +40,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Music() {
-    
-    const perfume_name = "BLEU DE CHANEL"
+
+    const perfume_id = localStorage.getItem('perfume_id');
+    const perfume_name = perfume_info[perfume_id].name
     const classes = useStyles();
     const [open, setOpen] = useState(false);
     const [title, setTitle] = useState('')
@@ -51,7 +53,7 @@ export default function Music() {
     const [review_order, setReviewOrder] = useState([]);
     const [key_order, setKeyOrder] = useState([]);
     const [showmore, setShowMore] = useState(false);
-
+    
 
     const show_more = () => {
         setShowMore(true)
