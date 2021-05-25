@@ -32,7 +32,7 @@ import Perfume29 from "../perfume_pictures/350x250/Perfume29.png"
 
 const perfume_info = [
     {
-      "name": "BLEU DE CHANEL",
+      "name": "CK One",
       "pic_name": <img src={Perfume1} alt = "" />,
       "color": "red",
       "brand": "Calvin Klein",

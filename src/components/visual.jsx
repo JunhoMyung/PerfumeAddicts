@@ -139,6 +139,7 @@ class visual extends Component {
                 <table>
                     <tbody>
                     <tr>
+                        {console.log(this.perfume_id)}
                         <td className='main_table'>{perfume_info[this.perfume_id.id].pic_name}</td>
                         <td className='main_table'>
                             <h3><b>{this.state.info.name} &emsp;</b></h3>
