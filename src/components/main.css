@@ -344,3 +344,7 @@ li.dropdown {
     font-family: "Lato", sans-serif;
     font-size: 12pt;
 }
+
+.perfume {
+    cursor: pointer;
+}
