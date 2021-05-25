@@ -141,7 +141,7 @@ export default function SimpleModal() {
   const body = (
     <Fade in={open}>
       <div className={classes.paper}>
-          <div className='overlaytitle'>CHOOSE SCENTS YOU AVOID</div>
+          <div className='overlaytitle'>DESELECT SCENTS YOU AVOID</div>
           <table className = "overlaytable" width = "100%">
             <tbody>
               <tr>
