@@ -184,6 +184,7 @@ export default function SimpleModal() {
     }
     localStorage.setItem("length", temp_list.length)
     setOpen(false);
+    window.location.reload();
   }
 
   const body = (

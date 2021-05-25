@@ -52,7 +52,7 @@ export default function Filter() {
 
   useEffect(() => {
       renew()
-  })
+  }, [])
 
 
   const renew = () => {
@@ -89,7 +89,7 @@ export default function Filter() {
       let children = []
       for (var j = 0; j < 4; j++){
         if((i*4+j)<= (displayList.length - 1)){          
-          children.push(<td>{perfume_info[displayList[i*4 + j]].pic_name}</td>)
+          children.push(<td>{perfume_info[displayList[i*4 + j]].pic_name}<br/>{perfume_info[displayList[i*4 + j]].name}</td>)
         }
         else{
           children.push(<td></td>)

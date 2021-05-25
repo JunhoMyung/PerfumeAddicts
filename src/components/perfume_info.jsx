@@ -32,7 +32,7 @@ import Perfume29 from "../perfume_pictures/350x250/Perfume29.png"
 const perfume_info = [
     {
       "name": "CK One",
-      "pic_name": <img src={Perfume1} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume1} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 0); window.location.href = "/visual"}}/>,
       "brand": "Calvin Klein",
       "price": [27.00, 22.00],
       "volume": [100, 50],
@@ -41,7 +41,7 @@ const perfume_info = [
     },
     {
       "name": "English Pear & Freesia",
-      "pic_name": <img src={Perfume2} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume2} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 1); window.location.href = "/visual"}}/>,
       "brand": "Jo Malone London",
       "price": [53.00, 29.00],
       "volume": [250, 100],
@@ -50,7 +50,7 @@ const perfume_info = [
     },
     {
       "name": "Do Son",
-      "pic_name": <img src={Perfume3} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume3} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 2); window.location.href = "/visual"}}/>,
       "brand": "Diptyque",
       "price": [131.00, 94.00],
       "volume": [100, 50],
@@ -59,7 +59,7 @@ const perfume_info = [
     },
     {
       "name": "Un Jardin En Mediterranee",
-      "pic_name": <img src={Perfume4} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume4} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 3); window.location.href = "/visual"}}/>,
       "brand": "Hermes",
       "price": [105.00, 85.50, 60.00],
       "volume": [100, 50, 30],
@@ -68,7 +68,7 @@ const perfume_info = [
     },
     {
       "name": "Voyage d'Hermes",
-      "pic_name": <img src={Perfume5} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume5} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 4); window.location.href = "/visual"}}/>,
       "brand": "Hermes",
       "price": [126.00, 84.00],
       "volume": [100, 35],
@@ -77,7 +77,7 @@ const perfume_info = [
     },
     {
       "name": "La Vie Est Belle",
-      "pic_name": <img src={Perfume6} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume6} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 5); window.location.href = "/visual"}}/>,
       "brand": "Lancome",
       "price": [133.00, 100.00],
       "volume": [100, 50],
@@ -86,7 +86,7 @@ const perfume_info = [
     },
     {
       "name": "Cherry Blossom",
-      "pic_name": <img src={Perfume7} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume7} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 6); window.location.href = "/visual"}}/>,
       "brand": "L'Occitane en Provence",
       "price": [50.00, 65.00],
       "volume": [75, 100],
@@ -95,7 +95,7 @@ const perfume_info = [
     },
     {
       "name": "A La Rose ",
-      "pic_name": <img src={Perfume8} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume8} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 7); window.location.href = "/visual"}}/>,
       "brand": "Maison Francis Kurkdjian",
       "price": [164.00, 104.00],
       "volume": [70, 35],
@@ -104,7 +104,7 @@ const perfume_info = [
     },
     {
       "name": "Modern Princess",
-      "pic_name": <img src={Perfume9} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume9} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 8); window.location.href = "/visual"}}/>,
       "brand": "Lanvin",
       "price": [30.00, 55.00],
       "volume": [50, 100],
@@ -113,7 +113,7 @@ const perfume_info = [
     },
     {
       "name": "Baccarat Rouge",
-      "pic_name": <img src={Perfume10} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume10} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 9); window.location.href = "/visual"}}/>,
       "brand": "Maison Francis Kurkdjian",
       "price": [78.00, 99.00],
       "volume": [70, 100],
@@ -122,7 +122,7 @@ const perfume_info = [
     },
     {
       "name": "Alien",
-      "pic_name": <img src={Perfume11} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume11} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 10); window.location.href = "/visual"}}/>,
       "brand": "Mugler",
       "price": [21.00, 35.00],
       "volume": [30, 50],
@@ -131,7 +131,7 @@ const perfume_info = [
     },
     {
       "name": "Tobacco Vanille",
-      "pic_name": <img src={Perfume12} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume12} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 11); window.location.href = "/visual"}}/>,
       "brand": "Tom Ford",
       "price": [45.00, 80.00],
       "volume": [50, 100],
@@ -140,7 +140,7 @@ const perfume_info = [
     },
     {
       "name": "Aventus",
-      "pic_name": <img src={Perfume13} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume13} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 12); window.location.href = "/visual"}}/>,
       "brand": "Creed",
       "price": [26.00, 36.00, 50.00],
       "volume": [30, 75, 250],
@@ -149,7 +149,7 @@ const perfume_info = [
     },
     {
       "name": "Coco Mademoiselle",
-      "pic_name": <img src={Perfume14} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume14} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 13); window.location.href = "/visual"}}/>,
       "brand": "Chanel",
       "price": [32.00, 50.00],
       "volume": [100, 250],
@@ -158,7 +158,7 @@ const perfume_info = [
     },
     {
       "name": "Black Opium",
-      "pic_name": <img src={Perfume15} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume15} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 14); window.location.href = "/visual"}}/>,
       "brand": "Yves Sain Laurent",
       "price": [40.00, 60.00, 75.00],
       "volume": [30, 50, 100],
@@ -167,7 +167,7 @@ const perfume_info = [
     },
     {
       "name": "Black Orchid",
-      "pic_name": <img src={Perfume16} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume16} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 15); window.location.href = "/visual"}}/>,
       "brand": "Tom Ford",
       "price": [65.00, 75.00],
       "volume": [40, 50],
@@ -176,7 +176,7 @@ const perfume_info = [
     },
     {
       "name": "La Nuit de I'Homme",
-      "pic_name": <img src={Perfume17} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume17} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 16); window.location.href = "/visual"}}/>,
       "brand": "Yves Sain Laurent",
       "price": [87.00, 100.00, 115.00],
       "volume": [40, 60, 100],
@@ -185,7 +185,7 @@ const perfume_info = [
     },
     {
       "name": "Rock Volume One",
-      "pic_name": <img src={Perfume18} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume18} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 17); window.location.href = "/visual"}}/>,
       "brand": "John Varvatos",
       "price": [27.00, 22.00],
       "volume": [100, 50],
@@ -194,7 +194,7 @@ const perfume_info = [
     },
     {
       "name": "Fahrenheit",
-      "pic_name": <img src={Perfume19} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume19} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 18); window.location.href = "/visual"}}/>,
       "brand": "Christian Dior",
       "price": [53.00, 29.00],
       "volume": [250, 100],
@@ -203,7 +203,7 @@ const perfume_info = [
     },
     {
       "name": "Acqua di Giò Profumo",
-      "pic_name": <img src={Perfume20} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume20} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 19); window.location.href = "/visual"}}/>,
       "brand": "Giorgioa Armani",
       "price": [131.00, 94.00],
       "volume": [100, 50],
@@ -212,7 +212,7 @@ const perfume_info = [
     },
     {
       "name": "Sailing Day",
-      "pic_name": <img src={Perfume21} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume21} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 20); window.location.href = "/visual"}}/>,
       "brand": "Maison Martin Margiela",
       "price": [30.00, 135.00],
       "volume": [10, 100],
@@ -221,7 +221,7 @@ const perfume_info = [
     },
     {
       "name": "Snow Mint",
-      "pic_name": <img src={Perfume22} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume22} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 21); window.location.href = "/visual"}}/>,
       "brand": "Victoria's Secret",
       "price": [164.00, 104.00],
       "volume": [70, 35],
@@ -230,7 +230,7 @@ const perfume_info = [
     },
     {
       "name": "Aqva Pour Homme Atlantiqve ",
-      "pic_name": <img src={Perfume23} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume23} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 22); window.location.href = "/visual"}}/>,
       "brand": "Bvlgari",
       "price": [45.00, 80.00],
       "volume": [50, 100],
@@ -239,7 +239,7 @@ const perfume_info = [
     },
     {
       "name": "Aqua Allegoria Herba Fresca",
-      "pic_name": <img src={Perfume24} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume24} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 23); window.location.href = "/visual"}}/>,
       "brand": "Guerlain",
       "price": [32.00, 50.00],
       "volume": [100, 250],
@@ -248,7 +248,7 @@ const perfume_info = [
     },
     {
       "name": "Poolside Breeze",
-      "pic_name": <img src={Perfume25} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume25} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 24); window.location.href = "/visual"}}/>,
       "brand": "Victoria's Secret",
       "price": [21.00, 35.00],
       "volume": [30, 50],
@@ -257,7 +257,7 @@ const perfume_info = [
     },
     {
       "name": "Luna Rossa Carbon",
-      "pic_name": <img src={Perfume26} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume26} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 25); window.location.href = "/visual"}}/>,
       "brand": "Prada",
       "price": [126.00, 84.00],
       "volume": [100, 35],
@@ -266,7 +266,7 @@ const perfume_info = [
     },
     {
       "name": "Radish Vetiver ",
-      "pic_name": <img src={Perfume27} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume27} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 26); window.location.href = "/visual"}}/>,
       "brand": "Comme des Garcons",
       "price": [65.00, 75.00],
       "volume": [40, 50],
@@ -275,7 +275,7 @@ const perfume_info = [
     },
     {
       "name": "Dry Wood Ramon",
-      "pic_name": <img src={Perfume28} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume28} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 27); window.location.href = "/visual"}}/>,
       "brand": "Mogegal",
       "price": [164.00, 104.00],
       "volume": [70, 35],
@@ -284,7 +284,7 @@ const perfume_info = [
     },
     {
       "name": "Honey Oud",
-      "pic_name": <img src={Perfume29} alt = "" />,
+      "pic_name": <img className = "perfume" src={Perfume29} alt = "" onClick = {() => {localStorage.setItem('perfume_id', 28); window.location.href = "/visual"}}/>,
       "brand": "Floris",
       "price": [45.00, 80.00],
       "volume": [50, 100],
