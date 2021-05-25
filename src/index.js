@@ -7,7 +7,6 @@ import filter from "./components/filter";
 import visual from "./components/visual";
 import overlay from "./components/overlay";
 
-
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
