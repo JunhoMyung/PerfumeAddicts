@@ -2,47 +2,6 @@ import { ScreenLockPortraitSharp } from '@material-ui/icons';
 import React from 'react'
 import NavBar from './NavBar.jsx'
 
-
-import Table from "./Table.js";
-
-function App() {
-  const data = [
-    {
-      Name: "Anssam",
-      Age: "20"
-    },
-    {
-      Name: "Rihab",
-      Age: "12"
-    },
-    {
-      Name: "Amir",
-      Age: "3"
-    }
-  ];
-
-  return (
-    <div className="App">
-      <Table
-        data={data}
-        theme={Table.THEME.DARK}
-        density={Table.DENSITY.AVERAGE}
-      >
-        <Table.TR>
-          <Table.TD>Seif</Table.TD>
-          <Table.TD>3</Table.TD>
-        </Table.TR>
-      </Table>
-    </div>
-  );
-}
-
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
-
-
-
-
 // import ReactDOM from 'react-dom'
 // import { Router, Route, browserHistory, IndexRoute  } from 'react-router'
 
