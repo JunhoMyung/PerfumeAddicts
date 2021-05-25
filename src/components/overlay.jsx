@@ -145,7 +145,7 @@ export default function SimpleModal() {
 
   const body = (
     <div style={modalStyle} className={classes.paper}>
-        <div className='overlaytitle'>CHOOSE SCENTS YOU AVOID</div>
+        <div className='overlaytitle'>DESELECT SCENTS YOU AVOID</div>
         <img src={ONE} style={{tintColor: imgColor1, opacity: imgOpacity1}}
                        onClick={SelectedIcon1} alt = "" className='icon'/>
         <img src={TWO} style={{tintColor: imgColor2, opacity: imgOpacity2}}
