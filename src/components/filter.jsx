@@ -1,14 +1,35 @@
 import { ScreenLockPortraitSharp } from '@material-ui/icons';
 import React from 'react'
 import NavBar from './NavBar.jsx'
-import Perfume1 from "../perfume_pictures/Perfume1.jpg"
-import Perfume2 from "../perfume_pictures/alarose.png"
-import Perfume3 from "../perfume_pictures/ckone.png"
-import Perfume4 from "../perfume_pictures/cherryblossom.png"
-import Perfume5 from "../perfume_pictures/doson.png"
-import Perfume6 from "../perfume_pictures/english_pear.png"
-import Perfume7 from "../perfume_pictures/voyage.png"
-import Perfume8 from "../perfume_pictures/unjardin.png"
+import Perfume1 from "../perfume_pictures/aventus creed.png"
+import Perfume2 from "../perfume_pictures/A La Rose.png"
+import Perfume3 from "../perfume_pictures/CK One.png"
+import Perfume4 from "../perfume_pictures/Cherry Blossom.png"
+import Perfume5 from "../perfume_pictures/Do Son.png"
+import Perfume6 from "../perfume_pictures/English Pear & Freesia.png"
+import Perfume7 from "../perfume_pictures/Voyage d'Hermes.png"
+import Perfume8 from "../perfume_pictures/Un Jardin En Mediterranee.png"
+import Perfume9 from "../perfume_pictures/Acqua di Gio Profumo.png"
+import Perfume10 from "../perfume_pictures/Alien Mugler.png"
+import Perfume11 from "../perfume_pictures/Aqua Allegoria Herba Fresca.png"
+import Perfume12 from "../perfume_pictures/Aqva Pour Homme Atlantiqve.png"
+import Perfume13 from "../perfume_pictures/Baccarat Rouge.png"
+import Perfume14 from "../perfume_pictures/Black Opium.png"
+import Perfume15 from "../perfume_pictures/Coco Mademoiselle.png"
+import Perfume16 from "../perfume_pictures/Fahrenheit Christian Dior.png"
+import Perfume17 from "../perfume_pictures/Honey Oud.png"
+import Perfume18 from "../perfume_pictures/La Nuit de I'Homme.png"
+import Perfume19 from "../perfume_pictures/Luna Rossa Carbon.png"
+import Perfume20 from "../perfume_pictures/Modern princess lanvin.png"
+import Perfume21 from "../perfume_pictures/Dry Wood Ramon.png"
+import Perfume22 from "../perfume_pictures/Poolside Breeze.png"
+import Perfume23 from "../perfume_pictures/Radish Vetiver.png"
+import Perfume24 from "../perfume_pictures/Sailing Day.png"
+import Perfume25 from "../perfume_pictures/Snow Mint.png"
+import Perfume26 from "../perfume_pictures/La Vie Est Belle.png"
+import Perfume27 from "../perfume_pictures/black orchid.png"
+import Perfume28 from "../perfume_pictures/Tobacco Vanille.png"
+import Perfume29 from "../perfume_pictures/Rock Volume One.png"
 
 
 // const rootElement = document.getElementById("root");
@@ -340,9 +361,51 @@ const filter = () => {
           <tr>
           <td className='main_table'><img src={Perfume7} alt = "" /></td>
           <td className='main_table'><img src={Perfume8} alt = "" /></td>
-          <td className='main_table'><img src={Perfume8} alt = "" /></td>
+          <td className='main_table'><img src={Perfume9} alt = "" /></td>
           </tr>
           
+          <tr>
+          <td className='main_table'><img src={Perfume10} alt = "" /></td>
+          <td className='main_table'><img src={Perfume11} alt = "" /></td>
+          <td className='main_table'><img src={Perfume12} alt = "" /></td>
+          </tr>
+
+          <tr>
+          <td className='main_table'><img src={Perfume13} alt = "" /></td>
+          <td className='main_table'><img src={Perfume14} alt = "" /></td>
+          <td className='main_table'><img src={Perfume15} alt = "" /></td>
+          </tr>
+
+          <tr>
+          <td className='main_table'><img src={Perfume16} alt = "" /></td>
+          <td className='main_table'><img src={Perfume17} alt = "" /></td>
+          <td className='main_table'><img src={Perfume18} alt = "" /></td>
+          </tr>
+          
+          <tr>
+          <td className='main_table'><img src={Perfume19} alt = "" /></td>
+          <td className='main_table'><img src={Perfume20} alt = "" /></td>
+          <td className='main_table'><img src={Perfume21} alt = "" /></td>
+          </tr>
+
+          <tr>
+          <td className='main_table'><img src={Perfume22} alt = "" /></td>
+          <td className='main_table'><img src={Perfume23} alt = "" /></td>
+          <td className='main_table'><img src={Perfume24} alt = "" /></td>
+          </tr>
+
+          <tr>
+          <td className='main_table'><img src={Perfume25} alt = "" /></td>
+          <td className='main_table'><img src={Perfume26} alt = "" /></td>
+          <td className='main_table'><img src={Perfume27} alt = "" /></td>
+          </tr>
+
+          <tr>
+          <td className='main_table'><img src={Perfume28} alt = "" /></td>
+          <td className='main_table'><img src={Perfume29} alt = "" /></td>
+          
+          </tr>
+
         </table>
 
   
