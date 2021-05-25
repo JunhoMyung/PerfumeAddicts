@@ -133,29 +133,32 @@ li.dropdown {
 }
 
 .sub_title {
-    padding-top: 10%;
-    padding-left: 10%;
     font-family: "Lato", sans-serif;
     font-weight: 1000;
     font-size: 15pt;
-    color: #582d68; 
-    top: 50%;
+    color: #582D68; 
+    position: absolute;
+    top: 135%;
+    left: 10%;
 }
 
 .main_title {
-    padding-top: 3%;
-    padding-left: 10%;
     font-family: "Lato", sans-serif;
     font-weight: 1000;
     font-size: 40pt;
     color: black; 
+    position: absolute;
+    top: 145%;
+    left: 10%;
 }
 
 .about_pic {
     height: 400px;
-    transform: translate(130%, 30%);
     text-align: right;
-    position: absolute;
+    position: relative;
+    left: 70%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .service {
