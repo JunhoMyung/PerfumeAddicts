@@ -15,9 +15,21 @@ import Fab from '@material-ui/core/Fab';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import Zoom from '@material-ui/core/Zoom';
 import PropTypes from "prop-types";
-import Toolbar from "@material-ui/core/Toolbar";
+import { createMuiTheme } from '@material-ui/core/styles';
+import purple from '@material-ui/core/colors/purple';
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 
 
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#A586B4",
+    },
+    secondary: {
+      main: '#f44336',
+    },
+  },
+});
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -94,11 +106,13 @@ const useStyles = makeStyles(theme => ({
                         Easily Feel Them
                 </div>
             </div>
+            <MuiThemeProvider theme={theme}>
             <ScrollTop {...props}>
                 <Fab color="primary" size="small" aria-label="scroll back to top">
                 <KeyboardArrowUpIcon />
                 </Fab>
             </ScrollTop>
+            </MuiThemeProvider>
         </React.Fragment>
     )
 }
