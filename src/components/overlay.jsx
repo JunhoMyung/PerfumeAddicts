@@ -137,6 +137,48 @@ export default function SimpleModal() {
     else {setimgColor12("transparent"); setimgOpacity12("100")}
   }
 
+  const handleFilter = () =>{
+    var temp_list = []
+    if (imgColor1 !== "transparent"){
+      temp_list.push(0)
+    }
+    if (imgColor2 !== "transparent"){
+      temp_list.push(1)
+    }
+    if (imgColor3 !== "transparent"){
+      temp_list.push(2)
+    }
+    if (imgColor4 !== "transparent"){
+      temp_list.push(3)
+    }
+    if (imgColor5 !== "transparent"){
+      temp_list.push(4)
+    }
+    if (imgColor6 !== "transparent"){
+      temp_list.push(5)
+    }
+    if (imgColor7 !== "transparent"){
+      temp_list.push(6)
+    }
+    if (imgColor8 !== "transparent"){
+      temp_list.push(7)
+    }
+    if (imgColor9 !== "transparent"){
+      temp_list.push(8)
+    }
+    if (imgColor10 !== "transparent"){
+      temp_list.push(9)
+    }
+    if (imgColor11 !== "transparent"){
+      temp_list.push(10)
+    }
+    if (imgColor12 !== "transparent"){
+      temp_list.push(11)
+    }
+    localStorage.setItem('deselect_item', temp_list)
+    setOpen(false);
+  }
+
   const body = (
     <Fade in={open}>
       <div className={classes.paper}>
@@ -199,7 +241,7 @@ export default function SimpleModal() {
               </tr>
             </tbody>
           </table>
-          <div className="button2" onClick = {()=>setOpen(false)}>Explore</div>     
+          <div className="button2" onClick = {handleFilter}>Explore</div>     
           <br/>   
           <br/>     
       </div>
