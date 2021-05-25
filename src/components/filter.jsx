@@ -3,6 +3,96 @@ import React from 'react'
 import NavBar from './NavBar.jsx'
 
 
+import Table from "./Table.js";
+
+function App() {
+  const data = [
+    {
+      Name: "Anssam",
+      Age: "20"
+    },
+    {
+      Name: "Rihab",
+      Age: "12"
+    },
+    {
+      Name: "Amir",
+      Age: "3"
+    }
+  ];
+
+  return (
+    <div className="App">
+      <Table
+        data={data}
+        theme={Table.THEME.DARK}
+        density={Table.DENSITY.AVERAGE}
+      >
+        <Table.TR>
+          <Table.TD>Seif</Table.TD>
+          <Table.TD>3</Table.TD>
+        </Table.TR>
+      </Table>
+    </div>
+  );
+}
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
+
+
+
+
+// import ReactDOM from 'react-dom'
+// import { Router, Route, browserHistory, IndexRoute  } from 'react-router'
+
+// class Table extends React.Component {
+//   constructor(props) {
+//      super(props)
+//      this.state = {
+//         students: [
+//         ]
+//      }
+//   }
+
+//   renderTableHeader() {
+//      let header = Object.keys(this.state.students[0])
+//      return header.map((key, index) => {
+//         return <th key={index}>{key.toUpperCase()}</th>
+//      })
+//   }
+
+//   renderTableData() {
+//      return this.state.students.map((student, index) => {
+//         const { id, name, age, email } = student //destructuring
+//         return (
+//            <tr key={id}>
+//               <td>{id}</td>
+//               <td>{name}</td>
+//               <td>{age}</td>
+//               <td>{email}</td>
+//            </tr>
+//         )
+//      })
+//   }
+
+//   render() {
+//      return (
+//         <div>
+//            <h1 id='title'>React Dynamic Table</h1>
+//            <table id='students'>
+//               <tbody>
+//                  <tr>{this.renderTableHeader()}</tr>
+//                  {this.renderTableData()}
+//               </tbody>
+//            </table>
+//         </div>
+//      )
+//   }
+// }
+
+// ReactDOM.render(<Table />, document.getElementById('root'));
+
 const filter = () => {
     // perfume_list = [[perfume_name, [tobefiltered_metric_list], img], [], []]
     const perfume_list = [
@@ -171,8 +261,40 @@ const filter = () => {
 //     }
 
 // checkbox()
+    // var [printlist] = useState([]);
+    var printlist = [];
+    printlist = [
+      {img: "img file tbd"},
+      {img: "img file tbd"},
+    ]
+    // function show_result(){
+    //   var printTable = document.getElementById('resultTable');
+    //   for (let i = 0; i < printlist.length; i++ ){
+    //     var newRow = printTable.insertRow(i+1);
+    //     var newCell1 = newRow.insertCell(0);
+    //     var newIdeaTitle = printlist[i]["img"];
+    //     newCell1.innerHTML = newIdeaTitle;
+    //   }
+    // }
+    // show_result()
 
 
+    // function show_perfume_() {
+    //   var table = document.getElementById("resultTable");
+    //   for (let i = 0; i < printlist.length; i++ ){
+    //     var row = table.insertRow(0);
+    //     var cell1 = row.insertCell(0);
+    //     cell1.innerHTML = printlist[i]["img"];
+    //   }
+    // }
+  
+    function show_perfume_list(){
+      var lst = [];
+      lst = printlist
+      for (let i = 0; i < lst.length; i++){
+        console.log(lst[i], i);
+      }
+    }
     // this.state = []
     // changestate = () => {
     //     this.setState(['musk'])
@@ -274,11 +396,18 @@ const filter = () => {
         <label for="choice_watery" id="watery"> Watery </label>
         </li>
 
+
         <table id='resultTable'>
-          <td> Perfume List available </td>
+          <tr>
+            <td> Perfume List available </td>
+          </tr>
         </table>
 
+        <button onclick={show_perfume_list}> Show Perfume list available </button>
+        
 
+        {/* <div id='root'></div> */}
+        
 
         {/* perfumeimg_list = [
         {
@@ -297,25 +426,19 @@ const filter = () => {
           }
         </script> */}
 
-            {/* {[perfumeimg_list].map((img, index) => {
+
+        {/* {[print_list].reverse().map((value, index) => {
             return (
-                <ReviewTable  width = "80%">
                     <tbody>
-
-                        if n%3 == 0
                         <tr>
-
-                            <td width = "80%">
-                            // nth index img1`
-                            </td>
-
+                            <td width = "80%">{value.img} </td>
+                        </tr>
+                        <tr>
                         </tr>
                     </tbody>
-                </ReviewTable>
-            )
-        })} */}
+                )
+        })}   */}
         
-
 
         {/* <div class="cell box" style="flex-grow: 0;">
         <div class="card-section"> */}
