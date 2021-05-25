@@ -1,10 +1,11 @@
 import './visual.css'
 import Perfume1 from "../perfume_pictures/Perfume1.jpg"
 import radar_chart from "../perfume_pictures/radar_chart.PNG"
-import React, { Component } from "react";
-import MyMusic from "./music.jsx";
+import React, { Component } from "react"
+import MyMusic from "./music.jsx"
 import ReactPlayer from 'react-player/youtube'
-import RadarChart from 'react-svg-radar-chart';
+import RadarChart from 'react-svg-radar-chart'
+import perfume_info from './perfume_info.jsx'
 //import 'react-svg-radar-chart/build/css/index.css'
 import NavBar from "./NavBar.jsx"
 
@@ -14,13 +15,17 @@ class visual extends Component {
         page : "detail",
         info : {
             id: 1,
-            name: "BLEU DE CHANEL",
-            price: ["$75 | ","$100",],
-            sizes: ["1.7 mL", "3.4 mL"]
+            name: perfume_info[0].name,
+            price: perfume_info[0].price,
+            sizes: perfume_info[0].volume
         },
-        total_price : 0,
+        total_price: 0,
         tab_state : 0,
         url: "https://www.youtube.com/watch?v=UDDMYw_IZnE&ab_channel=DopeLyrics"
+    }
+
+    Total_Price = (option) => {
+        this.state.info.total_price = option
     }
 
     music = () => {
@@ -30,28 +35,25 @@ class visual extends Component {
     detail = () => {
         this.setState({page : "detail"});
     }
-
+/*
+                citrus: perfume_info[0].radar_chart.citrus,
+                woody: perfume_info[0].radar_chart.woody,
+                spicy: perfume_info[0].radar_chart.spicy,
+                flower: perfume_info[0].radar_chart.flower,
+                fruit: perfume_info[0].radar_chart.fruit
+*/
     render_tab = () => {
+        //console.log(perfume_info[0].radar_chart)
         const data = [
             {
               data: {
-                citrus: 0.7,
-                woody: .8,
-                spicy: 0.9,
-                flower: 0.67,
-                fruit: 0.8
+                citrus: perfume_info[0].radar_chart.citrus,
+                woody: perfume_info[0].radar_chart.woody,
+                spicy: perfume_info[0].radar_chart.spicy,
+                flower: perfume_info[0].radar_chart.flowery,
+                fruit: perfume_info[0].radar_chart.fruity
               },
-              meta: { color: 'blue'}
-            },
-            {
-              data: {
-                citrus: 0.6,
-                woody: .85,
-                spicy: 0.5,
-                flower: 0.6,
-                fruit: 0.7
-              },
-              meta: { color: 'red' }
+              meta: { color: perfume_info[0].color }
             }
           ];
        
@@ -64,8 +66,7 @@ class visual extends Component {
             fruit: 'Fruit'
           };
         if (this.state.page === "detail"){
-            return(
-                ////<img src={radar_chart} className='radar_chart' alt = ""/> 
+            return( 
                 <div className='radar_chart'>
                     
         <RadarChart
@@ -100,14 +101,14 @@ class visual extends Component {
                                     <td className='inner_second_td'>
                                         <form>
                                         <select name='volume' id='volume' className='form'>
-                                            <option value='vol1'>{this.state.info.sizes[0]}</option>
-                                            <option value='vol2'>{this.state.info.sizes[1]}</option>
+                                            <option value='vol1' onClick={this.Total_Price(this.state.info.price[0])}>{this.state.info.sizes[0]}</option>
+                                            <option value='vol2' onClick={this.Total_Price(this.state.info.price[1])}>{this.state.info.sizes[1]}</option>
                                         </select>
                                     </form></td>   
                                 </tr>
                                 <tr>
-                                    <td><b>Price: </b></td>
-                                    <td className='inner_second_td'>{this.state.info.price}</td>   
+                                    <td><b>Price ($): </b></td>
+                                    <td className='inner_second_td'>{this.state.info.price[0]} | {this.state.info.price[1]}</td>   
                                 </tr>
                                 <tr>
                                     <td><b>Options:  </b></td>
@@ -130,8 +131,8 @@ class visual extends Component {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><b>Total:  </b></td>
-                                    <td className='inner_second_td'>${this.state.total_price}</td>
+                                    <td><b>Total ($):  </b></td>
+                                    <td className='inner_second_td'>{this.state.info.total_price}</td>
                                 </tr>
                                 </tbody>
                             </table>

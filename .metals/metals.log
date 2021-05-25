@@ -2,3 +2,4 @@
 [0m2021.05.24 21:17:01 INFO  time: initialize in 1.55s[0m
 [0m2021.05.24 21:17:01 WARN  Build server is not auto-connectable.[0m
 [0m2021.05.24 21:17:01 WARN  no build tool detected in workspace 'C:\MyWorld\KAIST\6th Semester Courses\HCI\Main Project\DP4\PerfumeAddicts'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.05.25 13:03:25 INFO  shutting down Metals[0m
