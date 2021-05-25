@@ -42,7 +42,7 @@ export class NavBar extends Component {
             const user_name = this.state.currentUser.displayName;
             return (
                 <div>
-                    <img src={LOGO_Full} alt = "" className='logo'/>
+                    <img src={LOGO_Full} alt = "" className='logo' onClick={() => {window.location.href = "/"}}/>
                     <ul>
                         <li><a href="/">HOME</a></li>
                         <li><a href="/">ABOUT</a></li>
