@@ -151,3 +151,13 @@ td{
     box-shadow:2px 2px 5px 0 rgba(0,0,0,.75)
 }
 /*# sourceMappingURL=index.css.map*/
+
+.quantity{
+    width: 107px;
+}
+
+.reset{
+    width: 60px;
+    
+    position: absolute;
+}

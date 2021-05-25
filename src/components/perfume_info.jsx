@@ -1,5 +1,34 @@
 import { red } from "@material-ui/core/colors"
-import Perfume1 from "../perfume_pictures/Perfume1.jpg"
+import Perfume1 from "../perfume_pictures/350x250/Perfume1.png"
+import Perfume2 from "../perfume_pictures/350x250/Perfume2.png"
+import Perfume3 from "../perfume_pictures/350x250/Perfume3.png"
+import Perfume4 from "../perfume_pictures/350x250/Perfume4.png"
+import Perfume5 from "../perfume_pictures/350x250/Perfume5.png"
+import Perfume6 from "../perfume_pictures/350x250/Perfume6.png"
+import Perfume7 from "../perfume_pictures/350x250/Perfume7.png"
+import Perfume8 from "../perfume_pictures/350x250/Perfume8.png"
+import Perfume9 from "../perfume_pictures/350x250/Perfume9.png"
+import Perfume10 from "../perfume_pictures/350x250/Perfume10.png"
+import Perfume11 from "../perfume_pictures/350x250/Perfume11.png"
+import Perfume12 from "../perfume_pictures/350x250/Perfume12.png"
+import Perfume13 from "../perfume_pictures/350x250/Perfume13.png"
+import Perfume14 from "../perfume_pictures/350x250/Perfume14.png"
+import Perfume15 from "../perfume_pictures/350x250/Perfume15.png"
+import Perfume16 from "../perfume_pictures/350x250/Perfume16.png"
+import Perfume17 from "../perfume_pictures/350x250/Perfume17.png"
+import Perfume18 from "../perfume_pictures/350x250/Perfume18.png"
+import Perfume19 from "../perfume_pictures/350x250/Perfume19.png"
+import Perfume20 from "../perfume_pictures/350x250/Perfume20.png"
+import Perfume21 from "../perfume_pictures/350x250/Perfume21.png"
+import Perfume22 from "../perfume_pictures/350x250/Perfume22.png"
+import Perfume23 from "../perfume_pictures/350x250/Perfume23.png"
+import Perfume24 from "../perfume_pictures/350x250/Perfume23.png"
+import Perfume25 from "../perfume_pictures/350x250/Perfume25.png"
+import Perfume26 from "../perfume_pictures/350x250/Perfume26.png"
+import Perfume27 from "../perfume_pictures/350x250/Perfume27.png"
+import Perfume28 from "../perfume_pictures/350x250/Perfume28.png"
+import Perfume29 from "../perfume_pictures/350x250/Perfume29.png"
+
 
 const perfume_info = [
     {
@@ -14,8 +43,8 @@ const perfume_info = [
     },
     {
       "name": "English Pear & Freesia",
-      "pic_name": <img src={Perfume1} alt = "" />,
-      "color": "",
+      "pic_name": <img src={Perfume2} alt = "" />,
+      "color": "red",
       "brand": "Jo Malone London",
       "price": [53.00, 29.00],
       "volume": [250, 100],
@@ -24,8 +53,8 @@ const perfume_info = [
     },
     {
       "name": "Do Son",
-      "pic_name": <img src={Perfume1} alt = "" />,
-      "color": "",
+      "pic_name": <img src={Perfume3} alt = "" />,
+      "color": "red",
       "brand": "Diptyque",
       "price": [131.00, 94.00],
       "volume": [100, 50],
@@ -34,8 +63,8 @@ const perfume_info = [
     },
     {
       "name": "Un Jardin En Mediterranee",
-      "pic_name": <img src={Perfume1} alt = "" />,
-      "color": "",
+      "pic_name": <img src={Perfume4} alt = "" />,
+      "color": "red",
       "brand": "Hermes",
       "price": [105.00, 85.50, 60.00],
       "volume": [100, 50, 30],
@@ -44,8 +73,8 @@ const perfume_info = [
     },
     {
       "name": "Voyage d'Hermes",
-      "pic_name": <img src={Perfume1} alt = "" />,
-      "color": "",
+      "pic_name": <img src={Perfume5} alt = "" />,
+      "color": "red",
       "brand": "Hermes",
       "price": [126.00, 84.00],
       "volume": [100, 35],
@@ -54,8 +83,8 @@ const perfume_info = [
     },
     {
         "name": "La Vie Est Belle",
-        "pic_name": <img src={Perfume1} alt = "" />,
-        "color": "",
+        "pic_name": <img src={Perfume6} alt = "" />,
+        "color": "red",
         "brand": "Lancome",
         "price": [133.00, 100.00],
         "volume": [100, 50],
@@ -64,8 +93,8 @@ const perfume_info = [
       },
       {
         "name": "Cherry Blossom",
-        "pic_name": <img src={Perfume1} alt = "" />,
-        "color": "",
+        "pic_name": <img src={Perfume7} alt = "" />,
+        "color": "red",
         "brand": "L'Occitane en Provence",
         "price": [50.00, 65.00],
         "volume": [75, 100],
@@ -74,8 +103,8 @@ const perfume_info = [
       },
       {
         "name": "A La Rose ",
-        "pic_name": <img src={Perfume1} alt = "" />,
-        "color": "",
+        "pic_name": <img src={Perfume8} alt = "" />,
+        "color": "red",
         "brand": "Maison Francis Kurkdjian",
         "price": [164.00, 104.00],
         "volume": [70, 35],
@@ -84,8 +113,8 @@ const perfume_info = [
       },
       {
         "name": "Modern Princess",
-        "pic_name": <img src={Perfume1} alt = "" />,
-        "color": "",
+        "pic_name": <img src={Perfume9} alt = "" />,
+        "color": "red",
         "brand": "Lanvin",
         "price": [30.00, 55.00],
         "volume": [50, 100],
@@ -94,8 +123,8 @@ const perfume_info = [
       },
       {
         "name": "Baccarat Rouge",
-        "pic_name": <img src={Perfume1} alt = "" />,
-        "color": "",
+        "pic_name": <img src={Perfume10} alt = "" />,
+        "color": "red",
         "brand": "Maison Francis Kurkdjian",
         "price": [78.00, 99.00],
         "volume": [70, 100],
@@ -104,8 +133,8 @@ const perfume_info = [
       },
       {
         "name": "Alien",
-        "pic_name": <img src={Perfume1} alt = "" />,
-        "color": "",
+        "pic_name": <img src={Perfume11} alt = "" />,
+        "color": "red",
         "brand": "Mugler",
         "price": [21.00, 35.00],
         "volume": [30, 50],
@@ -114,8 +143,8 @@ const perfume_info = [
       },
       {
         "name": "Tobacco Vanille",
-        "pic_name": <img src={Perfume1} alt = "" />,
-        "color": "",
+        "pic_name": <img src={Perfume12} alt = "" />,
+        "color": "red",
         "brand": "Tom Ford",
         "price": [45.00, 80.00],
         "volume": [50, 100],
@@ -124,8 +153,8 @@ const perfume_info = [
       },
       {
         "name": "Aventus",
-        "pic_name": <img src={Perfume1} alt = "" />,
-        "color": "",
+        "pic_name": <img src={Perfume13} alt = "" />,
+        "color": "red",
         "brand": "Creed",
         "price": [26.00, 36.00, 50.00],
         "volume": [30, 75, 250],
@@ -134,8 +163,8 @@ const perfume_info = [
       },
       {
         "name": "Coco Mademoiselle",
-        "pic_name": <img src={Perfume1} alt = "" />,
-        "color": "",
+        "pic_name": <img src={Perfume14} alt = "" />,
+        "color": "red",
         "brand": "Chanel",
         "price": [32.00, 50.00],
         "volume": [100, 250],
@@ -144,8 +173,8 @@ const perfume_info = [
       },
       {
         "name": "Black Opium",
-        "pic_name": <img src={Perfume1} alt = "" />,
-        "color": "",
+        "pic_name": <img src={Perfume15} alt = "" />,
+        "color": "red",
         "brand": "Yves Sain Laurent",
         "price": [40.00, 60.00, 75.00],
         "volume": [30, 50, 100],
@@ -154,8 +183,8 @@ const perfume_info = [
       },
       {
           "name": "Black Orchid",
-          "pic_name": <img src={Perfume1} alt = "" />,
-          "color": "",
+          "pic_name": <img src={Perfume16} alt = "" />,
+          "color": "red",
           "brand": "Tom Ford",
           "price": [65.00, 75.00],
           "volume": [40, 50],
@@ -164,8 +193,8 @@ const perfume_info = [
         },
         {
           "name": "La Nuit de I'Homme",
-          "pic_name": <img src={Perfume1} alt = "" />,
-          "color": "",
+          "pic_name": <img src={Perfume17} alt = "" />,
+          "color": "red",
           "brand": "Yves Sain Laurent",
           "price": [87.00, 100.00, 115.00],
           "volume": [40, 60, 100],
@@ -174,8 +203,8 @@ const perfume_info = [
         },
         {
           "name": "Rock Volume One",
-          "pic_name": <img src={Perfume1} alt = "" />,
-          "color": "",
+          "pic_name": <img src={Perfume18} alt = "" />,
+          "color": "red",
           "brand": "John Varvatos",
           "price": [27.00, 22.00],
           "volume": [100, 50],
@@ -184,8 +213,8 @@ const perfume_info = [
         },
         {
           "name": "Fahrenheit",
-          "pic_name": <img src={Perfume1} alt = "" />,
-          "color": "",
+          "pic_name": <img src={Perfume19} alt = "" />,
+          "color": "red",
           "brand": "Christian Dior",
           "price": [53.00, 29.00],
           "volume": [250, 100],
@@ -194,8 +223,8 @@ const perfume_info = [
         },
         {
           "name": "Acqua di Giò Profumo",
-          "pic_name": <img src={Perfume1} alt = "" />,
-          "color": "",
+          "pic_name": <img src={Perfume20} alt = "" />,
+          "color": "red",
           "brand": "Giorgioa Armani",
           "price": [131.00, 94.00],
           "volume": [100, 50],
@@ -204,8 +233,8 @@ const perfume_info = [
         },
         {
             "name": "Sailing Day",
-            "pic_name": <img src={Perfume1} alt = "" />,
-            "color": "",
+            "pic_name": <img src={Perfume21} alt = "" />,
+            "color": "red",
             "brand": "Maison Martin Margiela",
             "price": [30.00, 135.00],
             "volume": [10, 100],
@@ -214,8 +243,8 @@ const perfume_info = [
           },
           {
             "name": "Snow Mint",
-            "pic_name": <img src={Perfume1} alt = "" />,
-            "color": "",
+            "pic_name": <img src={Perfume22} alt = "" />,
+            "color": "red",
             "brand": "Victoria's Secret",
             "price": [164.00, 104.00],
             "volume": [70, 35],
@@ -224,8 +253,8 @@ const perfume_info = [
           },
           {
             "name": "Aqva Pour Homme Atlantiqve ",
-            "pic_name": <img src={Perfume1} alt = "" />,
-            "color": "",
+            "pic_name": <img src={Perfume23} alt = "" />,
+            "color": "red",
             "brand": "Bvlgari",
             "price": [45.00, 80.00],
             "volume": [50, 100],
@@ -234,8 +263,8 @@ const perfume_info = [
           },
           {
             "name": "Aqua Allegoria Herba Fresca",
-            "pic_name": <img src={Perfume1} alt = "" />,
-            "color": "",
+            "pic_name": <img src={Perfume24} alt = "" />,
+            "color": "red",
             "brand": "Guerlain",
             "price": [32.00, 50.00],
             "volume": [100, 250],
@@ -244,8 +273,8 @@ const perfume_info = [
           },
           {
             "name": "Poolside Breeze",
-            "pic_name": <img src={Perfume1} alt = "" />,
-            "color": "",
+            "pic_name": <img src={Perfume25} alt = "" />,
+            "color": "red",
             "brand": "Victoria's Secret",
             "price": [21.00, 35.00],
             "volume": [30, 50],
@@ -254,8 +283,8 @@ const perfume_info = [
           },
           {
             "name": "Luna Rossa Carbon",
-            "pic_name": <img src={Perfume1} alt = "" />,
-            "color": "",
+            "pic_name": <img src={Perfume26} alt = "" />,
+            "color": "red",
             "brand": "Prada",
             "price": [126.00, 84.00],
             "volume": [100, 35],
@@ -264,8 +293,8 @@ const perfume_info = [
           },
           {
               "name": "Radish Vetiver ",
-              "pic_name": <img src={Perfume1} alt = "" />,
-              "color": "",
+              "pic_name": <img src={Perfume27} alt = "" />,
+              "color": "red",
               "brand": "Comme des Garcons",
               "price": [65.00, 75.00],
               "volume": [40, 50],
@@ -274,8 +303,8 @@ const perfume_info = [
             },
             {
               "name": "Dry Wood Ramon",
-              "pic_name": <img src={Perfume1} alt = "" />,
-              "color": "",
+              "pic_name": <img src={Perfume28} alt = "" />,
+              "color": "red",
               "brand": "Mogegal",
               "price": [164.00, 104.00],
               "volume": [70, 35],
@@ -284,8 +313,8 @@ const perfume_info = [
             },
             {
               "name": "Honey Oud",
-              "pic_name": <img src={Perfume1} alt = "" />,
-              "color": "",
+              "pic_name": <img src={Perfume29} alt = "" />,
+              "color": "red",
               "brand": "Floris",
               "price": [45.00, 80.00],
               "volume": [50, 100],
