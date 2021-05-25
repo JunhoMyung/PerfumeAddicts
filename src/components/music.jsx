@@ -132,9 +132,14 @@ export default function Music() {
     }
 
     const onsubmit = () => {
-
-        setOpen(false);
-        updateDB();
+        if (title !== "" && artist !== "" && url !== "" && description !== ""){
+            setOpen(false);
+            updateDB();
+        }
+        else{
+            alert("Please fill in all fields.")
+        }
+        
     }
 
     const updateDB = () => {
@@ -203,7 +208,11 @@ export default function Music() {
                             )
                         }
                     })}
-                    <button onClick = {show_more}>show more</button>
+                    {() => {if (review_order.length > 3){
+                        return(
+                            <button onClick = {show_more}>show more</button>
+                        )
+                    }}}
                 </div>
             )
         }
