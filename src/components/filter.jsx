@@ -40,123 +40,123 @@ import Perfume29 from "../perfume_pictures/Rock Volume One.png"
 const filter = () => {
     // perfume_list = [[perfume_name, [tobefiltered_metric_list], img], [], []]
     const perfume_list = [
-        {
-          "name": "CK One",
-          "ingredient": ["woody", "citrus", "floral", "aromatic"]
-        },
-        {
-          "name": "English Pear & Freesia",
-          "ingredient": ["floral", "honey", "minty"]
-        },
-        {
-          "name": "Do Son",
-          "ingredient": ["floral", "citrus", "musk"]
-        },
-        {
-          "name": "Un Jardin En Mediterranee",
-          "ingredient": ["citrus", "green", "floral", "woody"]
-        },
-        {
-          "name": "Voyage d'Hermes",
-          "ingredient": ["aromatic", "citrus", "musk", "woody"]
-        },
-        {
-            "name": "La Vie Est Belle",
-            "ingredient": ["floral", "minty", "powdery"]
-          },
-          {
-            "name": "Cherry Blossom",
-            "ingredient": ["floral", "musk"]
-          },
-          {
-            "name": "A La Rose ",
-            "ingredient": ["citrus", "musk", "woody", "floral"]
-          },
-          {
-            "name": "Modern Princess",
-            "ingredient": ["floral", "honey"]
-          },
-          {
-            "name": "Baccarat Rouge",
-            "ingredient": ["woody", "spicy", "aromatic", "oriental"]
-          },
-          {
-            "name": "Alien",
-            "ingredient": ["floral", "powdery", "woody"]
-          },
-          {
-            "name": "Tobacco Vanille",
-            "ingredient": ["oriental", "powdery", "spicy", "dry"]
-          },
-          {
-            "name": "Aventus",
-            "ingredient": ["woody", "green", "musk", "citrus"]
-          },
-          {
-            "name": "Coco Mademoiselle",
-            "ingredient": ["citrus", "woody", "floral", "spicy"]
-          },
-          {
-            "name": "Black Opium",
-            "ingredient": ["floral", "powdery", "woody"]
-          },
-          {
-              "name": "Black Orchid",
-              "ingredient": ["oriental", "woody", "floral"]
-            },
-            {
-              "name": "La Nuit de I'Homme",
-              "ingredient": ["aromatic", "spicy", "woody", "citrus"]
-            },
-            {
-              "name": "Rock Volume One",
-              "ingredient": ["leathery", "metallic", "aromatic"]
-            },
-            {
-              "name": "Fahrenheit",
-              "ingredient": ["leathery", "woody"]
-            },
-            {
-              "name": "Acqua di Giò Profumo",
-              "ingredient": ["aromatic", "marine", "minty"]
-            },
-            {
-                "name": "Sailing Day",
-                "ingredient": ["marine", "woody", "watery"]
-              },
-              {
-                "name": "Snow Mint",
-                "ingredient": ["green", "minty", "aromatic"]
-              },
-              {
-                "name": "Aqva Pour Homme Atlantiqve ",
-                "ingredient": ["minty", "watery", "marine", "citrus"]
-              },
-              {
-                "name": "Aqua Allegoria Herba Fresca",
-                "ingredient": ["minty", "green", "citrus"]
-              },
-              {
-                "name": "Poolside Breeze",
-                "ingredient": ["watery", "floral"]
-              },
-              {
-                "name": "Luna Rossa Carbon",
-                "ingredient": ["spicy", "metallic", "aromatic"]
-              },
-              {
-                  "name": "Radish Vetiver ",
-                  "ingredient": ["dry", "green", "woody"]
-                },
-                {
-                  "name": "Dry Wood Ramon",
-                  "ingredient": ["dry", "woody", "spicy"]
-                },
-                {
-                  "name": "Honey Oud",
-                  "ingredient": ["honey", "floral"]
-                }
-    ]
+      {
+        "name": "CK One",
+        "ingredient": ["citrus", "green", "drywood", "mossywood", "powdery"]
+      },
+      {
+        "name": "English Pear & Freesia",
+        "ingredient": ["floral", "fruity", "water", "musk", "aromatic"]
+      },
+      {
+        "name": "Do Son",
+        "ingredient": ["floral", "citrus", "musk"]
+      },
+      {
+        "name": "Un Jardin En Mediterranee",
+        "ingredient": ["citrus", "aromatic", "floral", "mossywood"]
+      },
+      {
+        "name": "Voyage d'Hermes",
+        "ingredient": ["softspicy", "citrus", "green", "aromatic", "drywood"]
+      },
+      {
+        "name": "La Vie Est Belle",
+        "ingredient": ["fruity", "aromatic", "softspicy"]
+      },
+      {
+        "name": "Cherry Blossom",
+        "ingredient": ["floral", "fruity", "musk"]
+      },
+      {
+        "name": "A La Rose ",
+        "ingredient": ["citrus", "musk", "drywood", "floral"]
+      },
+      {
+        "name": "Modern Princess",
+        "ingredient": ["fruity", "aromatic", "floral"]
+      },
+      {
+        "name": "Baccarat Rouge",
+        "ingredient": ["drywood", "softspicy", "aromatic"]
+      },
+      {
+        "name": "Alien",
+        "ingredient": ["floral", "powdery", "softspicy", "drywood"] 
+      },
+      {
+        "name": "Tobacco Vanille",
+        "ingredient": ["softspicy", "powdery", "drywood"]
+      },
+      {
+        "name": "Aventus",
+        "ingredient": ["drywood", "green", "musk", "citrus"]
+      },
+      {
+        "name": "Coco Mademoiselle",
+        "ingredient": ["citrus", "drywood", "floral", "softspicy"]
+      },
+      {
+        "name": "Black Opium",
+        "ingredient": ["floral", "powdery", "drywood", "fruity"]
+      },
+      {
+        "name": "Black Orchid",
+        "ingredient": ["softspicy", "drywood", "floral"]
+      },
+      {
+        "name": "La Nuit de I'Homme",
+        "ingredient": ["aromatic", "softspicy", "drywood", "citrus"]
+      },
+      {
+        "name": "Rock Volume One",
+        "ingredient": ["musk", "sharpspicy"]
+      },
+      {
+        "name": "Fahrenheit",
+        "ingredient": ["musk", "drywood"]
+      },
+      {
+        "name": "Acqua di Giò Profumo",
+        "ingredient": ["aromatic", "water"]
+      },
+      {
+        "name": "Sailing Day",
+        "ingredient": ["mossywood", "water"]
+      },
+      {
+        "name": "Snow Mint",
+        "ingredient": ["green", "aromatic"]
+      },
+      {
+        "name": "Aqva Pour Homme Atlantiqve ",
+        "ingredient": ["aromatic", "water", "citrus"]
+      },
+      {
+        "name": "Aqua Allegoria Herba Fresca",
+        "ingredient": ["green", "citrus", "aromatic"]
+      },
+      {
+        "name": "Poolside Breeze",
+        "ingredient": ["water", "floral"]
+      },
+      {
+        "name": "Luna Rossa Carbon",
+        "ingredient": ["sharpspicy", "aromatic"]
+      },
+      {
+        "name": "Radish Vetiver ",
+        "ingredient": ["drywood", "green"]
+      },
+      {
+        "name": "Dry Wood Ramon",
+        "ingredient": ["drywood", "sharpspicy"]
+      },
+      {
+        "name": "Honey Oud",
+        "ingredient": ["powdery", "floral", "fruity"]
+      }
+   ]
     // checked elements to be filtered
 
     var filter_list = ["metallic", "citrus"];
