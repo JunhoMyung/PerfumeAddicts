@@ -35,7 +35,6 @@ function getModalStyle() {
 const useStyles = makeStyles((theme) => ({
   paper: {
     position: 'absolute',
-    width: 700,
     height: 400,
     backgroundColor: '#b1b2b0',
     border: '2px solid #000',
@@ -146,30 +145,64 @@ export default function SimpleModal() {
   const body = (
     <div style={modalStyle} className={classes.paper}>
         <div className='overlaytitle'>CHOOSE SCENTS YOU AVOID</div>
-        <img src={ONE} style={{tintColor: imgColor1, opacity: imgOpacity1}}
-                       onClick={SelectedIcon1} alt = "" className='icon'/>
-        <img src={TWO} style={{tintColor: imgColor2, opacity: imgOpacity2}}
-                       onClick={SelectedIcon2} alt = "" className='icon'/>
-        <img src={THREE} style={{tintColor: imgColor3, opacity: imgOpacity3}}
-                         onClick={SelectedIcon3} alt = "" className='icon'/>
-        <img src={FOUR} style={{tintColor: imgColor4, opacity: imgOpacity4}}
+        <table className = "overlaytable" width = "700px">
+          <tbody>
+            <tr>
+              <td align = 'center'>
+                <img src={ONE} style={{tintColor: imgColor1, opacity: imgOpacity1}}
+                        onClick={SelectedIcon1} alt = "" className='icon'/>
+              </td>
+              <td align = 'center'>
+                <img src={TWO} style={{tintColor: imgColor2, opacity: imgOpacity2}}
+                        onClick={SelectedIcon2} alt = "" className='icon'/>
+              </td>
+              <td align = 'center'>
+                <img src={THREE} style={{tintColor: imgColor3, opacity: imgOpacity3}}
+                        onClick={SelectedIcon3} alt = "" className='icon'/>
+              </td>
+              <td align = 'center'>
+                <img src={FOUR} style={{tintColor: imgColor4, opacity: imgOpacity4}}
                         onClick={SelectedIcon4} alt = "" className='icon'/>
-        <img src={FIVE} style={{tintColor: imgColor5, opacity: imgOpacity5}}
+              </td>
+            </tr>
+            <tr>
+              <td align = 'center'>
+                <img src={FIVE} style={{tintColor: imgColor5, opacity: imgOpacity5}}
                         onClick={SelectedIcon5} alt = "" className='icon'/>
-        <img src={SIX} style={{tintColor: imgColor6, opacity: imgOpacity6}}
-                       onClick={SelectedIcon6} alt = "" className='icon'/>
-        <img src={SEVEN} style={{tintColor: imgColor7, opacity: imgOpacity7}}
-                         onClick={SelectedIcon7} alt = "" className='icon'/>
-        <img src={EIGHT} style={{tintColor: imgColor8, opacity: imgOpacity8}}
-                         onClick={SelectedIcon8} alt = "" className='icon'/>
-        <img src={NINE} style={{tintColor: imgColor9, opacity: imgOpacity9}}
-                        onClick={SelectedIcon9} alt = "" className='icon'/>
-        <img src={TEN} style={{tintColor: imgColor10, opacity: imgOpacity10}}
-                       onClick={SelectedIcon10} alt = "" className='icon'/>
-        <img src={ELEVEN} style={{tintColor: imgColor11, opacity: imgOpacity11}}
-                          onClick={SelectedIcon11} alt = "" className='icon'/>
-        <img src={TWELVE} style={{tintColor: imgColor12, opacity: imgOpacity12}}
-                          onClick={SelectedIcon12} alt = "" className='icon'/>
+              </td>
+              <td align = 'center'>
+                <img src={SIX} style={{tintColor: imgColor6, opacity: imgOpacity6}}
+                        onClick={SelectedIcon6} alt = "" className='icon'/>
+              </td>
+              <td align = 'center'>
+                <img src={SEVEN} style={{tintColor: imgColor7, opacity: imgOpacity7}}
+                        onClick={SelectedIcon7} alt = "" className='icon'/>
+              </td>
+              <td align = 'center'>
+                <img src={EIGHT} style={{tintColor: imgColor8, opacity: imgOpacity8}}
+                        onClick={SelectedIcon8} alt = "" className='icon'/>
+              </td>
+            </tr>
+            <tr>
+              <td align = 'center'>
+                <img src={NINE} style={{tintColor: imgColor9, opacity: imgOpacity9}}
+                        onClick={SelectedIcon9} alt = "" className='icon'/>  
+              </td>
+              <td align = 'center'>
+                <img src={TEN} style={{tintColor: imgColor10, opacity: imgOpacity10}}
+                        onClick={SelectedIcon10} alt = "" className='icon'/>
+              </td>   
+              <td align = 'center'>
+                <img src={ELEVEN} style={{tintColor: imgColor11, opacity: imgOpacity11}}
+                        onClick={SelectedIcon11} alt = "" className='icon'/>
+              </td>
+              <td align = 'center'>
+                <img src={TWELVE} style={{tintColor: imgColor12, opacity: imgOpacity12}}
+                        onClick={SelectedIcon12} alt = "" className='icon'/>
+              </td>
+            </tr>
+          </tbody>
+        </table>        
     </div>
   );
 
