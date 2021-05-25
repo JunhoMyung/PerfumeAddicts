@@ -258,7 +258,8 @@ const filter = () => {
         <h2> Choose scents to avoid: </h2>
 
         
-        {/* <li class="choice1">
+
+        <li class="choice1">
         <input name="input1" type="checkbox" value="1" id="choice_musk" ></input>
         <label for="choice_musk" id="musk"> Musk </label>
         </li>
@@ -336,11 +337,12 @@ const filter = () => {
         <li class="choice16">
         <input name="input16" type="checkbox" value="16" id="choice_watery"></input>
         <label for="choice_watery" id="watery"> Watery </label>
-        </li> */}
+        </li>
 
-          <tr>
-            <td> <h1> Perfume List available </h1></td>
-          </tr>
+        {/* 줄바꿈 필요함, line break needed */}
+        <tr>
+          <td> <br></br> <h1> Perfume List available </h1></td>
+        </tr>
 
         <table id='resultTable'>
 
