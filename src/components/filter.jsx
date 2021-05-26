@@ -128,7 +128,7 @@ export default function Filter(props) {
       }
     }
     setDisplay(temp2)
-  }, [])
+  }, [filter_list, filter_length])
 
 
   const display = () => {
