@@ -3,10 +3,68 @@ import './filter.css'
 import React, { useState, useEffect } from "react";
 import NavBar from './NavBar.jsx'
 import perfume_info from './perfume_info.jsx'
-import { ThemeProvider } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import Fab from '@material-ui/core/Fab';
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import Zoom from '@material-ui/core/Zoom';
+import PropTypes from "prop-types";
+import { createMuiTheme } from '@material-ui/core/styles';
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 
-export default function Filter() {
     
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#A586B4",
+    },
+    secondary: {
+      main: '#f44336',
+    },
+  },
+});
+
+const useStyles = makeStyles(theme => ({
+    root: {
+      position: "fixed",
+      bottom: theme.spacing(2),
+      right: theme.spacing(2)
+    }
+  }));
+  
+  function ScrollTop(props) {
+    const { children } = props;
+    const classes = useStyles();
+    const trigger = useScrollTrigger({
+      disableHysteresis: true,
+      threshold: 100
+    });
+  
+    const handleClick = event => {
+      const anchor = (event.target.ownerDocument || document).querySelector(
+        "#back-to-top-anchor"
+      );
+  
+      if (anchor) {
+        anchor.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    };
+  
+    return (
+      <Zoom in={trigger}>
+        <div onClick={handleClick} role="presentation" className={classes.root}>
+          {children}
+        </div>
+      </Zoom>
+    );
+  }
+  
+  ScrollTop.propTypes = {
+    children: PropTypes.element.isRequired
+  };
+
+export default function Filter(props) {
+
   const [displayList, setDisplay] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]);
   const filter_list = []
   const filter_length = localStorage.getItem('length')
@@ -101,6 +159,7 @@ export default function Filter() {
   }
 
     return (
+        <React.Fragment>
         <div>
           <NavBar/>
           <div className="filtertitle">FIND YOUR PERFUME</div>
@@ -109,5 +168,13 @@ export default function Filter() {
             {display()}
           </div>
         </div>
+        <MuiThemeProvider theme={theme}>
+            <ScrollTop {...props}>
+                <Fab color="primary" size="small" aria-label="scroll back to top">
+                <KeyboardArrowUpIcon />
+                </Fab>
+            </ScrollTop>
+            </MuiThemeProvider>
+        </React.Fragment>
     )
 }

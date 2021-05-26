@@ -258,9 +258,19 @@ export default function SimpleModal() {
 
   return (
     <div>
-      <button type="button" className = "button3" onClick={handleOpen} height="50px">
-        <div id = 'txt'> Start Filtering </div>
-      </button>
+      <div className="start_filtering" onClick={handleOpen}>
+      {/* <button type="button" className = "button3" onClick={handleOpen} height="50px"> */}
+        {/* <div id = 'txt'> */}
+        Start Filtering 
+        {/* </div> */}
+      {/* </button> */}
+      </div>
+      <br/>
+      <br/>
+      {/* <br/> */}
+      <br/>
+      <br/>
+      <hr width="1050px"/>
 
       <Modal
           aria-labelledby="transition-modal-title"
