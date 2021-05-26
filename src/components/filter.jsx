@@ -66,7 +66,6 @@ const useStyles = makeStyles(theme => ({
 export default function Filter(props) {
 
   const [displayList, setDisplay] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]);
-  const filter_list = []
   const filter_length = localStorage.getItem('length')
     // var filter_list = ["metallic", "citrus"];
     // var showlist = [];
@@ -109,6 +108,7 @@ export default function Filter(props) {
     // console.log(perfume_image_list);
 
   useEffect(() => {
+    const filter_list = []
     for (let k = 0; k < filter_length; k++){
       filter_list.push(localStorage.getItem('index' + k))
     }
@@ -128,7 +128,7 @@ export default function Filter(props) {
       }
     }
     setDisplay(temp2)
-  }, [filter_list, filter_length])
+  }, [filter_length])
 
 
   const display = () => {
