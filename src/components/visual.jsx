@@ -165,17 +165,17 @@ class visual extends Component {
         return (
             <div>
                 <NavBar />
-                <br/><br/>
+                <div>
                 <table>
                     <tbody>
                     <tr>
-                        <td className='main_table'>{perfume_info[this.perfume_id.id].pic_name}</td>
+                        <td className="perfume_picture">{perfume_info[this.perfume_id.id].pic_name}</td>
                         <td className='main_table'>
-                            <h3><b>{this.state.info.name} &emsp;</b></h3>
+                            <h3 className="perfume_name"><b>{this.state.info.name} &emsp;</b></h3>
                             <table>
                                 <tbody>
                                 <tr> 
-                                    <td><b>Volume:  </b></td>
+                                    <td className="inner_first_td"><b>Volume:  </b></td>
                                     <td className='inner_second_td'>
                                         <form>
                                         <select name='volume' id='volume' className='form' onChange={this.changePrice}>
@@ -185,12 +185,12 @@ class visual extends Component {
                                     </form></td>   
                                 </tr>
                                 <tr>
-                                    <td><b>Price: </b></td>
+                                    <td className="inner_first_td"><b>Price: </b></td>
                                     <td className='inner_second_td'>${this.state.current_price}</td>   
                                 </tr>
                                 
                                 <tr>
-                                    <td><b>Quantity:  </b></td>
+                                    <td className="inner_first_td"><b>Quantity:  </b></td>
                                     <td className='inner_second_td'>
                                         <form>
                                             <input type="text" id="quantity" name="quantity" className='quantity' value={this.state.quantity} onChange={this.changeTotalPrice} onKeyDown={this.changeQuantity} />
@@ -198,7 +198,7 @@ class visual extends Component {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><b>Total:  </b></td>
+                                    <td className="inner_first_td"><b>Total:  </b></td>
                                     <td className='inner_second_td'>${this.state.total_price} &emsp; &emsp; 
                                     <button className='reset' onClick={this.reset}>Reset</button>
                                     </td>
@@ -206,12 +206,12 @@ class visual extends Component {
                                 </tr>
                                 </tbody>
                             </table>
-                            <button>BUY NOW</button> &emsp;
                             <button onClick = {this.wishlist}>ADD TO WISH-LIST</button>
                         </td>            
                     </tr>
                     </tbody>
                 </table>
+                </div>
     
                 &emsp; &emsp; Currently playing: {this.state.music_title} - {this.state.music_artist}
                 <ReactPlayer url = {this.state.url} controls = {true} playing = {true} width="340px" height="200px" volume = {0.2}/>

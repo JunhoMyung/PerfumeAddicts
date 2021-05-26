@@ -19,14 +19,30 @@
 }
 
 .main_table{
-    padding-left: 25px;
+    /* padding-left: 50px; */
+    text-align: left;
+    vertical-align: middle;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* left: 50%; */
+    /* transform: translate(-50%, 0%); */
+    /* padding: 10px 10px 10px; */
 }
 
-td{
-    padding-bottom: 15px;
+.inner_first_td{
+    font-family: "Lato", sans-serif;
+    font-size: 14pt;
+    height: 50px;
+    vertical-align: middle;
 }
 .inner_second_td{
-    padding-left:15px;
+    /* padding-left: 15px; */
+    font-family: "Lato", sans-serif;
+    font-size: 12pt;
+    height: 50px;
+    vertical-align: middle;
 }
 
 .form{
@@ -151,3 +167,18 @@ td{
     box-shadow:2px 2px 5px 0 rgba(0,0,0,.75)
 }
 /*# sourceMappingURL=index.css.map*/
+
+.perfume_name {
+    font-family: "Lato", sans-serif;
+    font-weight: 1000;
+    font-size: 30pt;
+    /* padding-top: 2%; */
+    width: 300px;
+}
+
+.perfume_picture {
+    /* padding-left: 3%; */
+    padding-top: 8%;
+    height: 350px;
+
+}
