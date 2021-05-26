@@ -15,3 +15,15 @@
     border: 1px solid #000;
     padding: 20px 30px;
    }
+
+.filtertitle {
+    position: relative;
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+    color:#2c2c2c;
+    font-family: 'LEMON MILK', sans-serif;
+    font-weight: bold;
+    font-size: 35pt;
+    white-space: nowrap;
+}

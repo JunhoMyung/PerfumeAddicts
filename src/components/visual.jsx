@@ -76,8 +76,8 @@ class visual extends Component {
             citrus: 'Citrus',
             woody: 'Woody',
             spicy: 'Spicy',
-            flower: 'Flower',
-            fruit: 'Fruit'
+            flower: 'Floral',
+            fruit: 'Fruity'
           };
         if (this.state.page === "detail"){
             return(
@@ -143,6 +143,7 @@ class visual extends Component {
             firebase.database().ref('/'+ firebase.auth().currentUser.displayName +'/').get().then((snapshot)=> {
                 if (snapshot.exists()){
                     if (!Object.values(snapshot.val()).includes(this.perfume_id.id)){
+                        alert("Successfully added")
                         firebase.database().ref('/'+ firebase.auth().currentUser.displayName +'/').push(this.perfume_id.id);
                     }
                     else{
@@ -150,8 +151,8 @@ class visual extends Component {
                     }
                 }
                 else{
-                    firebase.database().ref('/'+ firebase.auth().currentUser.displayName +'/').push(this.perfume_id.id);
                     alert("Successfully added")
+                    firebase.database().ref('/'+ firebase.auth().currentUser.displayName +'/').push(this.perfume_id.id);
                 }
             })            
         }

@@ -72,6 +72,11 @@ const useStyles = makeStyles(theme => ({
   export default function main(props) {
 
     localStorage.setItem('perfume_id', 0)
+    for (let k = 0; k < localStorage.getItem('length'); k++){
+        localStorage.setItem('index' + k, null)
+    }
+    localStorage.setItem('length', null)
+
     return (
         <React.Fragment>
             <div id="back-to-top-anchor" />
