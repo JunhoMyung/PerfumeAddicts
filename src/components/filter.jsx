@@ -103,6 +103,7 @@ export default function Filter() {
     return (
         <div>
           <NavBar/>
+          <div className="filtertitle">FIND YOUR PERFUME</div>
           <Overlay/>
           <div className = "filtertable">
             {display()}
