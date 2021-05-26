@@ -5,6 +5,8 @@ import { DataGrid } from '@material-ui/data-grid';
 import perfume_info from './perfume_info.jsx'
 import RadarChart from 'react-svg-radar-chart';
 
+
+
 export default class Mypage extends Component {
     
     constructor(props) {
@@ -14,7 +16,6 @@ export default class Mypage extends Component {
             { field: 'PerfumeName', headerName: 'Perfume Name', sortable: false, width: 200 },
             { field: 'img', headerName: 'Image', width: 400, sortable: false, 
                 renderCell: (params) => {
-                    console.log(params)
                     return (
                         <div className = "mypage">
                             {params.row.img}
@@ -26,7 +27,15 @@ export default class Mypage extends Component {
           ],
           rows: [],
           currentUser: null,
-          shoppingcart: 0
+          data: [],
+          captions: {
+            citrus: 'Citrus',
+            woody: 'Woody',
+            spicy: 'Spicy',
+            flower: 'Floral',
+            fruit: 'Fruity'
+          },
+          select: []
         }
     }
 
@@ -56,14 +65,48 @@ export default class Mypage extends Component {
     }
 
     print = () =>{
-        console.log(this.state.rows)
         if(this.state.rows !== null){
             return(
-                <DataGrid rows={this.state.rows} columns={this.state.columns} pageSize={3} checkboxSelection rowHeight = {200} />
+                <DataGrid rows={this.state.rows} columns={this.state.columns} pageSize={3} checkboxSelection rowHeight = {200} 
+                    onRowSelected={(e) => this.selected_list(e)}/>
             )
         }
     }
 
+    selected_list = (e) => {
+        var temp = this.state.select;
+        if (temp.includes(e.data.id)){
+            for (var i = 0; i < temp.length; i ++){
+                if (temp[i] === e.data.id+""){
+                    temp.splice(i, 1)
+                }
+            }
+        }
+        else{
+            temp.push(e.data.id);
+        }
+        this.setState({select: temp})
+        var temp2 = [];
+        for (i of temp){
+            var r = 255*((perfume_info[i].radar_chart.fruity + perfume_info[i].radar_chart.flowery) / 2)
+            var g = 255*perfume_info[i].radar_chart.woody
+            var b = 255*perfume_info[i].radar_chart.citrus;
+            var a = 1*((perfume_info[i].radar_chart.woody + perfume_info[i].radar_chart.spicy) / 2)
+            temp2.push(
+                {
+                    data: {
+                        citrus: perfume_info[i].radar_chart.citrus,
+                        woody: perfume_info[i].radar_chart.woody,
+                        spicy: perfume_info[i].radar_chart.spicy,
+                        flower: perfume_info[i].radar_chart.flowery,
+                        fruit: perfume_info[i].radar_chart.fruity
+                    },
+                    meta: { color: "rgba(" + r + "," + g + "," + b + "," + a + ")" }
+                }
+            )
+        }
+        this.setState({data: temp2})
+    }
 
     render (){
         return (
@@ -73,8 +116,17 @@ export default class Mypage extends Component {
                 <div style={{ height: 710, width: '80%', margin: "10%" }}>
                     {this.print()}
                 </div>
+                <div className = "radar_chart">
+                <RadarChart
+                    captions={this.state.captions}
+                    data={this.state.data}
+                    size={600}
+                />
+                </div>
             </div>
         )
     }
 }
+
+
 
