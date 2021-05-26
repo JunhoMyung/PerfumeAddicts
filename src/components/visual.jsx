@@ -102,7 +102,7 @@ class visual extends Component {
         let value = event.target.value
         //console.log("value = " + value)
         var index = 0
-        if (value === 1)
+        if (value == 1)
             {
                 //console.log("Yes")
                 index = 1
