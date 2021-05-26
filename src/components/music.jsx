@@ -282,38 +282,38 @@ export default function Music() {
                         />
                         Artist
                         <TextField 
-                            style={{ margin: 8 }}
+                            // style={{ margin: 8 }}
                             required 
                             id="music_artist" 
-                            label="Artist" 
+                            // label="Artist" 
                             defaultValue="" 
                             // helperText="Full width!"
                             fullWidth
-                            margin="normal"
+                            // margin="normal"
                             onChange = {event => setArtist(event.target.value)}
                         />
                         Music URL (YouTube Link)
                         <TextField 
-                            style={{ margin: 8 }}
+                            // style={{ margin: 8 }}
                             required 
                             id="music_url" 
-                            label="URL (YouTube)" 
+                            // label="URL (YouTube)" 
                             defaultValue="" 
                             // helperText="Full width!"
                             fullWidth
-                            margin="normal"
+                            // margin="normal"
                             onChange = {event => setURL(event.target.value)}
                         />
                         Brief Reason
                         <TextField 
-                            style={{ margin: 8 }}
+                            // style={{ margin: 8 }}
                             required 
                             id="music_reason" 
-                            label="Brief Reason" 
+                            // label="Brief Reason" 
                             defaultValue="" 
                             // helperText="Full width!"
                             fullWidth
-                            margin="normal"
+                            // margin="normal"
                             onChange = {event => setDescription(event.target.value)}
                         />
                         </div>
