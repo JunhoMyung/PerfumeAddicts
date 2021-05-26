@@ -76,8 +76,8 @@ class visual extends Component {
             citrus: 'Citrus',
             woody: 'Woody',
             spicy: 'Spicy',
-            flower: 'Flower',
-            fruit: 'Fruit'
+            flower: 'Floral',
+            fruit: 'Fruity'
           };
         if (this.state.page === "detail"){
             return(
@@ -162,10 +162,6 @@ class visual extends Component {
         //console.log(this.state.current_price)
         //const current_price = this.state.current_price
         //const quantity = this.state.quantity
-        for (let k = 0; k < localStorage.getItem('length'); k++){
-            localStorage.setItem('index' + k, null)
-        }
-        localStorage.setItem('length', null)
         return (
             <div>
                 <NavBar />
