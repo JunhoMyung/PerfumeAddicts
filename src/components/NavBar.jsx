@@ -67,7 +67,7 @@ export class NavBar extends Component {
                         <ul style={{float: "right"}}>
                             <li className="dropdown signin"><a href="# "><i className="fas fa-user-circle fa-lg"></i>&nbsp;&nbsp;{user_name}</a>
                                 <div className="dropdown-content">
-                                    <a href="/">My Page 
+                                    <a href="/mypage">My Page 
                                         <IconButton aria-label="cart">
                                             <StyledBadge badgeContent={4} color="secondary">
                                             <ShoppingCartIcon />

@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import main from "./components/main";
 import filter from "./components/filter";
 import visual from "./components/visual";
-import overlay from "./components/overlay";
+import mypage from "./components/mypage";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -13,7 +13,7 @@ ReactDOM.render(
       <Route path="/filter" component = {filter} />
       <Route path="/visual" component = {visual} />
       <Route exact path="/" component = {main}/>
-      <Route path="/overlay" component = {overlay} />
+      <Route path="/mypage" component = {mypage} />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
