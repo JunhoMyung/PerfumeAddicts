@@ -120,10 +120,12 @@ li.dropdown {
 .dropdown-content a:hover {
     background-color: #f1f1f1;
     color: black;
+    z-index: 10;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
+    z-index: 10;
 }
 
 .about {
