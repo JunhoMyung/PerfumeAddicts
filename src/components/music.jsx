@@ -117,7 +117,7 @@ export default function Music() {
                 voteID: value.voteID
             }
             var updates2 = {};
-            updates['/'+ perfume_name +'/' + [...key_order].reverse()[index]] = new_data2;
+            updates2['/'+ perfume_name +'/' + [...key_order].reverse()[index]] = new_data2;
             firebase.database().ref().update(updates2);
             var temp = firebase.database().ref('/'+ perfume_name +'/'+ [...key_order].reverse()[index] + '/voteID/')
             temp.get().then((snapshot) =>{
@@ -273,8 +273,9 @@ export default function Music() {
                 <Fade in={open}>
                     <div className={classes.paper}>
                         <div className = "overlaytitle2">RECOMMEND MUSIC</div>
-                        <div className = "overlaysubtitle">Title
-                        <TextField 
+                        <div className = "overlaysubtitle2">Title
+                        <TextField
+                            className = "recommendtext"
                             required 
                             id="music_title" 
                             fullWidth
@@ -283,6 +284,7 @@ export default function Music() {
                         Artist
                         <TextField 
                             // style={{ margin: 8 }}
+                            className = "recommendtext"                            
                             required 
                             id="music_artist" 
                             // label="Artist" 
@@ -294,6 +296,7 @@ export default function Music() {
                         />
                         Music URL (YouTube Link)
                         <TextField 
+                            className = "recommendtext"
                             // style={{ margin: 8 }}
                             required 
                             id="music_url" 
@@ -307,6 +310,7 @@ export default function Music() {
                         Brief Reason
                         <TextField 
                             // style={{ margin: 8 }}
+                            className = "recommendtext"
                             required 
                             id="music_reason" 
                             // label="Brief Reason" 
