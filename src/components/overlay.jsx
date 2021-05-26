@@ -258,9 +258,10 @@ export default function SimpleModal() {
 
   return (
     <div>
-      <button type="button" onClick={handleOpen} height="50px">
-        Filter
+      <button type="button" className = "button3" onClick={handleOpen} height="50px">
+        <div id = 'txt'> Start Filtering </div>
       </button>
+
       <Modal
           aria-labelledby="transition-modal-title"
           aria-describedby="transition-modal-description"

@@ -3,7 +3,9 @@
     border-collapse: collapse;
     
 }
-
+.filtertable{
+    margin-top: 100px;
+}
 
 .resultTable{
     border-spacing: 0;
