@@ -8,6 +8,7 @@ import { withStyles } from '@material-ui/core/styles';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { createMuiTheme } from '@material-ui/core/styles';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import { Link } from "react-scroll"
 
 
 const theme = createMuiTheme({
@@ -66,10 +67,9 @@ export class NavBar extends Component {
                         <img src={LOGO_Full} alt = "" className='logo' onClick={() => {window.location.href = "/"}}/>
                     <ul>
                         <li><a href="/">HOME</a></li>
-                        <li><a href="/">ABOUT</a></li>
-                        <li><a href="/">BEST</a></li>
-                        <li><a href="/">NEW</a></li>
-                        <li><a href="/">BRANDS</a></li>
+                        <li><Link to="about" spy={true} smooth={true}>ABOUT</Link></li>
+                        <li><Link to="service" spy={true} smooth={true}>SERVICE</Link></li>
+                        <li><Link to="join" spy={true} smooth={true}>JOIN</Link></li>
                         <li><a href="./filter">DISCOVER</a></li>
                         <ul style={{float: "right"}}>
                             <li onClick={signInWithGoogle} className="signin" href="# "><a href="# ">SIGN IN WITH GOOGLE</a></li>
@@ -86,10 +86,9 @@ export class NavBar extends Component {
                     <img src={LOGO_Full} alt = "" className='logo' onClick={() => {window.location.href = "/"}}/>
                     <ul>
                         <li><a href="/">HOME</a></li>
-                        <li><a href="/">ABOUT</a></li>
-                        <li><a href="/">BEST</a></li>
-                        <li><a href="/">NEW</a></li>
-                        <li><a href="/">BRANDS</a></li>
+                        <li><Link to="about" spy={true} smooth={true}>ABOUT</Link></li>
+                        <li><Link to="service" spy={true} smooth={true}>SERVICE</Link></li>
+                        <li><Link to="join" spy={true} smooth={true}>JOIN</Link></li>
                         <li><a href="./filter">DISCOVER</a></li>
                         <ul style={{float: "right"}}>
                             <li className="dropdown signin"><a href="# "><i className="fas fa-user-circle fa-lg"></i>&nbsp;&nbsp;{user_name}</a>

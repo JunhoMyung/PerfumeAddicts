@@ -94,7 +94,7 @@ table.overlaytable {
         transform: translate(-50%, 0%);
         width: 200px;
         height: 47px;
-        background: #6b3f7a;
+        background: #815b8d;
         border-radius: 25px;
         cursor: pointer;
         text-align: center;
@@ -103,6 +103,6 @@ table.overlaytable {
 }
 
 .start_filtering:hover { 
-    background: #8f709e; 
+    background: #9c83a8; 
     color: white; 
 }
