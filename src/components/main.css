@@ -370,3 +370,14 @@ li.dropdown {
     font-size: 13pt;
     height: 150px;
 }
+
+.mypage{
+    text-align: center;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    left: 30%;
+    transform: translate(-50%, 0%);
+    padding: 10px 10px 10px;
+}
