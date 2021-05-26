@@ -273,7 +273,7 @@ export default function Music() {
                 <Fade in={open}>
                     <div className={classes.paper}>
                         <div className = "overlaytitle2">RECOMMEND MUSIC</div>
-                        <div className = "overlaysubtitle">Title</div>
+                        <div className = "overlaysubtitle">Title
                         <TextField 
                             required 
                             id="music_title" 
@@ -316,6 +316,7 @@ export default function Music() {
                             margin="normal"
                             onChange = {event => setDescription(event.target.value)}
                         />
+                        </div>
                         <Button id = "submit" variant="contained" size="large" onClick = {onsubmit}>Submit Response</Button>
                     </div>
                 </Fade>
