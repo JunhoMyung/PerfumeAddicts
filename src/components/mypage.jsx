@@ -3,7 +3,7 @@ import NavBar from './NavBar'
 import {auth, db} from "./firebase.jsx";
 import { DataGrid } from '@material-ui/data-grid';
 import perfume_info from './perfume_info.jsx'
-
+import RadarChart from 'react-svg-radar-chart';
 
 export default class Mypage extends Component {
     

@@ -157,6 +157,16 @@ class visual extends Component {
         }
     }
 
+    music_playing = () =>{
+        if(this.state.music_title !== ""){
+            return(<div>&emsp; &emsp; Currently playing: {this.state.music_title} - {this.state.music_artist}</div>)
+        }
+        else{
+            return(<div>There is no music recommendation at the moment.</div>)
+        }
+
+    }
+
     render(){
         //console.log(this.state.current_price)
         //const current_price = this.state.current_price
@@ -211,8 +221,7 @@ class visual extends Component {
                     </tbody>
                 </table>
                 </div>
-    
-                &emsp; &emsp; Currently playing: {this.state.music_title} - {this.state.music_artist}
+                {this.music_playing()}
                 <ReactPlayer url = {this.state.url} controls = {true} playing = {true} width="340px" height="200px" volume = {0.2}/>
                 <br/><br/>
                 <ul className='detail_ul'>
