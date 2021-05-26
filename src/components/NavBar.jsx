@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import './main.css'
 import LOGO_Full from "../perfume_pictures/LOGO_Full.PNG"
 import 'firebase/auth';
-import {auth, signInWithGoogle, signOutWithGoogle} from "./firebase.jsx";
+import {auth, signInWithGoogle, signOutWithGoogle, db} from "./firebase.jsx";
 import {Link} from 'react-router-dom'
 import Badge from '@material-ui/core/Badge';
 import { withStyles } from '@material-ui/core/styles';
@@ -34,20 +34,34 @@ const StyledBadge = withStyles((theme) => ({
 
 
 export class NavBar extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-          currentUser: null
+          currentUser: null,
+          shoppingcart: 0
         }
       }
 
     componentDidMount() {
         auth.onAuthStateChanged(user => {
           this.setState({ currentUser: user });
+          this.shoppingcart()
         })
-      }
+    }
+
+    shoppingcart(){
+        if (this.state.currentUser !== null){
+            var temp = this
+            db.ref('/'+ temp.state.currentUser.displayName +'/').get().then((snapshot)=> {
+                if (snapshot.exists()){
+                    temp.setState({shoppingcart: Object.values(snapshot.val()).length})
+                }
+            })
+        }
+    }
     
     render() {
+        
         if (this.state.currentUser === null) {
             return (
                 <div>
@@ -68,6 +82,7 @@ export class NavBar extends Component {
         }
         else {
             const user_name = this.state.currentUser.displayName;
+            const shopping_cart = this.state.shoppingcart
             return (
                 <div>
                     <img src={LOGO_Full} alt = "" className='logo' onClick={() => {window.location.href = "/"}}/>
@@ -83,7 +98,7 @@ export class NavBar extends Component {
                                 <div className="dropdown-content">
                                     <a href="/">My Page&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <MuiThemeProvider theme={theme}>
-                                        <StyledBadge fontSize="small" badgeContent={4} color="primary">
+                                        <StyledBadge fontSize="small" badgeContent={shopping_cart} color="primary">
                                         <ShoppingCartIcon fontSize="small" />
                                         </StyledBadge>
                                     </MuiThemeProvider>
