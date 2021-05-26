@@ -112,8 +112,8 @@ export default class Mypage extends Component {
         return (
             <div>
                 <NavBar/>
-                <h1>Wish-List</h1>
-                <div style={{ height: 710, width: '80%', margin: "10%" }}>
+                <div className="filtertitle">Wish-List</div>
+                <div className ="datatable" style={{ height: 710, width: '80%'}}>
                     {this.print()}
                 </div>
                 <div className = "radar_chart">
