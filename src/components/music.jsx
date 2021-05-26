@@ -273,7 +273,8 @@ export default function Music() {
                 <Fade in={open}>
                     <div className={classes.paper}>
                         <div className = "overlaytitle2">RECOMMEND MUSIC</div>
-                        <div className = "overlaysubtitle2">Title
+                        <div className = "overlaysubtitle2">
+                        <div className = "recommendtext2">Title</div>
                         <TextField
                             className = "recommendtext"
                             required 
@@ -281,7 +282,7 @@ export default function Music() {
                             fullWidth
                             onChange = {event => setTitle(event.target.value)}
                         />
-                        Artist
+                        <div className = "recommendtext2">Artist</div>
                         <TextField 
                             // style={{ margin: 8 }}
                             className = "recommendtext"                            
@@ -294,7 +295,7 @@ export default function Music() {
                             // margin="normal"
                             onChange = {event => setArtist(event.target.value)}
                         />
-                        Music URL (YouTube Link)
+                        <div className = "recommendtext2">Music URL (YouTube Link)</div>
                         <TextField 
                             className = "recommendtext"
                             // style={{ margin: 8 }}
@@ -307,7 +308,7 @@ export default function Music() {
                             // margin="normal"
                             onChange = {event => setURL(event.target.value)}
                         />
-                        Brief Reason
+                        <div className = "recommendtext2">Brief Reason</div>
                         <TextField 
                             // style={{ margin: 8 }}
                             className = "recommendtext"
@@ -321,7 +322,9 @@ export default function Music() {
                             onChange = {event => setDescription(event.target.value)}
                         />
                         </div>
-                        <Button id = "submit" variant="contained" size="large" onClick = {onsubmit}>Submit Response</Button>
+                        <div className = "recommendtext2">
+                            <Button id = "submit" variant="contained" size="large" onClick = {onsubmit}>Submit Response</Button>
+                        </div>
                     </div>
                 </Fade>
             </Modal>
