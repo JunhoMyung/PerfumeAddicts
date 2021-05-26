@@ -3,10 +3,8 @@ import './main.css'
 import LOGO_Full from "../perfume_pictures/LOGO_Full.PNG"
 import 'firebase/auth';
 import {auth, signInWithGoogle, signOutWithGoogle, db} from "./firebase.jsx";
-import {Link} from 'react-router-dom'
 import Badge from '@material-ui/core/Badge';
 import { withStyles } from '@material-ui/core/styles';
-import IconButton from '@material-ui/core/IconButton';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { createMuiTheme } from '@material-ui/core/styles';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';

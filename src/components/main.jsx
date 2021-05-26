@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React from 'react'
 import './main.css'
 import MAIN_PAGE from "../perfume_pictures/MAIN_PAGE.png"
 import ABOUT_PIC from "../perfume_pictures/about_pic.svg"

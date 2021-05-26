@@ -7,7 +7,6 @@ import 'react-svg-radar-chart/build/css/index.css'
 import NavBar from "./NavBar.jsx"
 import firebase from './firebase';
 import perfume_info from './perfume_info.jsx'
-import { SportsRugbySharp } from '@material-ui/icons';
 
 
 class visual extends Component {
@@ -103,7 +102,7 @@ class visual extends Component {
         let value = event.target.value
         //console.log("value = " + value)
         var index = 0
-        if (value == 1)
+        if (value === 1)
             {
                 //console.log("Yes")
                 index = 1

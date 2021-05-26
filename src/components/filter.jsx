@@ -109,11 +109,6 @@ export default function Filter(props) {
     // console.log(perfume_image_list);
 
   useEffect(() => {
-      renew()
-  }, [])
-
-
-  const renew = () => {
     for (let k = 0; k < filter_length; k++){
       filter_list.push(localStorage.getItem('index' + k))
     }
@@ -133,11 +128,7 @@ export default function Filter(props) {
       }
     }
     setDisplay(temp2)
-    // console.log(perfume_info[1].ingredient.includes(filter_list[1]))
-    // console.log(filter_list[0])
-    // console.log(filter_list)
-    // console.log(temp2)
-  }
+  }, [])
 
 
   const display = () => {

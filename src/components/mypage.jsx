@@ -3,7 +3,6 @@ import NavBar from './NavBar'
 import {auth, db} from "./firebase.jsx";
 import { DataGrid } from '@material-ui/data-grid';
 import perfume_info from './perfume_info.jsx'
-import Perfume1 from "../perfume_pictures/350x250/Perfume1.png"
 
 
 export default class Mypage extends Component {
@@ -71,7 +70,7 @@ export default class Mypage extends Component {
             <div>
                 <NavBar/>
                 <h1>Wish-List</h1>
-                <div style={{ height: 700, width: '80%', margin: "10%" }}>
+                <div style={{ height: 710, width: '80%', margin: "10%" }}>
                     {this.print()}
                 </div>
             </div>

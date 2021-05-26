@@ -105,9 +105,10 @@ export default function Music() {
             firebase.database().ref().update(updates);
             firebase.database().ref('/'+ perfume_name +'/'+ [...key_order].reverse()[index] + '/voteID/').push(firebase.auth().currentUser.email);
             setUpdate(update => update + 1)
+            console.log(update)
         }
         else {
-            var new_data = {
+            var new_data2 = {
                 title: value.title,
                 artist: value.artist,
                 url: value.url,
@@ -115,12 +116,11 @@ export default function Music() {
                 vote: value.vote - 1,
                 voteID: value.voteID
             }
-            var updates = {};
-            updates['/'+ perfume_name +'/' + [...key_order].reverse()[index]] = new_data;
-            firebase.database().ref().update(updates);
+            var updates2 = {};
+            updates['/'+ perfume_name +'/' + [...key_order].reverse()[index]] = new_data2;
+            firebase.database().ref().update(updates2);
             var temp = firebase.database().ref('/'+ perfume_name +'/'+ [...key_order].reverse()[index] + '/voteID/')
             temp.get().then((snapshot) =>{
-                var keys = Object.keys(snapshot.val());
                 snapshot.forEach((child) => {
                     if(child.val() === firebase.auth().currentUser.email){
                         firebase.database().ref('/'+ perfume_name +'/'+ [...key_order].reverse()[index] + '/voteID/' + child.key).remove()
@@ -206,6 +206,9 @@ export default function Music() {
                                     </tbody>
                                 </ReviewTable>
                             )
+                        }
+                        else{
+                            return null
                         }
                     })}
                     {() => {if (review_order.length > 3){
