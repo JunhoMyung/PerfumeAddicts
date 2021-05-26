@@ -68,6 +68,8 @@
 .detail_ul_bytton{
     width: 200px;
     height: 40px;
+    background-color: #735880;
+    color: white;
 }
 
 .radar_chart{
@@ -215,8 +217,8 @@
     justify-content: center;
     flex-direction: column;
     color: white;
-    left: 46%;
-    top: 83%;
+    left: 45.5%;
+    top: 67%;
     /* transform: translate(-50%, 0%); */
     width: 180px;
     height: 35px;

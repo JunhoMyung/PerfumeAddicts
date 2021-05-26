@@ -198,21 +198,21 @@ class visual extends Component {
                                     <td className='inner_second_td'>${this.state.current_price}</td>   
                                 </tr>
                                 
-                                <tr>
+                                {/* <tr>
                                     <td className="inner_first_td"><b>Quantity:  </b></td>
                                     <td className='inner_second_td'>
                                         <form>
                                             <input type="text" id="quantity" name="quantity" className='quantity' value={this.state.quantity} onChange={this.changeTotalPrice} onKeyDown={this.changeQuantity} />
                                         </form>
-                                    </td>
-                                </tr>
+                                    </td> */}
+                                {/* </tr>
                                 <tr>
                                     <td className="inner_first_td"><b>Total:  </b></td>
                                     <td className='inner_second_td'>${this.state.total_price} &emsp; &emsp; 
-                                    <button className='reset' onClick={this.reset}>Reset</button>
-                                    </td>
+                                    {/* <button className='reset' onClick={this.reset}>Reset</button> */}
+                                    {/* </td> */}
                                    
-                                </tr>
+                                {/* </tr> */}
                                 </tbody>
                             </table>
                         
@@ -229,9 +229,9 @@ class visual extends Component {
                 <br/><br/>
                 <ul className='detail_ul'>
                     <li><button className='detail_ul_bytton' onClick = {this.detail}>DETAIL</button></li>
-                    <li><button className='detail_ul_bytton'>REVIEW</button></li>
+                    {/* <li><button className='detail_ul_bytton'>REVIEW</button></li> */}
                     <li><button className='detail_ul_bytton' onClick = {this.music}>MUSIC</button></li>
-                    <li><button className='detail_ul_bytton'>Q&A</button></li>
+                    {/* <li><button className='detail_ul_bytton'>Q&A</button></li> */}
                 </ul>
                 <br></br>
 
