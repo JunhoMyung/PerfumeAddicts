@@ -252,7 +252,7 @@ const perfume_info = [
       "brand": "Victoria's Secret",
       "price": [21.00, 35.00],
       "volume": [30, 50],
-      "radar_chart": {"citrus": 0.0, "spicy": 0.0, "woody": 0.5, "fruity": 0.0, "flowery": 0.5},
+      "radar_chart": {"citrus": 0.0, "spicy": 0.2, "woody": 0.5, "fruity": 0.1, "flowery": 0.5},
       "ingredient": ["water", "floral"]
     },
     {
