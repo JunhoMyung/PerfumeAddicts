@@ -159,10 +159,10 @@ class visual extends Component {
 
     music_playing = () =>{
         if(this.state.music_title !== ""){
-            return(<div>&emsp; &emsp; Currently playing: {this.state.music_title} - {this.state.music_artist}</div>)
+            return(<div className="yes">&emsp; &emsp; Currently playing: {this.state.music_title} - {this.state.music_artist}</div>)
         }
         else{
-            return(<div>There is no music recommendation at the moment.</div>)
+            return(<div className="no">There is no music recommendation at the moment.</div>)
         }
 
     }
@@ -215,14 +215,17 @@ class visual extends Component {
                                 </tr>
                                 </tbody>
                             </table>
-                            <button onClick = {this.wishlist}>ADD TO WISH-LIST</button>
+                        
                         </td>            
                     </tr>
+                    <div className="purchasebutton" onClick = {this.wishlist}>ADD TO WISH-LIST</div>
                     </tbody>
                 </table>
                 </div>
                 {this.music_playing()}
+                <div className="yes2">
                 <ReactPlayer url = {this.state.url} controls = {true} playing = {true} width="340px" height="200px" volume = {0.2}/>
+                </div>
                 <br/><br/>
                 <ul className='detail_ul'>
                     <li><button className='detail_ul_bytton' onClick = {this.detail}>DETAIL</button></li>
