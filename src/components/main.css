@@ -365,13 +365,6 @@ li.dropdown {
     padding: 10px 10px 10px;
 }
 
-.filterpadding{
-    padding: 15px 30px 30px;
-    font-family: "Lato", sans-serif;
-    font-size: 13pt;
-    height: 150px;
-}
-
 .mypage{
     /* display: flex; */
     /* flex-direction: column; */
@@ -393,4 +386,29 @@ li.dropdown {
 
 .recommendtext2{
     margin-top: 5%;
+}
+
+.filterpadding{
+    padding: 15px 30px 30px;
+    font-family: "Lato", sans-serif;
+    font-size: 13pt;
+    height: 150px;
+    border-bottom: 0.1px solid gray;
+    
+}
+
+.perfumename{
+    font-family: "Lato", sans-serif;
+    font-size: 17pt;
+}
+
+.perfumebrand{
+    font-family: "Lato", sans-serif;
+    font-size: 10pt;
+    color: gray
+}
+
+.filtertag{
+    font-family: "Lato", sans-serif;
+    font-size: 10pt;
 }

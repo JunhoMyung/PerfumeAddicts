@@ -157,6 +157,11 @@ const useStyles = makeStyles(theme => ({
                 <KeyboardArrowUpIcon />
                 </Fab>
             </ScrollTop>
+            {/* <ScrollTop {...props}>
+                <Fab color="primary" size="small" aria-label="scroll back to top">
+                <KeyboardArrowUpIcon />
+                </Fab>
+            </ScrollTop> */}
             </MuiThemeProvider>
         </React.Fragment>
     )

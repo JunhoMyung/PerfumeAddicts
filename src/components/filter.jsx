@@ -138,10 +138,30 @@ export default function Filter(props) {
       let children = []
       for (var j = 0; j < 4; j++){
         if((i*4+j)<= (displayList.length - 1)){          
-          children.push(<td className = "filterpadding">{perfume_info[displayList[i*4 + j]].pic_name}<br/><br/>{perfume_info[displayList[i*4 + j]].name}</td>)
+          children.push(
+          <td className = "filterpadding">
+            <br/><br/>
+            {perfume_info[displayList[i*4 + j]].pic_name}
+            <br/><br/>
+            <div className = "perfumename">{perfume_info[displayList[i*4 + j]].name}</div>
+            <div className = "perfumebrand">{perfume_info[displayList[i*4 + j]].brand}</div>
+            <br/>
+            {perfume_info[displayList[i*4 + j]].ingredient.map((value, index) => {
+              if (index < 3){
+                return(
+                  <span className = {"filtertag"}>
+                  #{value + " "}
+                  </span>
+                )
+              }
+              else{
+                return(null)
+              }
+            })}
+            </td>)
         }
         else{
-          children.push(<td className = "filterpadding"></td>)
+          children.push(<td className = "filterpadding" width = '50%'></td>)
         }
       }
       table.push(<tr>{children}</tr>)
