@@ -116,6 +116,7 @@ export default class Mypage extends Component {
                 <div className ="datatable" style={{ height: 710, width: '80%'}}>
                     {this.print()}
                 </div>
+                <br/><br/><br/>
                 <div className = "radar_chart">
                 <RadarChart
                     captions={this.state.captions}
@@ -123,6 +124,23 @@ export default class Mypage extends Component {
                     size={600}
                 />
                 </div>
+
+                <span className = "radarchartlegend">
+                {this.state.select.map((value) => {
+                    var r = 255*((perfume_info[value].radar_chart.fruity + perfume_info[value].radar_chart.flowery) / 2)
+                    var g = 255*perfume_info[value].radar_chart.woody
+                    var b = 255*perfume_info[value].radar_chart.citrus;
+                    var a = 1*((perfume_info[value].radar_chart.woody + perfume_info[value].radar_chart.spicy) / 2)
+                    var color = "rgba(" + r + "," + g + "," + b + "," + a + ")"
+                    return(
+                        <span className = "legendspecific">
+                            <span className = "box" style = {{backgroundColor: "rgba(" + r + "," + g + "," + b + "," + a + ")"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            {perfume_info[value].name}
+                        </span>
+                    )
+                })}
+                </span>
+                <br/><br/><br/><br/>
             </div>
         )
     }

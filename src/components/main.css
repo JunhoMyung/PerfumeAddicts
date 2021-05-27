@@ -541,3 +541,27 @@ li.dropdown {
     border-radius: 10px;
     font-size: 10pt;
 }
+
+.radarchartlegend{
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.legendspecific{
+    padding: 10px 10px 10px;
+    font-family: "Lato", sans-serif;
+    margin-right: 5px;
+    margin-left: 5px;
+    text-align: center;
+    font-size: 15pt;
+
+
+}
+
+.box{
+    height: 20px;
+    border: 1px solid black;
+    margin-right: 5px;
+}
