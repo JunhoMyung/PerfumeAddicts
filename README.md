@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Indroduction
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a project for KAIST CS374 course (Introduction to HCI).
 
-## Available Scripts
+Our project aims to provide an easier method of choosing perfumes online, even for complete beginners.
 
-In the project directory, you can run:
+# Main Page
 
-### `npm start`
+Our main page includes explanations of the special features our website provides.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The code for the main page is located at ./src/components/main.jsx
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Filter Page
 
-### `npm test`
+Our filtering method focuses on "filtering out the scents users hate". Sufficient visualization of scents are also provided together, so that even beginners can easily narrow down their choice.s
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The code for the filter page is located at ./src/components/filter.jsx
 
-### `npm run build`
+# Perfume Info Page
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Our perfume information page consists of two components: a radar chart to help visualizing the scent, and a music (with music reviews) that helps users to feel the essence of the scents. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The code for visualizing the scent is located at ./src/components/visual.jsx,
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+and the code for music is located at ./src/components/music.jsx
 
-### `npm run eject`
+# Mypage Page
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Our website allows direct comparision of perfumes in the mypage.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The code for the mypage is located at ./src/components/mypage.jsx
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Others
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Routing & importing basic dependencies are executed in ./src/index.js.
