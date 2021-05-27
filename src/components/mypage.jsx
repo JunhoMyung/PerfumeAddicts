@@ -23,7 +23,7 @@ export default class Mypage extends Component {
                     );
             }},
             { field: 'Price', headerName: 'Price ($)', width: 200 },
-            { field: 'Quantity', headerName: 'Quantity (mL)', width: 200 },
+            { field: 'Quantity', headerName: 'Volume (mL)', width: 200 },
           ],
           rows: [],
           currentUser: null,
