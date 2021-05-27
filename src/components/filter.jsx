@@ -149,7 +149,7 @@ export default function Filter(props) {
             {perfume_info[displayList[i*4 + j]].ingredient.map((value, index) => {
               if (index < 3){
                 return(
-                  <span className = {"filtertag"}>
+                  <span className = {"filtertag" + value}>
                   #{value + " "}
                   </span>
                 )
