@@ -10,8 +10,7 @@ import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import Zoom from '@material-ui/core/Zoom';
 import PropTypes from "prop-types";
 import { createMuiTheme } from '@material-ui/core/styles';
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
-
+import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles'
     
 const theme = createMuiTheme({
   palette: {
@@ -67,45 +66,6 @@ export default function Filter(props) {
 
   const [displayList, setDisplay] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]);
   const filter_length = localStorage.getItem('length')
-    // var filter_list = ["metallic", "citrus"];
-    // var showlist = [];
-    // var remove = [];
-
-    // //filtering 
-    // function nextpage(){
-    //     var tobeshown = perfume_list;
-    //     for (let i = 0; i < tobeshown.length; i++){
-    //         for (let j = 0; j < filter_list.length; j++){
-    //             if (tobeshown[i]['ingredient'].includes(filter_list[j])){
-    //                 remove.push(i);
-    //                 break;
-    //             }
-    //         }
-    //     }
-
-    //     for (let i = 0; i < tobeshown.length; i++){
-    //         if (!remove.includes(i)){
-    //             showlist.push(tobeshown[i]['name']);
-    //         }
-    //     }
-
-    //     console.log(showlist);
-    //     console.log(filter_list);
-
-    //     showlist = [];
-    // }
-
-
-    // function handleclick(){
-    //     //localStorage.setItem('perfume_id', 0)
-    //     window.location.href = "/visual";
-    // }
-  
-    // var perfume_image_list = []; 
-    // for (let i = 1; i < 28; i++){
-    //   perfume_image_list.push("Perfume" + String(i))
-    // }
-    // console.log(perfume_image_list);
 
   useEffect(() => {
     const filter_list = []
@@ -139,7 +99,7 @@ export default function Filter(props) {
       for (var j = 0; j < 4; j++){
         if((i*4+j)<= (displayList.length - 1)){          
           children.push(
-          <td className = "filterpadding">
+          <td className = "filterpadding" key = {i*4 + j}>
             <br/><br/>
             {perfume_info[displayList[i*4 + j]].pic_name}
             <br/><br/>
@@ -149,7 +109,7 @@ export default function Filter(props) {
             {perfume_info[displayList[i*4 + j]].ingredient.map((value, index) => {
               if (index < 3){
                 return(
-                  <span className = {"filtertag" + value}>
+                  <span className = {"filtertag" + value} key = {index}>
                   #{value + " "}
                   </span>
                 )
@@ -161,10 +121,10 @@ export default function Filter(props) {
             </td>)
         }
         else{
-          children.push(<td className = "filterpadding" width = '50%'></td>)
+          children.push(<td className = "filterpadding" width = '50%' key = {i*4 + j}></td>)
         }
       }
-      table.push(<tr>{children}</tr>)
+      table.push(<tr key = {i}>{children}</tr>)
     }
     return table
   }
@@ -175,9 +135,11 @@ export default function Filter(props) {
           <NavBar/>
           <div className="filtertitle">FIND YOUR PERFUME</div>
           <Overlay/>
-          <div className = "filtertable">
-            {display()}
-          </div>
+          <table className = "filtertable">
+            <tbody>
+              {display()}
+            </tbody>
+          </table>
         </div>
         <MuiThemeProvider theme={theme}>
             <ScrollTop {...props}>

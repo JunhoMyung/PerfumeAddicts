@@ -7,8 +7,8 @@ import Badge from '@material-ui/core/Badge';
 import { withStyles } from '@material-ui/core/styles';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { createMuiTheme } from '@material-ui/core/styles';
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
-import { Link } from "react-scroll"
+import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
+import { Link } from "react-scroll";
 
 
 const theme = createMuiTheme({

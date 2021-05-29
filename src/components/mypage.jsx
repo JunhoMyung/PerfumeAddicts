@@ -131,7 +131,6 @@ export default class Mypage extends Component {
                     var g = 255*perfume_info[value].radar_chart.woody
                     var b = 255*perfume_info[value].radar_chart.citrus;
                     var a = 1*((perfume_info[value].radar_chart.woody + perfume_info[value].radar_chart.spicy) / 2)
-                    var color = "rgba(" + r + "," + g + "," + b + "," + a + ")"
                     return(
                         <span className = "legendspecific">
                             <span className = "box" style = {{backgroundColor: "rgba(" + r + "," + g + "," + b + "," + a + ")"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>

@@ -16,8 +16,7 @@ import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import Zoom from '@material-ui/core/Zoom';
 import PropTypes from "prop-types";
 import { createMuiTheme } from '@material-ui/core/styles';
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
-
+import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles'
 
 const theme = createMuiTheme({
   palette: {
