@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { render } from 'react-dom';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 //import "bulma/css/bulma.css";
 import Main from "./components/main";
@@ -7,7 +7,7 @@ import Filter from "./components/filter";
 import Visual from "./components/visual";
 import Mypage from "./components/mypage";
 
-ReactDOM.render(
+const App = () => (
   <BrowserRouter>
     <Switch>
       <Route path="/filter" component = {Filter} />
@@ -15,6 +15,7 @@ ReactDOM.render(
       <Route exact path="/" component = {Main}/>
       <Route path="/mypage" component = {Mypage} />
     </Switch>
-  </BrowserRouter>,
-  document.getElementById("root")
+  </BrowserRouter>
 );
+
+render(<App />, document.getElementById('root'));
