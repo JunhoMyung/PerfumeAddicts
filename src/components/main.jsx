@@ -6,7 +6,6 @@ import MAIN_FILTER from "../perfume_pictures/MAIN_filter.svg"
 import MAIN_INTERACT from "../perfume_pictures/MAIN_interact.svg"
 import MAIN_VISUAL from "../perfume_pictures/MAIN_visual.svg"
 import JOIN from "../perfume_pictures/JOIN.svg"
-import 'firebase/auth';
 import {Link} from 'react-router-dom'
 import NavBar from './NavBar.jsx'
 import { makeStyles } from '@material-ui/core/styles';

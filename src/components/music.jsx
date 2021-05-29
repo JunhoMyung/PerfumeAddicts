@@ -13,9 +13,8 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
-import firebase from './firebase';
+import {db, auth} from './firebase';
 import perfume_info from './perfume_info.jsx'
-import './overlay.css'
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -72,10 +71,10 @@ export default function Music() {
     };
 
     const returnvote = (value) => {
-        if (firebase.auth().currentUser === null){
+        if (auth.currentUser === null){
             return (<i className="far fa-thumbs-up"></i>)
         }
-        else if(!Object.values(value.voteID).includes(firebase.auth().currentUser.email)){
+        else if(!Object.values(value.voteID).includes(auth.currentUser.email)){
             return(
                 <i className="far fa-thumbs-up"></i>
             )
@@ -88,10 +87,10 @@ export default function Music() {
     }
 
     const handleVote = (value, index) => {
-        if (firebase.auth().currentUser === null){
+        if (auth.currentUser === null){
             alert("Please sign in to vote")
         }
-        else if(!Object.values(value.voteID).includes(firebase.auth().currentUser.email)) {
+        else if(!Object.values(value.voteID).includes(auth.currentUser.email)) {
             var new_data = {
                 title: value.title,
                 artist: value.artist,
@@ -102,8 +101,8 @@ export default function Music() {
             }
             var updates = {};
             updates['/'+ perfume_name +'/' + [...key_order].reverse()[index]] = new_data;
-            firebase.database().ref().update(updates);
-            firebase.database().ref('/'+ perfume_name +'/'+ [...key_order].reverse()[index] + '/voteID/').push(firebase.auth().currentUser.email);
+            db.ref().update(updates);
+            db.ref('/'+ perfume_name +'/'+ [...key_order].reverse()[index] + '/voteID/').push(auth.currentUser.email);
             setUpdate(update => update + 1)
             console.log(update)
         }
@@ -118,12 +117,12 @@ export default function Music() {
             }
             var updates2 = {};
             updates2['/'+ perfume_name +'/' + [...key_order].reverse()[index]] = new_data2;
-            firebase.database().ref().update(updates2);
-            var temp = firebase.database().ref('/'+ perfume_name +'/'+ [...key_order].reverse()[index] + '/voteID/')
+            db.ref().update(updates2);
+            var temp = db.ref('/'+ perfume_name +'/'+ [...key_order].reverse()[index] + '/voteID/')
             temp.get().then((snapshot) =>{
                 snapshot.forEach((child) => {
-                    if(child.val() === firebase.auth().currentUser.email){
-                        firebase.database().ref('/'+ perfume_name +'/'+ [...key_order].reverse()[index] + '/voteID/' + child.key).remove()
+                    if(child.val() === auth.currentUser.email){
+                        db.ref('/'+ perfume_name +'/'+ [...key_order].reverse()[index] + '/voteID/' + child.key).remove()
                     }
                 })
             })
@@ -143,7 +142,7 @@ export default function Music() {
     }
 
     const updateDB = () => {
-        const newKey = firebase.database().ref('/'+ perfume_name +'/').push();
+        const newKey = db.ref('/'+ perfume_name +'/').push();
         newKey.set({
             title: title,
             artist: artist,
@@ -163,7 +162,7 @@ export default function Music() {
     const sortbyvote = () => {
         var temp1 = []
         var temp2 = []
-        firebase.database().ref('/'+ perfume_name +'/').orderByChild('vote').on("child_added", function(snapshot) {
+        db.ref('/'+ perfume_name +'/').orderByChild('vote').on("child_added", function(snapshot) {
             temp1.push(snapshot.val())
             temp2.push(snapshot.key)
             // review_order.push(snapshot.val());

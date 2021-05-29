@@ -1,4 +1,6 @@
-import firebase from 'firebase';
+import firebase from 'firebase/app'
+import 'firebase/auth';        // for authentication
+import 'firebase/database';    // for realtime database
 
 const firebaseConfig = {
     apiKey: "AIzaSyAGCvrIzrlKZ0hi7MdtvBB4YG_x_iNArA8",
@@ -11,7 +13,6 @@ const firebaseConfig = {
     databaseURL: "https://perfumeaddict-6294b-default-rtdb.asia-southeast1.firebasedatabase.app/"
   };
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
 
 
 export const auth = firebase.auth();

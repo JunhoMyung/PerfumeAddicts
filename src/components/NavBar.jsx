@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import './main.css'
 import LOGO_Full from "../perfume_pictures/LOGO_Full.PNG"
-import 'firebase/auth';
 import {auth, signInWithGoogle, signOutWithGoogle, db} from "./firebase.jsx";
 import Badge from '@material-ui/core/Badge';
 import { withStyles } from '@material-ui/core/styles';

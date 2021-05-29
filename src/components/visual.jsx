@@ -5,7 +5,7 @@ import ReactPlayer from 'react-player/youtube'
 import RadarChart from 'react-svg-radar-chart';
 import 'react-svg-radar-chart/build/css/index.css'
 import NavBar from "./NavBar.jsx"
-import firebase from './firebase';
+import {db, auth} from './firebase';
 import perfume_info from './perfume_info.jsx'
 
 
@@ -38,7 +38,7 @@ class visual extends Component {
 
     componentDidMount = () => {
         let current_component = this
-        firebase.database().ref('/'+ this.state.info.name +'/').orderByChild('vote').on("child_added", function(snapshot) {
+        db.ref('/'+ this.state.info.name +'/').orderByChild('vote').on("child_added", function(snapshot) {
             current_component.setState({url: snapshot.val().url, music_title: snapshot.val().title, music_artist: snapshot.val().artist})
         });
     }
@@ -135,15 +135,15 @@ class visual extends Component {
     }
 
     wishlist = () => {
-        if (firebase.auth().currentUser === null){
+        if (auth.currentUser === null){
             alert("Sign in to add to wishlist")
         }
         else{
-            firebase.database().ref('/'+ firebase.auth().currentUser.displayName +'/').get().then((snapshot)=> {
+            db.ref('/'+ auth.currentUser.displayName +'/').get().then((snapshot)=> {
                 if (snapshot.exists()){
                     if (!Object.values(snapshot.val()).includes(this.perfume_id.id)){
                         alert("Successfully added")
-                        firebase.database().ref('/'+ firebase.auth().currentUser.displayName +'/').push(this.perfume_id.id);
+                        db.ref('/'+ auth.currentUser.displayName +'/').push(this.perfume_id.id);
                     }
                     else{
                         alert("Already in wishlist")
@@ -151,7 +151,7 @@ class visual extends Component {
                 }
                 else{
                     alert("Successfully added")
-                    firebase.database().ref('/'+ firebase.auth().currentUser.displayName +'/').push(this.perfume_id.id);
+                    db.ref('/'+ auth.currentUser.displayName +'/').push(this.perfume_id.id);
                 }
             })            
         }
@@ -218,9 +218,10 @@ class visual extends Component {
                         
                         </td>            
                     </tr>
-                    <div className="purchasebutton" onClick = {this.wishlist}>ADD TO WISH-LIST</div>
                     </tbody>
                 </table>
+                <div className="purchasebutton" onClick = {this.wishlist}>ADD TO WISH-LIST</div>
+
                 </div>
                 {this.music_playing()}
                 <div className="yes2">
