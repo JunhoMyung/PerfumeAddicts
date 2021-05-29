@@ -412,7 +412,7 @@ li.dropdown {
     font-family: "Lato", sans-serif;
     font-size: 10pt;
     color: white;
-    background-color: rgba(255, 166, 0);
+    background-color: rgba(255, 166, 0, 0.5);
     padding: 5px 5px 5px;
     margin-right: 2px;
     margin-left: 2px;
@@ -423,7 +423,7 @@ li.dropdown {
     font-family: "Lato", sans-serif;
     font-size: 10pt;
     color: white;
-    background-color: skyblue;
+    background-color: rgba(39, 137, 238, 0.5);
     padding: 5px 5px 5px;
     margin-right: 2px;
     margin-left: 2px;
@@ -434,7 +434,7 @@ li.dropdown {
     font-family: "Lato", sans-serif;
     font-size: 10pt;
     color: white;
-    background-color: green;
+    background-color: rgba(40, 157, 64, 0.5);
     padding: 5px 5px 5px;
     margin-right: 2px;
     margin-left: 2px;
@@ -445,7 +445,7 @@ li.dropdown {
     font-family: "Lato", sans-serif;
     font-size: 10pt;
     color: white;
-    background-color: rgb(236, 74, 74);
+    background-color: rgba(200, 57, 24, 0.5);
     padding: 5px 5px 5px;
     margin-right: 2px;
     margin-left: 2px;
@@ -456,7 +456,7 @@ li.dropdown {
     font-family: "Lato", sans-serif;
     font-size: 10pt;
     color: white;
-    background-color: rgb(168, 118, 44);
+    background-color: rgba(184, 97, 132, 0.5);
     padding: 5px 5px 5px;
     text-align: center;
     margin-right: 2px;
@@ -467,7 +467,7 @@ li.dropdown {
     font-family: "Lato", sans-serif;
     font-size: 10pt;
     color: white;
-    background-color: rgb(181, 234, 250);
+    background-color: rgba(242, 185, 139, 0.5);
     padding: 5px 5px 5px;
     margin-right: 2px;
     margin-left: 2px;
@@ -478,7 +478,7 @@ li.dropdown {
     font-family: "Lato", sans-serif;
     font-size: 10pt;
     color: white;
-    background-color: rgb(190, 204, 64);
+    background-color: rgb(163, 102, 192, 0.5);
     padding: 5px 5px 5px;
     margin-right: 2px;
     margin-left: 2px;
@@ -490,7 +490,7 @@ li.dropdown {
     font-family: "Lato", sans-serif;
     font-size: 10pt;
     color: white;
-    background-color: rgb(168, 118, 44);
+    background-color: rgba(168, 118, 44, 0.5);
     padding: 5px 5px 5px;
     margin-right: 2px;
     margin-left: 2px;
@@ -501,7 +501,7 @@ li.dropdown {
     font-family: "Lato", sans-serif;
     font-size: 10pt;
     color: white;
-    background-color: rgb(109, 65, 0);
+    background-color: rgba(0, 81, 61, 0.5);
     padding: 5px 5px 5px;
     margin-right: 2px;
     margin-left: 2px;
@@ -512,7 +512,7 @@ li.dropdown {
     font-family: "Lato", sans-serif;
     font-size: 10pt;
     color: white;
-    background-color: rgb(137, 174, 185);
+    background-color: rgb(238, 238, 189, 1);
     padding: 5px 5px 5px;
     margin-right: 2px;
     margin-left: 2px;
@@ -523,7 +523,7 @@ li.dropdown {
     font-family: "Lato", sans-serif;
     font-size: 10pt;
     color: white;
-    background-color: rgb(155, 110, 26);
+    background-color: rgb(180, 132, 2, 0.5);
     padding: 5px 5px 5px;
     margin-right: 2px;
     margin-left: 2px;
@@ -533,7 +533,7 @@ li.dropdown {
 .filtertagsharpspicy{
     font-family: "Lato", sans-serif;
     color: white;
-    background-color: green;
+    background-color: rgba(77, 49, 26, 0.5);
     padding: 5px 5px 5px;
     margin-right: 2px;
     margin-left: 2px;
