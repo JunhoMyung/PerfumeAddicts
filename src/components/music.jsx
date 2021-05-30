@@ -184,7 +184,7 @@ export default function Music() {
                 </div>
             )
         }
-        else if (showmore === false){
+        else if (showmore === false && review_order.length <= 3){
             return(
                 <div>
                     {[...review_order].reverse().map((value, index) => {
@@ -210,11 +210,36 @@ export default function Music() {
                             return null
                         }
                     })}
-                    {() => {if (review_order.length > 3){
-                        return(
-                            <button onClick = {show_more}>show more</button>
-                        )
-                    }}}
+                </div>
+            )
+        }
+        else if (showmore === false && review_order.length > 3){
+            return(
+                <div>
+                    {[...review_order].reverse().map((value, index) => {
+                        if (index < 3){
+                            return (
+                                <ReviewTable  width = "80%">
+                                    <tbody>
+                                        <tr>
+                                            <td width = "80%"><MusicH2>{value.title} - {value.artist}</MusicH2></td>
+                                            <td>
+                                                <MusicH3>Votes: {value.vote}</MusicH3>
+                                            </td>
+                                            <td>
+                                                <MusicH3><Button onClick = {() => handleVote(value, index)}>{returnvote(value)}</Button></MusicH3>
+                                            </td>
+                                        </tr>
+                                        <tr><Musiccontent>{value.description}</Musiccontent></tr>
+                                    </tbody>
+                                </ReviewTable>
+                            )
+                        }
+                        else{
+                            return null
+                        }
+                    })}
+                    <button onClick = {show_more}>show more</button>
                 </div>
             )
         }
