@@ -9,8 +9,10 @@
 }
 
 .radar_chart {
-    margin-top: 6.0%;
-    margin-left: 10%;
+    margin-top: 2%;
+    margin-left: 5%;
+    position: static;
+    text-align: center;
 }
 
 .shape {
@@ -19,4 +21,18 @@
 
 .shape:hover {
     fill-opacity: 1;
+}
+
+.radar_chart_explain {
+    white-space: nowrap;
+    vertical-align: top;
+    font-family: "Lato", sans-serif;
+    font-weight: 1000;
+    font-size: 25px;
+    text-align: center;
+    padding-left: 50px;
+}
+
+.detail_pic {
+    width: 600px;
 }

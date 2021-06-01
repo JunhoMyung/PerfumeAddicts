@@ -190,10 +190,10 @@ export default function Music() {
                     {[...review_order].reverse().map((value, index) => {
                         if (index < 3){
                             return (
-                                <ReviewTable  width = "80%">
+                                <ReviewTable className="reviewtable">
                                     <tbody>
                                         <tr>
-                                            <td width = "80%"><MusicH2>{value.title} - {value.artist}</MusicH2></td>
+                                            <td><MusicH2>{value.title} - {value.artist}</MusicH2></td>
                                             <td>
                                                 <MusicH3>Votes: {value.vote}</MusicH3>
                                             </td>
