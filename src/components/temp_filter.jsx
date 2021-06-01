@@ -13,6 +13,7 @@ import MyMusic from "./music.jsx"
 import Visual from "./visual_copy.jsx"
 import Visual2 from "./visual_copy2.jsx"
 import Music_bar from "./music_bar.jsx"
+import LOGO_Full from "../perfume_pictures/LOGO_Full.PNG"
 
 
 
@@ -83,6 +84,7 @@ export default function Temp_filter() {
   };
     return(
         <div>
+        <img src={LOGO_Full} alt = "" className='logo' onClick={() => {window.location.href = "/"}}/>
         <NavBar2 />
         <div className={classes.root}>
         <Tabs

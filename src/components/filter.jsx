@@ -11,6 +11,8 @@ import Zoom from '@material-ui/core/Zoom';
 import PropTypes from "prop-types";
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles'
+import LOGO_Full from "../perfume_pictures/LOGO_Full.PNG"
+import Container from '@material-ui/core/Container';
     
 const theme = createMuiTheme({
   palette: {
@@ -134,16 +136,17 @@ export default function Filter(props) {
     return (
         <React.Fragment>
         <div id="back-to-top-anchor" />
-        <div>
-          <NavBar2/>
-          <div className="filtertitle">FIND YOUR PERFUME</div>
-          <Overlay/>
-          <table className = "filtertable">
+        <img src={LOGO_Full} alt = "" className='logo' onClick={() => {window.location.href = "/"}}/>
+        <NavBar2/>
+        <div className="filtertitle">FIND YOUR PERFUME</div>
+        <Overlay/>
+        <Container>
+          <table className = "filtertable" width = "80%">
             <tbody>
               {display()}
             </tbody>
           </table>
-        </div>
+        </Container>
         <MuiThemeProvider theme={theme}>
             <ScrollTop {...props}>
                 <Fab color="primary" size="small" aria-label="scroll back to top">

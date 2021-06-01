@@ -4,6 +4,7 @@ import {auth, db} from "./firebase.jsx";
 import { DataGrid } from '@material-ui/data-grid';
 import perfume_info from './perfume_info.jsx'
 import RadarChart from 'react-svg-radar-chart';
+import LOGO_Full from "../perfume_pictures/LOGO_Full.PNG"
 
 
 
@@ -111,6 +112,7 @@ export default class Mypage extends Component {
     render (){
         return (
             <div>
+                <img src={LOGO_Full} alt = "" className='logo' onClick={() => {window.location.href = "/"}}/>
                 <NavBar/>
                 <div className="filtertitle">Wish-List</div>
                 <div className ="datatable" style={{ height: 710, width: '80%'}}>

@@ -16,6 +16,7 @@ import Zoom from '@material-ui/core/Zoom';
 import PropTypes from "prop-types";
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles'
+import LOGO_Full from "../perfume_pictures/LOGO_Full.PNG"
 
 const theme = createMuiTheme({
   palette: {
@@ -77,6 +78,7 @@ const useStyles = makeStyles(theme => ({
 
     return (
         <React.Fragment>
+            <img src={LOGO_Full} alt = "" className='logo' onClick={() => {window.location.href = "/"}}/>
             <div id="back-to-top-anchor" />
             <NavBar/>
             <img src={MAIN_PAGE} alt = "" className='main'/>

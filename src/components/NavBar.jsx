@@ -62,8 +62,7 @@ export class NavBar extends Component {
         
         if (this.state.currentUser === null) {
             return (
-                <div>
-                        <img src={LOGO_Full} alt = "" className='logo' onClick={() => {window.location.href = "/"}}/>
+                <div className = "nav_bar">
                     <ul>
                         <li><a href="/">HOME</a></li>
                         <li><Link to="about" spy={true} smooth={true}>ABOUT</Link></li>
@@ -82,8 +81,7 @@ export class NavBar extends Component {
             const shopping_cart = this.state.shoppingcart
             if(shopping_cart !== 0){
                 return (
-                    <div>
-                        <img src={LOGO_Full} alt = "" className='logo' onClick={() => {window.location.href = "/"}}/>
+                    <div className = "nav_bar">
                         <ul>
                             <li><a href="/">HOME</a></li>
                             <li><Link to="about" spy={true} smooth={true}>ABOUT</Link></li>
@@ -115,8 +113,7 @@ export class NavBar extends Component {
             }
             else{
                 return (
-                    <div>
-                        <img src={LOGO_Full} alt = "" className='logo' onClick={() => {window.location.href = "/"}}/>
+                    <div className = "nav_bar">
                         <ul>
                             <li><a href="/">HOME</a></li>
                             <li><Link to="about" spy={true} smooth={true}>ABOUT</Link></li>
