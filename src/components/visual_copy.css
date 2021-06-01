@@ -124,17 +124,13 @@
 
 
 .purchasebutton {
-    position: absolute;
-    display: flex;
+    position: relative;
     justify-content: center;
-    flex-direction: column;
     color: white;
-    left: 45.5%;
-    top: 67%;
-    /* transform: translate(-50%, 0%); */
+    transform: translate(350px, -300%);
     width: 180px;
     height: 35px;
-    background: #704685;
+    background: #815b8d;
     border-radius: 25px;
     cursor: pointer;
     text-align: center;
