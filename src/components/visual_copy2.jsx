@@ -5,10 +5,11 @@ import RadarChart from 'react-svg-radar-chart';
 import 'react-svg-radar-chart/build/css/index.css'
 import {db, auth} from './firebase';
 import perfume_info from './perfume_info.jsx'
+import DETAIL from "../perfume_pictures/detail.png"
 
 
-class visual extends Component {
-    
+
+class visual extends Component {  
     constructor(props) {
         super(props);
         this.perfume_id = {
@@ -78,15 +79,23 @@ class visual extends Component {
         if (this.state.page === "detail"){
             return(
                 <div className='radar_chart'>
-                    
-        <RadarChart
-            captions={captions}
-            data={data}
-            size={390}
-            scales={3}
-            options={{captionMargin: 0, zoomDistance: 1.3, captionMargin: 11}}
-          />
-        </div>
+                    <table className="radar_chart_table">
+                        <tr>
+                        <td>
+                            <RadarChart
+                                captions={captions}
+                                data={data}
+                                size={390}
+                                scales={3}
+                                options={{captionMargin: 0, zoomDistance: 1.3, captionMargin: 11}}/>
+                        </td> 
+                        <td className="radar_chart_explain">
+                            SCENT DETAIL <br/><br/>
+                            <img src={DETAIL} alt = "" className='detail_pic'/>
+                        </td>
+                        </tr>
+                    </table>
+                </div>
             )
         }
         else if (this.state.page === "music"){
