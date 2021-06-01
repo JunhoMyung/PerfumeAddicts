@@ -1,7 +1,6 @@
 import React from "react";
 import { render } from 'react-dom';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-//import "bulma/css/bulma.css";
 import Main from "./components/main";
 import Filter from "./components/filter";
 import Visual from "./components/visual";

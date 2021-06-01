@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import {db} from './firebase'
 import perfume_info from './perfume_info.jsx'
+import ReactPlayer from 'react-player/youtube'
+
 
 export default class Music_bar extends Component {
 
@@ -17,6 +19,8 @@ export default class Music_bar extends Component {
             url: "",
             music_title: "",
             music_artist: "",
+            playing: true,
+            youtubeOpen: false,
         };        
         this.componentDidMount = this.componentDidMount.bind(this) 
 
@@ -29,10 +33,43 @@ export default class Music_bar extends Component {
         });
     }
 
+    pauseorplay = () =>{
+        if (this.state.playing){
+            return(
+                <i className="fas fa-pause" onClick = {() => this.setState({playing: false})}></i>
+            )
+        }
+        else{
+            return(
+                <i className="fas fa-play" onClick = {() => this.setState({playing: true})}></i>
+            )
+        }
+    }
+
+    getYoutubeVideo() {
+        return (
+          <div className="invisible">
+            <ReactPlayer
+            url={this.state.url}
+            controls={true}
+            width="340px"
+            height="200px"
+            playing={this.state.playing}
+            volume = {0.2}
+            />
+          </div>
+        );
+      }
+    
+
     render() {
         return (
-            <div className = "music_bar">
-                Currently Playing: {this.state.music_title} - {this.state.music_artist}
+            <div>
+                <div className = "music_bar">
+                    <div className = "column left">{this.pauseorplay()}</div>
+                    <div className = "music_info column right">Currently Playing: {this.state.music_title} - {this.state.music_artist}</div>
+                </div>
+                {this.getYoutubeVideo()}
             </div>
         )
     }

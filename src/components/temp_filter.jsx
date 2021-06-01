@@ -15,6 +15,7 @@ import Visual2 from "./visual_copy2.jsx"
 import Music_bar from "./music_bar.jsx"
 
 
+
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
   

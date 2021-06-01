@@ -571,22 +571,52 @@ li.dropdown {
     background: #61466F;
     bottom: 0;
     right: 0;
-    margin-right: 0.5%;
-    margin-bottom: 0.5%;
+    margin-right: 8px;
+    margin-bottom: 8px;
     padding: 5px 5px 5px;
     font-family: "Lato", sans-serif;
     color: white;
     border-radius: 10px;
     width: 400px;
-    text-align: center;
     line-height: 30px;
     height: 30px;
+}
+
+.music_info{
     overflow-x: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     transition: text-indent 5s linear;
 }
 
-.music_bar:hover{
-    text-indent: -400px;
+.music_info:hover{
+    text-indent: -100px;
+}
+
+.column {
+    float: left;
+}
+  
+.left {
+    width: 10%;
+    text-align: center;
+}
+
+.right {
+    width: 90%;
+    text-align: center;
+}
+
+.youtube{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 48px;
+    margin-right: 8px;
+}
+
+.invisible {
+    visibility: hidden;
+    position: absolute;
+    top: -9999px;
 }
