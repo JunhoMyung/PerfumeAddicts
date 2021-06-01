@@ -363,6 +363,7 @@ li.dropdown {
     left: 50%;
     transform: translate(-50%, 0%);
     padding: 10px 10px 10px;
+    border-collapse: collapse;
 }
 
 .mypage{
@@ -394,7 +395,6 @@ li.dropdown {
     font-size: 13pt;
     height: 150px;
     border-bottom: 0.1px solid gray;
-    
 }
 
 .perfumename{
