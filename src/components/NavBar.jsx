@@ -80,32 +80,69 @@ export class NavBar extends Component {
         else {
             const user_name = this.state.currentUser.displayName;
             const shopping_cart = this.state.shoppingcart
-            return (
-                <div>
-                    <img src={LOGO_Full} alt = "" className='logo' onClick={() => {window.location.href = "/"}}/>
-                    <ul>
-                        <li><a href="/">HOME</a></li>
-                        <li><Link to="about" spy={true} smooth={true}>ABOUT</Link></li>
-                        <li><Link to="service" spy={true} smooth={true}>SERVICE</Link></li>
-                        <li><Link to="join" spy={true} smooth={true}>JOIN</Link></li>
-                        <li><a href="./filter">DISCOVER</a></li>
-                        <ul style={{float: "right"}}>
-                            <li className="dropdown signin"><a href="# "><i className="fas fa-user-circle fa-lg"></i>&nbsp;&nbsp;{user_name}</a>
-                                <div className="dropdown-content">
-                                    <a href="/mypage">My Page&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <MuiThemeProvider theme={theme}>
-                                        <StyledBadge fontSize="small" badgeContent={shopping_cart} color="primary">
-                                        <ShoppingCartIcon fontSize="small" />
-                                        </StyledBadge>
-                                    </MuiThemeProvider>
-                                    </a>
-                                    <a onClick={() => {signOutWithGoogle(); window.location.reload();}} href="# ">Sign Out</a>
-                                </div>
-                            </li>
+            if(shopping_cart !== 0){
+                return (
+                    <div>
+                        <img src={LOGO_Full} alt = "" className='logo' onClick={() => {window.location.href = "/"}}/>
+                        <ul>
+                            <li><a href="/">HOME</a></li>
+                            <li><Link to="about" spy={true} smooth={true}>ABOUT</Link></li>
+                            <li><Link to="service" spy={true} smooth={true}>SERVICE</Link></li>
+                            <li><Link to="join" spy={true} smooth={true}>JOIN</Link></li>
+                            <li><a href="./filter">DISCOVER</a></li>
+                            <ul style={{float: "right"}}>
+                                <li className="dropdown signin"><a href="# ">
+                                <span className = "logowrapper">
+                                    <i class="fas fa-user-circle fa-lg"></i>
+                                    <span class="badge"></span>
+                                </span>
+                                &nbsp;&nbsp;{user_name}</a>
+                                    <div className="dropdown-content">
+                                        <a href="/mypage">My Page&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <MuiThemeProvider theme={theme}>
+                                            <StyledBadge fontSize="small" badgeContent={shopping_cart} color="primary">
+                                            <ShoppingCartIcon fontSize="small" />
+                                            </StyledBadge>
+                                        </MuiThemeProvider>
+                                        </a>
+                                        <a onClick={() => {signOutWithGoogle(); window.location.reload();}} href="# ">Sign Out</a>
+                                    </div>
+                                </li>
+                            </ul>
                         </ul>
-                    </ul>
-                </div>
-            )
+                    </div>
+                )
+            }
+            else{
+                return (
+                    <div>
+                        <img src={LOGO_Full} alt = "" className='logo' onClick={() => {window.location.href = "/"}}/>
+                        <ul>
+                            <li><a href="/">HOME</a></li>
+                            <li><Link to="about" spy={true} smooth={true}>ABOUT</Link></li>
+                            <li><Link to="service" spy={true} smooth={true}>SERVICE</Link></li>
+                            <li><Link to="join" spy={true} smooth={true}>JOIN</Link></li>
+                            <li><a href="./filter">DISCOVER</a></li>
+                            <ul style={{float: "right"}}>
+                                <li className="dropdown signin"><a href="# ">
+                                <i class="fas fa-user-circle fa-lg"></i>
+                                &nbsp;&nbsp;{user_name}</a>
+                                    <div className="dropdown-content">
+                                        <a href="/mypage">My Page&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <MuiThemeProvider theme={theme}>
+                                            <StyledBadge fontSize="small" badgeContent={shopping_cart} color="primary">
+                                            <ShoppingCartIcon fontSize="small" />
+                                            </StyledBadge>
+                                        </MuiThemeProvider>
+                                        </a>
+                                        <a onClick={() => {signOutWithGoogle(); window.location.reload();}} href="# ">Sign Out</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                )
+            }
         }
     }
 }
