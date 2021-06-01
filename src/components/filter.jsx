@@ -110,7 +110,7 @@ export default function Filter(props) {
               if (index < 3){
                 return(
                   <span className = {"filtertag" + value} key = {index}>
-                  #{value + " "}
+                  #{value}
                   </span>
                 )
               }
