@@ -12,6 +12,7 @@ import NavBar from "./NavBar.jsx"
 import MyMusic from "./music.jsx"
 import Visual from "./visual_copy.jsx"
 import Visual2 from "./visual_copy2.jsx"
+import Music_bar from "./music_bar.jsx"
 
 
 function TabPanel(props) {
@@ -105,6 +106,7 @@ export default function Temp_filter() {
         <TabPanel value={value} index={2}>
           <MyMusic />
         </TabPanel>
+        <Music_bar />
       </div>
       </div>
     )

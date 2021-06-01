@@ -72,12 +72,17 @@ class visual extends Component {
 
           const captions = {
             // columns
-            citrus: 'Citrus',
-            woody: 'Woody',
-            spicy: 'Spicy',
-            flower: 'Floral',
-            fruit: 'Fruity'
+            citrus: 'CITRUS',
+            woody: 'WOODY',
+            spicy: 'SPICY',
+            flower: 'FLORAL',
+            fruit: 'FRUITY'
           };
+
+          const options = {
+              captions: false,
+          }
+        
         if (this.state.page === "detail"){
             return(
                 ////<img src={radar_chart} className='radar_chart' alt = ""/> 
@@ -87,6 +92,7 @@ class visual extends Component {
             captions={captions}
             data={data}
             size={600}
+            options={options}
           />
         </div>
             )
