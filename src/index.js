@@ -11,10 +11,10 @@ const App = () => (
   <BrowserRouter>
     <Switch>
       <Route path="/filter" component = {Filter} />
-      <Route path="/visual" component = {Visual} />
+      <Route path="/visual" component = {Temp} />
       <Route exact path="/" component = {Main}/>
       <Route path="/mypage" component = {Mypage} />
-      <Route path="/temp" component = {Temp} />
+      {/* <Route path="/temp" component = {Temp} /> */}
     </Switch>
   </BrowserRouter>
 );
