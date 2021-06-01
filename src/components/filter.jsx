@@ -131,6 +131,7 @@ export default function Filter(props) {
 
     return (
         <React.Fragment>
+        <div id="back-to-top-anchor" />
         <div>
           <NavBar/>
           <div className="filtertitle">FIND YOUR PERFUME</div>
