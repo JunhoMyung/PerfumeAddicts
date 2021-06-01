@@ -620,3 +620,7 @@ li.dropdown {
     position: absolute;
     top: -9999px;
 }
+
+.pointer{
+    cursor: pointer;
+}

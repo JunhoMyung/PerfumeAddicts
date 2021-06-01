@@ -36,12 +36,16 @@ export default class Music_bar extends Component {
     pauseorplay = () =>{
         if (this.state.playing){
             return(
-                <i className="fas fa-pause" onClick = {() => this.setState({playing: false})}></i>
+                <div className = "pointer">
+                    <i className="fas fa-pause" onClick = {() => this.setState({playing: false})}></i>
+                </div>
             )
         }
         else{
             return(
-                <i className="fas fa-play" onClick = {() => this.setState({playing: true})}></i>
+                <div className = "pointer">
+                    <i className="fas fa-play" onClick = {() => this.setState({playing: true})}></i>
+                </div>
             )
         }
     }
