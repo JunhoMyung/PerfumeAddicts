@@ -6,6 +6,7 @@ import Main from "./components/main";
 import Filter from "./components/filter";
 import Visual from "./components/visual";
 import Mypage from "./components/mypage";
+import Temp from "./components/temp_filter";
 
 const App = () => (
   <BrowserRouter>
@@ -14,6 +15,7 @@ const App = () => (
       <Route path="/visual" component = {Visual} />
       <Route exact path="/" component = {Main}/>
       <Route path="/mypage" component = {Mypage} />
+      <Route path="/temp" component = {Temp} />
     </Switch>
   </BrowserRouter>
 );
