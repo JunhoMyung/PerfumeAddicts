@@ -81,8 +81,9 @@ export class NavBar extends Component {
             const user_name = this.state.currentUser.displayName;
             const shopping_cart = this.state.shoppingcart
             return (
-                <div>
-                    <img src={LOGO_Full} alt = "" className='logo' onClick={() => {window.location.href = "/"}}/>
+                <div className="nav_bar">
+                    <div><img src={LOGO_Full} alt = "" className='logo' onClick={() => {window.location.href = "/"}}/></div>
+                    <div className="nav_bar">
                     <ul>
                         <li><a href="/">HOME</a></li>
                         <li><Link to="about" spy={true} smooth={true}>ABOUT</Link></li>
@@ -104,6 +105,7 @@ export class NavBar extends Component {
                             </li>
                         </ul>
                     </ul>
+                </div>
                 </div>
             )
         }
