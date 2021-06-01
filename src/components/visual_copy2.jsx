@@ -77,15 +77,15 @@ class visual extends Component {
           };
         if (this.state.page === "detail"){
             return(
-                <div className="flex_container">
                 <div className='radar_chart'>
                     
         <RadarChart
             captions={captions}
             data={data}
-            size={410}
+            size={390}
+            scales={3}
+            options={{captionMargin: 0, zoomDistance: 1.3, captionMargin: 11}}
           />
-        </div>
         </div>
             )
         }

@@ -2,15 +2,21 @@
     fill:#444;
     font-weight: 400;
     text-shadow:1px 1px 0 #fff;
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
+    z-index: 100;
+    font-family: "Lato", sans-serif;
 }
 
-.flex_container {
-    display: flex;
-    flex-direction: column;
-  }
-
 .radar_chart {
-    margin: 0 auto;
+    margin-top: 6.0%;
+    margin-left: 10%;
+}
+
+.shape {
+    fill-opacity: 0.7;
+}
+
+.shape:hover {
+    fill-opacity: 1;
 }
