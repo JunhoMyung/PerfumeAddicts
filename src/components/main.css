@@ -5,7 +5,6 @@
     margin-top: 10px;
     margin-bottom: 10px;
     display: flex;
-    position: sticky;
     cursor: pointer;
 }
 
@@ -641,3 +640,11 @@ li.dropdown {
     right:-4px;
     padding:5px;
 }
+.nav_bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+    
+}
+
