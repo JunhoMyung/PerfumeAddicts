@@ -4,7 +4,7 @@ import MyMusic from "./music.jsx";
 import ReactPlayer from 'react-player/youtube'
 import RadarChart from 'react-svg-radar-chart';
 import 'react-svg-radar-chart/build/css/index.css'
-import NavBar from "./NavBar.jsx"
+import NavBar from "./NavBar_copy.jsx"
 import {db, auth} from './firebase';
 import perfume_info from './perfume_info.jsx'
 

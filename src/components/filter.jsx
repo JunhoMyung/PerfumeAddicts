@@ -1,7 +1,7 @@
 import Overlay from './overlay.jsx'
 import './filter.css'
 import React, { useState, useEffect } from "react";
-import NavBar from './NavBar.jsx'
+import NavBar2 from './NavBar_copy.jsx'
 import perfume_info from './perfume_info.jsx'
 import { makeStyles } from '@material-ui/core/styles';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
@@ -112,12 +112,14 @@ export default function Filter(props) {
                   <span className = {"filtertag" + value} key = {index}>
                   #{value}
                   </span>
+
                 )
               }
               else{
                 return(null)
               }
             })}
+            <br/><br/>
             </td>)
         }
         else{
@@ -132,7 +134,7 @@ export default function Filter(props) {
     return (
         <React.Fragment>
         <div>
-          <NavBar/>
+          <NavBar2/>
           <div className="filtertitle">FIND YOUR PERFUME</div>
           <Overlay/>
           <table className = "filtertable">

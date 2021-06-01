@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import NavBar from './NavBar'
+import NavBar from './NavBar_copy'
 import {auth, db} from "./firebase.jsx";
 import { DataGrid } from '@material-ui/data-grid';
 import perfume_info from './perfume_info.jsx'

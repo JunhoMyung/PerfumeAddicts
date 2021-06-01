@@ -8,7 +8,7 @@ import Box from '@material-ui/core/Box';
 import './temp_filter.css'
 import './visual.css'
 import 'react-svg-radar-chart/build/css/index.css'
-import NavBar from "./NavBar.jsx"
+import NavBar2 from "./NavBar_copy.jsx"
 import MyMusic from "./music.jsx"
 import Visual from "./visual_copy.jsx"
 import Visual2 from "./visual_copy2.jsx"
@@ -83,7 +83,7 @@ export default function Temp_filter() {
   };
     return(
         <div>
-        <NavBar />
+        <NavBar2 />
         <div className={classes.root}>
         <Tabs
           orientation="vertical"

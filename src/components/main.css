@@ -467,7 +467,7 @@ li.dropdown {
     font-family: "Lato", sans-serif;
     font-size: 10pt;
     color: white;
-    background-color: rgba(242, 185, 139, 0.5);
+    background-color: rgba(242, 185, 139, 0.8);
     padding: 5px 5px 5px;
     margin-right: 2px;
     margin-left: 2px;
@@ -512,7 +512,7 @@ li.dropdown {
     font-family: "Lato", sans-serif;
     font-size: 10pt;
     color: white;
-    background-color: rgb(238, 238, 189, 1);
+    background-color: rgba(226, 226, 172, 1);
     padding: 5px 5px 5px;
     margin-right: 2px;
     margin-left: 2px;
