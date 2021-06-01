@@ -568,7 +568,7 @@ li.dropdown {
 
 .music_bar{
     position: fixed;
-    background: #61466F;
+    background: rgb(200, 200, 200);
     bottom: 0;
     right: 0;
     margin-right: 8px;

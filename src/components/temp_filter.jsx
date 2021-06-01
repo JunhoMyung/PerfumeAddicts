@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
         height: "calc((100vh - 120px)/3)",
       },
       customStyleOnActiveTab:{
-        backgroundColor: "purple",
+        backgroundColor: "#815b8d",
         width: "3px",
       },
       customStyleOnTab:{
