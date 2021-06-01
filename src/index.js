@@ -3,7 +3,6 @@ import { render } from 'react-dom';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Main from "./components/main";
 import Filter from "./components/filter";
-import Visual from "./components/visual";
 import Mypage from "./components/mypage";
 import Temp from "./components/temp_filter";
 

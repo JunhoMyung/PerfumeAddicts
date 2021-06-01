@@ -87,7 +87,7 @@ class visual extends Component {
                                 data={data}
                                 size={390}
                                 scales={3}
-                                options={{captionMargin: 0, zoomDistance: 1.3, captionMargin: 11}}/>
+                                options={{zoomDistance: 1.3, captionMargin: 11}}/>
                         </td> 
                         <td className="radar_chart_explain">
                             SCENT DETAIL <br/><br/>

@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import { useEffect } from 'react';
 import './main.css'
 import LOGO_Full from "../perfume_pictures/LOGO_Full.PNG"
 import {auth, signInWithGoogle, signOutWithGoogle, db} from "./firebase.jsx";
@@ -8,7 +7,6 @@ import { withStyles } from '@material-ui/core/styles';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
-import { Link } from "react-scroll";
 import { withRouter } from 'react-router-dom'
 
 
