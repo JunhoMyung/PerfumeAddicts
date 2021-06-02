@@ -12,7 +12,6 @@ import PropTypes from "prop-types";
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles'
 import LOGO_Full from "../perfume_pictures/LOGO_Full.PNG"
-import Container from '@material-ui/core/Container';
     
 const theme = createMuiTheme({
   palette: {

@@ -643,12 +643,13 @@ li.dropdown {
 }
   
 .radarleft {
-    width: 60%;
+    width: 55%;
     text-align: right;
+    margin-right: 10px;
 }
 
 .radarright {
-    width: 40%;
+    width: 30%;
     text-align: left;
 }
 
