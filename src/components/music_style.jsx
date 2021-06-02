@@ -18,13 +18,15 @@ export const MusicH2 = styled.div`
     height: 35px;
     padding-left: 20px;
     line-height: 35px;
+    width: 700px;
 `;
 
 export const MusicH3 = styled.div`
     font-size: 11pt;
     transform: translateY(30%);
     font-family: "Lato", sans-serif;
-    text-align: right;
+    text-align: left;
+    position: relative;
 `;
 
 export const Musiccontent = styled.div`
@@ -51,6 +53,6 @@ export const Modal_margin = styled.div`
 `
 
 export const ReviewTable = styled.table`
-    margin-left: 10%;
-    width: 150%;
+    margin-left: 50px;
+    width: calc(100vw - 350px);
 `
