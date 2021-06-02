@@ -356,10 +356,11 @@ li.dropdown {
 
 .filtertable {
     text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    transform: translate(4.5%, 0%);
+    display: absolute;
+    left:0;
+    right:0;
+    margin-left: auto;
+    margin-right: auto;
     padding: 10px 10px 10px;
     border-collapse: collapse;
 }
@@ -394,6 +395,7 @@ li.dropdown {
     height: 150px;
     border-bottom: 0.1px solid gray;
     border-top: 0.1px solid gray;
+    width: 300px;
 }
 
 .perfumename{
@@ -665,4 +667,8 @@ li.dropdown {
     cursor: pointer;
     margin-left: 370px;
     font-family: "Lato", sans-serif;
+}
+
+.verticalcenter{
+    vertical-align: middle;
 }

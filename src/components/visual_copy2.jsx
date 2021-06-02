@@ -10,7 +10,7 @@ import Floral from "../perfume_pictures/floral.png"
 import Woody from "../perfume_pictures/woody.png"
 import Spicy from "../perfume_pictures/spicy.png"
 import Citrus from "../perfume_pictures/citrus.png"
-import Slider1 from "./slider.jsx"
+import {Floral2, Fruity2, Woody2, Citrus2, Spicy2} from "./slider.jsx"
 
 
 
@@ -34,7 +34,8 @@ class visual_copy2 extends Component {
             url: "",
             music_title: "",
             music_artist: "",
-            wishlist: []
+            wishlist: [],
+            scent: "",
         };        
         this.componentDidMount = this.componentDidMount.bind(this) 
 
@@ -53,6 +54,34 @@ class visual_copy2 extends Component {
 
     detail = () => {
         this.setState({page : "detail"});
+    }
+
+    slider = () => {
+        if(this.state.scent === "floral"){
+            return(
+                <Floral2 />
+            )
+        }
+        else if(this.state.scent === "woody"){
+            return(
+                <Woody2 />
+            )
+        }
+        else if(this.state.scent === "spicy"){
+            return(
+                <Spicy2 />
+            )
+        }
+        else if(this.state.scent === "citrus"){
+            return(
+                <Citrus2 />
+            )
+        }
+        else if(this.state.scent === "fruity"){
+            return(
+                <Fruity2 />
+            )
+        }
     }
 
     render_tab = () => {
@@ -90,34 +119,35 @@ class visual_copy2 extends Component {
                             <RadarChart
                                 captions={captions}
                                 data={data}
-                                size={390}
+                                size={400}
                                 scales={3}
                                 options={{zoomDistance: 1.3, captionMargin: 11}}/>
                         </td> 
                         <td className="radar_chart_explain">
                             SCENT DETAIL <br/><br/>
+                        
                             <table>
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <img src = {Fruity} alt = "" className = "detail_pic"></img>
+                                            <img src = {Fruity} alt = "" className = "detail_pic" onClick = {() => this.setState({scent: "fruity"})}></img>
                                         </td>
                                         <td>
-                                            <img src = {Floral} alt = "" className = "detail_pic"></img>
+                                            <img src = {Floral} alt = "" className = "detail_pic" onClick = {() => this.setState({scent: "floral"})}></img>
                                         </td>
                                         <td>
-                                            <img src = {Spicy} alt = "" className = "detail_pic"></img>
+                                            <img src = {Spicy} alt = "" className = "detail_pic" onClick = {() => this.setState({scent: "spicy"})}></img>
                                         </td>
                                         <td>
-                                            <img src = {Woody} alt = "" className = "detail_pic"></img>
+                                            <img src = {Woody} alt = "" className = "detail_pic" onClick = {() => this.setState({scent: "woody"})}></img>
                                         </td>
                                         <td>
-                                            <img src = {Citrus} alt = "" className = "detail_pic"></img>
+                                            <img src = {Citrus} alt = "" className = "detail_pic" onClick = {() => this.setState({scent: "citrus"})}></img>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
-                            {/* <Slider1 /> */}
+                            {this.slider()}
                         </td>
                         </tr>
                     </table>

@@ -15,7 +15,7 @@ const spicy = perfume_info[perfume_id].radar_chart.spicy;
 
 const useStyles = makeStyles((theme) => ({
     root: {
-      width: 300,
+      width: 500,
     },
     margin: {
       height: theme.spacing(3),
@@ -336,4 +336,94 @@ export default function ContinuousSlider() {
       />
     </div>
   );
+}
+
+export function Citrus2() {
+  const classes = useStyles();
+  
+  return (
+    <div className={classes.root}>
+      <CustomSlidercitrus
+        defaultValue={citrus*100}
+        valueLabelFormat={valueLabelFormat_citrus}
+        aria-labelledby="discrete-slider-restrict"
+        step={null}
+        valueLabelDisplay="auto"
+        marks={marks_citrus}
+        track={false}
+      />
+    </div>
+  )
+}
+
+export function Floral2() {
+  const classes = useStyles();
+  
+  return (
+    <div className={classes.root}>
+      <CustomSliderfloral
+        defaultValue={floral*100}
+        valueLabelFormat={valueLabelFormat_floral}
+        aria-labelledby="discrete-slider-restrict"
+        step={null}
+        valueLabelDisplay="auto"
+        marks={marks_floral}
+        track={false}
+      />
+    </div>
+  )
+}
+
+export function Woody2() {
+  const classes = useStyles();
+  
+  return (
+    <div className={classes.root}>
+      <CustomSliderwoody
+        defaultValue={woody*100}
+        valueLabelFormat={valueLabelFormat_woody}
+        aria-labelledby="discrete-slider-restrict"
+        step={null}
+        valueLabelDisplay="auto"
+        marks={marks_woody}
+        track={false}
+      />
+    </div>
+  )
+}
+
+export function Fruity2() {
+  const classes = useStyles();
+  
+  return (
+    <div className={classes.root}>
+      <CustomSliderfruity
+        defaultValue={fruity*100}
+        valueLabelFormat={valueLabelFormat_fruity}
+        aria-labelledby="discrete-slider-restrict"
+        step={null}
+        valueLabelDisplay="auto"
+        marks={marks_fruity}
+        track={false}
+      />
+    </div>
+  )
+}
+
+export function Spicy2() {
+  const classes = useStyles();
+  
+  return (
+    <div className={classes.root}>
+      <CustomSliderspicy
+        defaultValue={spicy*100}
+        valueLabelFormat={valueLabelFormat_spicy}
+        aria-labelledby="discrete-slider-restrict"
+        step={null}
+        valueLabelDisplay="auto"
+        marks={marks_spicy}
+        track={false}
+      />
+    </div>
+  )
 }

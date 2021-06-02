@@ -140,13 +140,11 @@ export default function Filter(props) {
         <NavBar2/>
         <div className="filtertitle">FIND YOUR PERFUME</div>
         <Overlay/>
-        <Container>
-          <table className = "filtertable" width = "80%">
+          <table className = "filtertable" width = "1200px">
             <tbody>
               {display()}
             </tbody>
           </table>
-        </Container>
         <MuiThemeProvider theme={theme}>
             <ScrollTop {...props}>
                 <Fab color="primary" size="small" aria-label="scroll back to top">
