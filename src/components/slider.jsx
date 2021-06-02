@@ -41,7 +41,7 @@ const CustomSlidercitrus = withStyles({
     rail: {
       height: 10,
       borderRadius: 0,
-      backgroundImage: "linear-gradient(to right, #aae391, #b3e487, #bde47d, #c9e472, #d5e468, #d8da5b, #dbd04f, #ddc644, #d4b134, #ca9c25, #c08817, #b47409)",
+      backgroundImage: "linear-gradient(to right, #e3ffc7, #dffcaf, #def794, #e0f279, #e4ec5a, #e8e346, #ecda30, #f1d111, #f3c403, #f4b800, #f4ab00, #f39e00)",
       opacity: 1
     },
   })(Slider);
@@ -66,7 +66,7 @@ const CustomSlidercitrus = withStyles({
     rail: {
       height: 10,
       borderRadius: 0,
-      backgroundImage: "linear-gradient(to right, #f7adf9, #f7a3f9, #f899f9, #f88ef9, #f883f9, #ef76f3, #e669ee, #dd5ce8, #c94adc, #b538d0, #a024c5, #8b08b9)",
+      backgroundImage: "linear-gradient(to right, #f2c2fc, #e9b1eb, #e09fd9, #d78ec7, #ce7db4, #c670a5, #be6297, #b65588, #ad497a, #a43c6c, #9b2f5e, #912150)",
       opacity: 1
     },
   })(Slider);
@@ -90,7 +90,7 @@ const CustomSlidercitrus = withStyles({
     rail: {
       height: 10,
       borderRadius: 0,
-      backgroundImage: "linear-gradient(to right, #ffc4e7, #fcb1d5, #fa9dc1, #f689ab, #f17593, #e8657f, #df566b, #d44756, #c53842, #b5292f, #a41a1c, #930606)",
+      backgroundImage: "linear-gradient(to right, #ffd2a8, #ffc7a0, #ffbb9a, #ffaf96, #fea394, #f8968f, #f1898a, #ea7c87, #dd6b7e, #d05a76, #c2486e, #b43667)",
       opacity: 1
     },
   })(Slider);
@@ -114,8 +114,8 @@ const CustomSlidercitrus = withStyles({
     rail: {
       height: 10,
       borderRadius: 0,
-      backgroundImage: "linear-gradient(to right, #618175, #5a7f67, #5b7c55, #617742, #6b712d, #6e6921, #726116, #75590b, #705007, #6a4704, #633e02, #5d3500)",
-      opacity: 0.8
+      backgroundImage: "linear-gradient(to right, #6ca271, #749f69, #7b9b61, #82985a, #899454, #878b4c, #858244, #83793d, #776931, #6b5925, #5f4a1a, #523b10)",
+      opacity: 1
     },
   })(Slider);
 
@@ -138,8 +138,8 @@ const CustomSlidercitrus = withStyles({
     rail: {
       height: 10,
       borderRadius: 0,
-      backgroundImage: "linear-gradient(to right, #cdcd92, #bab276, #a8985b, #957f41, #836629, #79551d, #6f4511, #643507, #5d2806, #561b04, #4d0e02, #440000)",
-      opacity: 0.9
+      backgroundImage: "linear-gradient(to right, #ffd1a3, #f4bf90, #e9ac7e, #de9a6d, #d3885d, #c87952, #bc6a48, #b15b3f, #a34c37, #943e2f, #862f27, #772020)",
+      opacity: 1
     },
   })(Slider);
 
@@ -220,61 +220,61 @@ const CustomSlidercitrus = withStyles({
   ];
 
   function valueLabelFormat_citrus(value) {
-    if ( `${value}` === (citrus * 100)) {
-        return "Here"
+    if (value === (citrus * 100)) {
+        return (<i class="fas fa-check"></i>)
     }
-    else if ( `${value}` === (0)) {
+    else if (value === (0)) {
         return "Min"
     }
-    else if ( `${value}` === (100)) {
+    else if (value === (100)) {
         return "Max"
     }
   }
 
   function valueLabelFormat_floral(value) {
-    if ( `${value}` === (floral * 100)) {
-        return "Here"
+    if (value === (floral * 100)) {
+        return (<i class="fas fa-check"></i>)
     }
-    else if ( `${value}` === (0)) {
+    else if (value === (0)) {
         return "Min"
     }
-    else if ( `${value}` === (100)) {
+    else if (value === (100)) {
         return "Max"
     }
   }
 
   function valueLabelFormat_fruity(value) {
-    if ( `${value}` === (fruity * 100)) {
-        return "Here"
+    if (value === (fruity * 100)) {
+        return (<i class="fas fa-check"></i>)
     }
-    else if ( `${value}` === (0)) {
+    else if (value === (0)) {
         return "Min"
     }
-    else if ( `${value}` === (100)) {
+    else if (value === (100)) {
         return "Max"
     }
   }
 
   function valueLabelFormat_woody(value) {
-    if ( `${value}` === (woody * 100)) {
-        return "Here"
+    if (value === (woody * 100)) {
+        return (<i class="fas fa-check"></i>)
     }
-    else if ( `${value}` === (0)) {
+    else if (value === (0)) {
         return "Min"
     }
-    else if ( `${value}` === (100)) {
+    else if (value === (100)) {
         return "Max"
     }
   }
 
   function valueLabelFormat_spicy(value) {
-    if ( `${value}` === (spicy * 100)) {
-        return "Here"
+    if ( value === (spicy * 100)) {
+        return (<i class="fas fa-check"></i>)
     }
-    else if ( `${value}` === (0)) {
+    else if ( value === (0)) {
         return "Min"
     }
-    else if ( `${value}` === (100)) {
+    else if ( value === (100)) {
         return "Max"
     }
   }
@@ -343,6 +343,7 @@ export function Citrus2() {
   
   return (
     <div className={classes.root}>
+      Citrus<br/>
       <CustomSlidercitrus
         defaultValue={citrus*100}
         valueLabelFormat={valueLabelFormat_citrus}
@@ -361,6 +362,7 @@ export function Floral2() {
   
   return (
     <div className={classes.root}>
+      Floral<br/>
       <CustomSliderfloral
         defaultValue={floral*100}
         valueLabelFormat={valueLabelFormat_floral}
@@ -379,6 +381,7 @@ export function Woody2() {
   
   return (
     <div className={classes.root}>
+      Woody<br/>
       <CustomSliderwoody
         defaultValue={woody*100}
         valueLabelFormat={valueLabelFormat_woody}
@@ -397,6 +400,7 @@ export function Fruity2() {
   
   return (
     <div className={classes.root}>
+      Fruity<br/>
       <CustomSliderfruity
         defaultValue={fruity*100}
         valueLabelFormat={valueLabelFormat_fruity}
@@ -415,6 +419,7 @@ export function Spicy2() {
   
   return (
     <div className={classes.root}>
+      Spicy<br/>  
       <CustomSliderspicy
         defaultValue={spicy*100}
         valueLabelFormat={valueLabelFormat_spicy}
