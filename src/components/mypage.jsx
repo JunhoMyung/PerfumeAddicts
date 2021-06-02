@@ -105,8 +105,8 @@ export default class Mypage extends Component {
         if(this.state.rows.length !== 0){
             return(
                 <div>
-                    <div className ="datatable" style={{ height: "70vh", width: '80%'}}>
-                        <DataGrid rows={this.state.rows} columns={this.state.columns} pageSize={3} checkboxSelection rowHeight = {h/6} 
+                    <div className ="datatable" style={{ height: 0.52*h, width: '80%'}}>
+                        <DataGrid rows={this.state.rows} columns={this.state.columns} pageSize={3} checkboxSelection rowHeight = {h/8} 
                         onSelectionModelChange={(e) => this.selected_list(e)}/>
                     </div>
                     <br/>
