@@ -19,7 +19,8 @@ class visual_copy extends Component {
             info : {
                 name: perfume_info[this.perfume_id.id].name,
                 price: perfume_info[this.perfume_id.id].price,
-                sizes: perfume_info[this.perfume_id.id].volume
+                sizes: perfume_info[this.perfume_id.id].volume,
+                brand: perfume_info[this.perfume_id.id].brand,
             },
             current_price: perfume_info[this.perfume_id.id].price[0],
             quantity: "",

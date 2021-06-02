@@ -94,6 +94,15 @@
     white-space: nowrap;
 }
 
+.brand_name{
+    font-family: "Lato", sans-serif;
+    font-weight: 1000;
+    text-transform: uppercase;
+    /* padding-top: 2%; */
+    padding-left: 18%;
+    white-space: nowrap;
+}
+
 .perfume_picture {
     /* padding-left: 3%; */
     padding-top: 8%;
