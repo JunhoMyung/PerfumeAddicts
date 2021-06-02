@@ -6,7 +6,7 @@ import perfume_info from './perfume_info.jsx'
 import RadarChart from 'react-svg-radar-chart';
 import LOGO_Full from "../perfume_pictures/LOGO_Full.PNG"
 import LOGO_Thumbnail from "../perfume_pictures/LOGO_Thumbnail.PNG"
-
+import DeleteIcon from '@material-ui/icons/Delete';
 
 
 export default class Mypage extends Component {
@@ -15,8 +15,7 @@ export default class Mypage extends Component {
         super(props);
         this.state = {
           columns: [
-            { field: 'PerfumeName', headerName: 'Perfume Name', sortable: false, width: 200 },
-            { field: 'img', headerName: 'Image', width: 400, sortable: false, 
+            { field: 'img', headerName: 'Image', width: 170, sortable: false, 
                 renderCell: (params) => {
                     return (
                         <div className = "mypage">
@@ -24,8 +23,16 @@ export default class Mypage extends Component {
                         </div>
                     );
             }},
-            { field: 'Price', headerName: 'Price ($)', width: 200 },
-            { field: 'Quantity', headerName: 'Volume (mL)', width: 200 },
+            { field: 'PerfumeName', headerName: 'Perfume Name', sortable: false, width: 350 },
+            { field: 'Price', headerName: 'Price ($)', width: 220 },
+            { field: 'Quantity', headerName: 'Volume (mL)', width: 220 },
+            { field: 'Delete', headerName: "Remove", width: 120, sortable: false, renderCell: (params) => {
+                return (
+                    <div className = "delete">
+                        {params.row.Delete}
+                    </div>
+                );
+        }},
           ],
           rows: [],
           currentUser: null,
@@ -58,12 +65,39 @@ export default class Mypage extends Component {
                 if (snapshot.exists()){
                     temp = Object.values(snapshot.val())
                     for (var i of temp){
-                        temp2.push({id: i, PerfumeName: perfume_info[i].name, img: perfume_info[i].pic_name, Price: perfume_info[i].price[0], Quantity: perfume_info[i].volume[0]})
+                        const num = i
+                        temp2.push({
+                            id: i, PerfumeName: perfume_info[i].name, 
+                            img: perfume_info[i].pic_name, 
+                            Price: perfume_info[i].price[0], 
+                            Quantity: perfume_info[i].volume[0], 
+                            Delete: <i className="far fa-trash-alt fa-lg pointer" onClick = {() => this.removerow(num)}></i>
+                        })
                     }
                     temp_this.setState({rows: temp2})
                 }
             })
         }
+    }
+
+    removerow = (num) =>{
+        var temp = [];
+        var temp2 = [];
+        temp = this.state.rows;
+        db.ref('/'+ this.state.currentUser.displayName +'/').get().then((snapshot)=> {
+            snapshot.forEach((child) => {
+                if(child.val() === num){
+                    db.ref('/'+ this.state.currentUser.displayName +'/' + child.key).remove()
+                }
+            })
+        })
+        for (var i of temp){
+            if (i.id !== num){
+                temp2.push(i)
+            }
+        }
+        this.setState({rows: temp2})
+
     }
 
     print = () =>{
