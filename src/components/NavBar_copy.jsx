@@ -70,7 +70,7 @@ export class NavBar extends Component {
             return (
                 <div className = "nav_bar">
                     <ul>
-                    <li onClick={this.goBack}><a href="# "><i class="fas fa-arrow-circle-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GO BACK</a></li>
+                    <li onClick={this.goBack}><a href="# "><i className="fas fa-arrow-circle-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GO BACK</a></li>
                         <ul style={{float: "right"}}>
                             <li onClick={signInWithGoogle} className="signin" href="# "><a href="# ">SIGN IN WITH GOOGLE</a></li>
                         </ul>
@@ -85,7 +85,7 @@ export class NavBar extends Component {
                 return (
                     <div className = "nav_bar">
                         <ul>
-                            <li onClick={this.goBack}><a href="# "><i class="fas fa-arrow-circle-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GO BACK</a></li>
+                            <li onClick={this.goBack}><a href="# "><i className="fas fa-arrow-circle-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GO BACK</a></li>
                             <ul style={{float: "right"}}>
                                 <li className="dropdown signin"><a href="# "><i className="fas fa-user-circle fa-lg"></i>&nbsp;&nbsp;{user_name}</a>
                                     <div className="dropdown-content">
@@ -108,12 +108,12 @@ export class NavBar extends Component {
                 return (
                     <div className = "nav_bar">
                         <ul>
-                            <li onClick={this.goBack}><a href="# "><i class="fas fa-arrow-circle-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GO BACK</a></li>
+                            <li onClick={this.goBack}><a href="# "><i className="fas fa-arrow-circle-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GO BACK</a></li>
                             <ul style={{float: "right"}}>
                                 <li className="dropdown signin"><a href="# ">
                                     <span className = "logowrapper">
-                                        <i class="fas fa-user-circle fa-lg"></i>
-                                        <span class="badge"></span>
+                                        <i className="fas fa-user-circle fa-lg"></i>
+                                        <span className="badge"></span>
                                     </span>
                                     &nbsp;&nbsp;{user_name}</a>
                                     <div className="dropdown-content">

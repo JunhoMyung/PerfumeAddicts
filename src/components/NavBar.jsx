@@ -91,8 +91,8 @@ export class NavBar extends Component {
                             <ul style={{float: "right"}}>
                                 <li className="dropdown signin"><a href="# ">
                                 <span className = "logowrapper">
-                                    <i class="fas fa-user-circle fa-lg"></i>
-                                    <span class="badge"></span>
+                                    <i className="fas fa-user-circle fa-lg"></i>
+                                    <span className="badge"></span>
                                 </span>
                                 &nbsp;&nbsp;{user_name}</a>
                                     <div className="dropdown-content">
@@ -122,7 +122,7 @@ export class NavBar extends Component {
                             <li><a href="./filter">DISCOVER</a></li>
                             <ul style={{float: "right"}}>
                                 <li className="dropdown signin"><a href="# ">
-                                <i class="fas fa-user-circle fa-lg"></i>
+                                <i className="fas fa-user-circle fa-lg"></i>
                                 &nbsp;&nbsp;{user_name}</a>
                                     <div className="dropdown-content">
                                         <a href="/mypage">My Page&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

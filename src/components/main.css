@@ -539,22 +539,10 @@ li.dropdown {
     font-size: 10pt;
 }
 
-.radarchartlegend{
-    position: absolute;
-    text-align: center;
-    left: 50%;
-    transform: translate(-50%, 0%);
-}
-
 .legendspecific{
     padding: 10px 10px 10px;
     font-family: "Lato", sans-serif;
-    margin-right: 5px;
-    margin-left: 5px;
-    text-align: center;
     font-size: 15pt;
-
-
 }
 
 .box{
@@ -646,3 +634,27 @@ li.dropdown {
     
 }
 
+.radarcolumn {
+    float: left;
+}
+  
+.radarleft {
+    width: 60%;
+    text-align: right;
+}
+
+.radarright {
+    width: 40%;
+    text-align: left;
+}
+
+.radartable{
+    margin-left: 10px;
+}
+
+.nodata{
+    text-align: center;
+    padding: 5px 5px 5px;
+    font-family: "Lato", sans-serif;
+    font-size: 30pt;
+}

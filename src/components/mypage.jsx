@@ -5,6 +5,7 @@ import { DataGrid } from '@material-ui/data-grid';
 import perfume_info from './perfume_info.jsx'
 import RadarChart from 'react-svg-radar-chart';
 import LOGO_Full from "../perfume_pictures/LOGO_Full.PNG"
+import LOGO_Thumbnail from "../perfume_pictures/LOGO_Thumbnail.PNG"
 
 
 
@@ -66,29 +67,68 @@ export default class Mypage extends Component {
     }
 
     print = () =>{
-        if(this.state.rows !== null){
+        if(this.state.rows.length !== 0){
             return(
-                <DataGrid rows={this.state.rows} columns={this.state.columns} pageSize={3} checkboxSelection rowHeight = {200} 
-                    onRowSelected={(e) => this.selected_list(e)}/>
+                <div>
+                    <div className ="datatable" style={{ height: 710, width: '80%'}}>
+                        <DataGrid rows={this.state.rows} columns={this.state.columns} pageSize={3} checkboxSelection rowHeight = {200} 
+                        onSelectionModelChange={(e) => this.selected_list(e)}/>
+                    </div>
+                    <br/><br/><br/>
+                    <div className = "radarcolumn radarleft">
+                        <RadarChart
+                            captions={this.state.captions}
+                            data={this.state.data}
+                            size={600}
+                        />
+                    </div>
+                    <div className = "radarcolumn radarright">
+                        <table height = "600px" className = "radartable">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        {this.state.select.map((value) => {
+                                            var r = 255*((perfume_info[value].radar_chart.fruity + perfume_info[value].radar_chart.flowery) / 2)
+                                            var g = 255*perfume_info[value].radar_chart.woody
+                                            var b = 255*perfume_info[value].radar_chart.citrus;
+                                            var a = 1*((perfume_info[value].radar_chart.woody + perfume_info[value].radar_chart.spicy) / 2)
+                                            return(
+                                                <div className = "legendspecific">
+                                                    <span className = "box" style = {{backgroundColor: "rgba(" + r + "," + g + "," + b + "," + a + ")"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                                    {perfume_info[value].name}
+                                                </div>
+                                            )
+                                        })}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br/><br/><br/><br/>
+                </div>
+                </div>
+            )
+        }
+        else{
+            return(
+                <div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <img className = "logo" src={LOGO_Thumbnail} alt = "" />
+                    <div className = "nodata">There are no perfumes in your wish list!</div>
+                </div>
             )
         }
     }
 
     selected_list = (e) => {
-        var temp = this.state.select;
-        if (temp.includes(e.data.id)){
-            for (var i = 0; i < temp.length; i ++){
-                if (temp[i] === e.data.id+""){
-                    temp.splice(i, 1)
-                }
-            }
-        }
-        else{
-            temp.push(e.data.id);
-        }
-        this.setState({select: temp})
+        console.log(e)
+        this.setState({select: e.selectionModel})
         var temp2 = [];
-        for (i of temp){
+        for (let i of e.selectionModel){
             var r = 255*((perfume_info[i].radar_chart.fruity + perfume_info[i].radar_chart.flowery) / 2)
             var g = 255*perfume_info[i].radar_chart.woody
             var b = 255*perfume_info[i].radar_chart.citrus;
@@ -115,33 +155,7 @@ export default class Mypage extends Component {
                 <img src={LOGO_Full} alt = "" className='logo' onClick={() => {window.location.href = "/"}}/>
                 <NavBar/>
                 <div className="filtertitle">Wish-List</div>
-                <div className ="datatable" style={{ height: 710, width: '80%'}}>
-                    {this.print()}
-                </div>
-                <br/><br/><br/>
-                <div className = "radar_chart">
-                <RadarChart
-                    captions={this.state.captions}
-                    data={this.state.data}
-                    size={600}
-                />
-                </div>
-
-                <span className = "radarchartlegend">
-                {this.state.select.map((value) => {
-                    var r = 255*((perfume_info[value].radar_chart.fruity + perfume_info[value].radar_chart.flowery) / 2)
-                    var g = 255*perfume_info[value].radar_chart.woody
-                    var b = 255*perfume_info[value].radar_chart.citrus;
-                    var a = 1*((perfume_info[value].radar_chart.woody + perfume_info[value].radar_chart.spicy) / 2)
-                    return(
-                        <span className = "legendspecific">
-                            <span className = "box" style = {{backgroundColor: "rgba(" + r + "," + g + "," + b + "," + a + ")"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                            {perfume_info[value].name}
-                        </span>
-                    )
-                })}
-                </span>
-                <br/><br/><br/><br/>
+                {this.print()}
             </div>
         )
     }

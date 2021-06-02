@@ -17,7 +17,7 @@ export const MusicH2 = styled.div`
     border-radius: 10px;
     height: 35px;
     padding-left: 20px;
-    vertical-align: middle;
+    line-height: 35px;
 `;
 
 export const MusicH3 = styled.div`
