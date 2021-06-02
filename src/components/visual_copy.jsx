@@ -169,12 +169,24 @@ class visual_copy extends Component {
     render(){
         return (
             <div>
-                <table>
+                <table className = "verticalcenter">
                     <tbody>
                     <tr>
                         <td className="perfume_picture">{perfume_info[this.perfume_id.id].pic_name}</td>
-                        <td className='main_table'>
-                            <h3 className="perfume_name"><b>{this.state.info.name} &emsp;</b></h3>
+                        <td>
+                            <div className="filter_name">
+                                {perfume_info[this.perfume_id.id].ingredient.map((value, index) => {
+                                    return(
+                                        <span className = {"filtertag" + value} key = {index}>
+                                        #{value}
+                                        </span>
+
+                                    )
+                                })}
+                            </div>
+                            <div className="perfume_name"><b>{this.state.info.name} &emsp;</b></div>
+                            <div className= "brand_name">{this.state.info.brand}</div>
+                            
                             <table>
                                 <tbody>
                                 <tr> 
