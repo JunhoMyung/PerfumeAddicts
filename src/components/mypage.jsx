@@ -116,11 +116,11 @@ export default class Mypage extends Component {
                         <RadarChart
                             captions={this.state.captions}
                             data={this.state.data}
-                            size={600}
+                            size={450}
                         />
                     </div>
                     <div className = "radarcolumn radarright">
-                        <table height = "600px" className = "radartable">
+                        <table height = "450px" className = "radartable">
                             <tbody>
                                 <tr>
                                     <td>
