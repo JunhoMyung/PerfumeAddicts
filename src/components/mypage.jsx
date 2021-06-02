@@ -70,11 +70,13 @@ export default class Mypage extends Component {
         if(this.state.rows.length !== 0){
             return(
                 <div>
-                    <div className ="datatable" style={{ height: 710, width: '80%'}}>
-                        <DataGrid rows={this.state.rows} columns={this.state.columns} pageSize={3} checkboxSelection rowHeight = {200} 
+                    <div className ="datatable" style={{ height: 410, width: '80%'}}>
+                        <DataGrid rows={this.state.rows} columns={this.state.columns} pageSize={3} checkboxSelection rowHeight = {100} 
                         onSelectionModelChange={(e) => this.selected_list(e)}/>
                     </div>
-                    <br/><br/><br/>
+                    <br/>
+                    <div className="filtersubtitle">Compare Selected Perfumes</div>
+                    <br/>
                     <div className = "radarcolumn radarleft">
                         <RadarChart
                             captions={this.state.captions}
