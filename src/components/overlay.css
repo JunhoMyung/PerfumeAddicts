@@ -117,3 +117,8 @@ table.overlaytable {
     margin-top: 10px;
     margin-left: 4%;
 }
+
+br {
+    margin: 0 0 0 0;
+}
+

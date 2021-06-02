@@ -267,10 +267,8 @@ export default function SimpleModal() {
       </div>
       <br/>
       <br/>
-      {/* <br/> */}
       <br/>
       <br/>
-      <hr width="1050px"/>
 
       <Modal
           aria-labelledby="transition-modal-title"

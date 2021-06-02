@@ -9,7 +9,7 @@ import DETAIL from "../perfume_pictures/detail.png"
 
 
 
-class visual extends Component {  
+class visual_copy2 extends Component {  
     constructor(props) {
         super(props);
         this.perfume_id = {
@@ -183,4 +183,4 @@ class visual extends Component {
     }
 }
 
-export default visual
+export default visual_copy2

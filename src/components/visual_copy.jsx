@@ -7,7 +7,7 @@ import {db, auth} from './firebase';
 import perfume_info from './perfume_info.jsx'
 
 
-class visual extends Component {
+class visual_copy extends Component {
     
     constructor(props) {
         super(props);
@@ -202,4 +202,4 @@ class visual extends Component {
     }
 }
 
-export default visual
+export default visual_copy
