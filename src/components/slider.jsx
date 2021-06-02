@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-const CustomSlider_citrus = withStyles({
+const CustomSlidercitrus = withStyles({
     thumb: {
       height: 24,
       width: 24,
@@ -47,7 +47,7 @@ const CustomSlider_citrus = withStyles({
   })(Slider);
 
 
-  const CustomSlider_floral = withStyles({
+  const CustomSliderfloral = withStyles({
     thumb: {
       height: 24,
       width: 24,
@@ -71,7 +71,7 @@ const CustomSlider_citrus = withStyles({
     },
   })(Slider);
 
-  const CustomSlider_fruity = withStyles({
+  const CustomSliderfruity = withStyles({
     thumb: {
       height: 24,
       width: 24,
@@ -95,7 +95,7 @@ const CustomSlider_citrus = withStyles({
     },
   })(Slider);
 
-  const CustomSlider_woody = withStyles({
+  const CustomSliderwoody = withStyles({
     thumb: {
       height: 24,
       width: 24,
@@ -119,7 +119,7 @@ const CustomSlider_citrus = withStyles({
     },
   })(Slider);
 
-  const CustomSlider_spicy = withStyles({
+  const CustomSliderspicy = withStyles({
     thumb: {
       height: 24,
       width: 24,
