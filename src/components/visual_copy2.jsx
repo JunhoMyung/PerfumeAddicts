@@ -119,7 +119,7 @@ class visual_copy2 extends Component {
                             <RadarChart
                                 captions={captions}
                                 data={data}
-                                size={400}
+                                size={450}
                                 scales={3}
                                 options={{zoomDistance: 1.3, captionMargin: 11}}/>
                         </td> 

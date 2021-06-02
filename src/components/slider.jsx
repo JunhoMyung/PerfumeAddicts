@@ -15,7 +15,7 @@ const spicy = perfume_info[perfume_id].radar_chart.spicy;
 
 const useStyles = makeStyles((theme) => ({
     root: {
-      width: 500,
+      width: "calc(38vw)",
     },
     margin: {
       height: theme.spacing(3),
