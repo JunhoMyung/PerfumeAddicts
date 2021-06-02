@@ -12,7 +12,7 @@ import NavBar2 from "./NavBar_copy.jsx"
 import MyMusic from "./music.jsx"
 import Visual from "./visual_copy.jsx"
 import Visual2 from "./visual_copy2.jsx"
-import Music_bar from "./music_bar.jsx"
+import Musicbar from "./music_bar.jsx"
 import LOGO_Full from "../perfume_pictures/LOGO_Full.PNG"
 
 
@@ -109,7 +109,7 @@ export default function Temp_filter() {
         <TabPanel value={value} index={2}>
           <MyMusic />
         </TabPanel>
-        <Music_bar />
+        <Musicbar />
       </div>
       </div>
     )
