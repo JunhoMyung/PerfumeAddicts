@@ -6,6 +6,7 @@ import 'react-svg-radar-chart/build/css/index.css'
 import {db, auth} from './firebase';
 import perfume_info from './perfume_info.jsx'
 import DETAIL from "../perfume_pictures/detail.png"
+import Slider1 from "./slider.jsx"
 
 
 
@@ -92,6 +93,7 @@ class visual_copy2 extends Component {
                         <td className="radar_chart_explain">
                             SCENT DETAIL <br/><br/>
                             <img src={DETAIL} alt = "" className='detail_pic'/>
+                            <Slider1 />
                         </td>
                         </tr>
                     </table>
