@@ -23,9 +23,9 @@ export default class Mypage extends Component {
                     );
             }},
             { field: 'PerfumeName', headerName: 'Perfume Name', sortable: false, width: 350 },
-            { field: 'Price', headerName: 'Price ($)', width: 220 },
-            { field: 'Quantity', headerName: 'Volume (mL)', width: 220 },
-            { field: 'Delete', headerName: "Remove", width: 120, sortable: false, renderCell: (params) => {
+            { field: 'Price', headerName: 'Price ($)', width: "13vw" },
+            { field: 'Quantity', headerName: 'Volume (mL)', width: "13vw" },
+            { field: 'Delete', headerName: "Remove", width: "10vw", sortable: false, renderCell: (params) => {
                 return (
                     <div className = "delete">
                         {params.row.Delete}
@@ -103,7 +103,7 @@ export default class Mypage extends Component {
         if(this.state.rows.length !== 0){
             return(
                 <div>
-                    <div className ="datatable" style={{ height: 410, width: '80%'}}>
+                    <div className ="datatable" style={{ height: "73vh", width: '80%'}}>
                         <DataGrid rows={this.state.rows} columns={this.state.columns} pageSize={3} checkboxSelection rowHeight = {100} 
                         onSelectionModelChange={(e) => this.selected_list(e)}/>
                     </div>

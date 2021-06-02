@@ -85,10 +85,12 @@ export class NavBar extends Component {
                     <div className = "nav_bar">
                         <ul>
                             <li onClick={this.goBack}><a href="# "><i className="fas fa-arrow-circle-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GO BACK</a></li>
+                            <li><a href="/">HOME</a></li>
+                            <li><a href="./filter">DISCOVER</a></li>
                             <ul style={{float: "right"}}>
                                 <li className="dropdown signin"><a href="# "><i className="fas fa-user-circle fa-lg"></i>&nbsp;&nbsp;{user_name}</a>
                                     <div className="dropdown-content">
-                                        <a href="/mypage">My Page&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="/mypage">Wish-List&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <MuiThemeProvider theme={theme}>
                                             <StyledBadge fontSize="small" badgeContent={shopping_cart} color="primary">
                                             <ShoppingCartIcon fontSize="small" />
@@ -108,6 +110,8 @@ export class NavBar extends Component {
                     <div className = "nav_bar">
                         <ul>
                             <li onClick={this.goBack}><a href="# "><i className="fas fa-arrow-circle-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GO BACK</a></li>
+                            <li><a href="/">HOME</a></li>
+                            <li><a href="./filter">DISCOVER</a></li>
                             <ul style={{float: "right"}}>
                                 <li className="dropdown signin"><a href="# ">
                                     <span className = "logowrapper">
@@ -116,7 +120,7 @@ export class NavBar extends Component {
                                     </span>
                                     &nbsp;&nbsp;{user_name}</a>
                                     <div className="dropdown-content">
-                                        <a href="/mypage">My Page&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="/mypage">Wish-List&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <MuiThemeProvider theme={theme}>
                                             <StyledBadge fontSize="small" badgeContent={shopping_cart} color="primary">
                                             <ShoppingCartIcon fontSize="small" />

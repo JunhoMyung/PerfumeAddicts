@@ -82,7 +82,7 @@ export class NavBar extends Component {
                 return (
                     <div className = "nav_bar">
                         <ul>
-                            <li><a href="/">HOME</a></li>
+                            <li><Link to="logo" spy={true} smooth={true}>HOME</Link></li>
                             <li><Link to="about" spy={true} smooth={true}>ABOUT</Link></li>
                             <li><Link to="service" spy={true} smooth={true}>SERVICE</Link></li>
                             <li><Link to="join" spy={true} smooth={true}>JOIN</Link></li>
@@ -95,7 +95,7 @@ export class NavBar extends Component {
                                 </span>
                                 &nbsp;&nbsp;{user_name}</a>
                                     <div className="dropdown-content">
-                                        <a href="/mypage">My Page&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="/mypage">Wish-List&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <MuiThemeProvider theme={theme}>
                                             <StyledBadge fontSize="small" badgeContent={shopping_cart} color="primary">
                                             <ShoppingCartIcon fontSize="small" />
@@ -114,7 +114,7 @@ export class NavBar extends Component {
                 return (
                     <div className = "nav_bar">
                         <ul>
-                            <li><a href="/">HOME</a></li>
+                            <li><Link to="logo" spy={true} smooth={true}>HOME</Link></li>
                             <li><Link to="about" spy={true} smooth={true}>ABOUT</Link></li>
                             <li><Link to="service" spy={true} smooth={true}>SERVICE</Link></li>
                             <li><Link to="join" spy={true} smooth={true}>JOIN</Link></li>
@@ -124,7 +124,7 @@ export class NavBar extends Component {
                                 <i className="fas fa-user-circle fa-lg"></i>
                                 &nbsp;&nbsp;{user_name}</a>
                                     <div className="dropdown-content">
-                                        <a href="/mypage">My Page&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="/mypage">Wish-List&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <MuiThemeProvider theme={theme}>
                                             <StyledBadge fontSize="small" badgeContent={shopping_cart} color="primary">
                                             <ShoppingCartIcon fontSize="small" />
