@@ -116,7 +116,7 @@ const CustomSlider_citrus = withStyles({
       height: 10,
       borderRadius: 0,
       backgroundImage: "linear-gradient(to right, #618175, #5a7f67, #5b7c55, #617742, #6b712d, #6e6921, #726116, #75590b, #705007, #6a4704, #633e02, #5d3500)",
-      opacity: 1
+      opacity: 0.8
     },
   })(Slider);
 
@@ -140,7 +140,7 @@ const CustomSlider_citrus = withStyles({
       height: 10,
       borderRadius: 0,
       backgroundImage: "linear-gradient(to right, #cdcd92, #bab276, #a8985b, #957f41, #836629, #79551d, #6f4511, #643507, #5d2806, #561b04, #4d0e02, #440000)",
-      opacity: 1
+      opacity: 0.9
     },
   })(Slider);
 
