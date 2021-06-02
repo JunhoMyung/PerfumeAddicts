@@ -10,7 +10,7 @@ import Floral from "../perfume_pictures/floral.png"
 import Woody from "../perfume_pictures/woody.png"
 import Spicy from "../perfume_pictures/spicy.png"
 import Citrus from "../perfume_pictures/citrus.png"
-import Slider1 from "./slider.jsx"
+// import Slider1 from "./slider.jsx"
 
 
 
