@@ -55,6 +55,6 @@
     margin-right: auto;
 }
 
-.center {
-    margin-right: auto;
+.padd {
+    padding: 5px 5px 5px;
 }

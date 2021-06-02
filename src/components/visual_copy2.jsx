@@ -134,19 +134,19 @@ class visual_copy2 extends Component {
                             <table className = "centertable">
                                 <tbody>
                                     <tr>
-                                        <td>
+                                        <td className = "padd">
                                             <img src = {Fruity} alt = "" className = "detail_pic" onClick = {() => this.setState({scent: "fruity"})}></img>
                                         </td>
-                                        <td>
+                                        <td className = "padd">
                                             <img src = {Floral} alt = "" className = "detail_pic" onClick = {() => this.setState({scent: "floral"})}></img>
                                         </td>
-                                        <td>
+                                        <td className = "padd">
                                             <img src = {Spicy} alt = "" className = "detail_pic" onClick = {() => this.setState({scent: "spicy"})}></img>
                                         </td>
-                                        <td>
+                                        <td className = "padd">
                                             <img src = {Woody} alt = "" className = "detail_pic" onClick = {() => this.setState({scent: "woody"})}></img>
                                         </td>
-                                        <td>
+                                        <td className = "padd">
                                             <img src = {Citrus} alt = "" className = "detail_pic" onClick = {() => this.setState({scent: "citrus"})}></img>
                                         </td>
                                     </tr>
