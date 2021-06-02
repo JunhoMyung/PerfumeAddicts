@@ -3,6 +3,8 @@ import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Slider from "@material-ui/core/Slider";
 import "./slider.css"
 import perfume_info from './perfume_info.jsx'
+import Tooltip from "@material-ui/core/Tooltip";
+import PropTypes from "prop-types";
 
 
 const perfume_id = localStorage.getItem('perfume_id');
@@ -12,6 +14,22 @@ const floral = perfume_info[perfume_id].radar_chart.flowery;
 const woody = perfume_info[perfume_id].radar_chart.woody;
 const spicy = perfume_info[perfume_id].radar_chart.spicy;
 
+
+function ValueLabelComponent(props) {
+  const { children, open, value } = props;
+
+  return (
+    <Tooltip open={open} enterTouchDelay={0} placement="top" title={value} arrow>
+      {children}
+    </Tooltip>
+  );
+}
+
+ValueLabelComponent.propTypes = {
+  children: PropTypes.element.isRequired,
+  open: PropTypes.bool.isRequired,
+  value: PropTypes.number.isRequired
+};
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -390,6 +408,7 @@ export function Citrus2() {
     <div className={classes.root}>
       <div className="slidername">Citrus<br/></div>
       <CustomSlidercitrus
+        ValueLabelComponent={ValueLabelComponent}
         defaultValue={citrus*100}
         valueLabelFormat={valueLabelFormat_citrus}
         aria-labelledby="discrete-slider-restrict"
@@ -409,6 +428,7 @@ export function Floral2() {
     <div className={classes.root}>
       <div className="slidername">Floral<br/></div>
       <CustomSliderfloral
+        ValueLabelComponent={ValueLabelComponent}
         defaultValue={floral*100}
         valueLabelFormat={valueLabelFormat_floral}
         aria-labelledby="discrete-slider-restrict"
@@ -428,6 +448,7 @@ export function Woody2() {
     <div className={classes.root}>
       <div className="slidername">Woody<br/></div>
       <CustomSliderwoody
+        ValueLabelComponent={ValueLabelComponent}
         defaultValue={woody*100}
         valueLabelFormat={valueLabelFormat_woody}
         aria-labelledby="discrete-slider-restrict"
@@ -447,6 +468,7 @@ export function Fruity2() {
     <div className={classes.root}>
       <div className="slidername">Fruity<br/></div>
       <CustomSliderfruity
+        ValueLabelComponent={ValueLabelComponent}
         defaultValue={fruity*100}
         valueLabelFormat={valueLabelFormat_fruity}
         aria-labelledby="discrete-slider-restrict"
@@ -466,6 +488,7 @@ export function Spicy2() {
     <div className={classes.root}>
       <div className="slidername">Spicy<br/></div> 
       <CustomSliderspicy
+        ValueLabelComponent={ValueLabelComponent}
         defaultValue={spicy*100}
         valueLabelFormat={valueLabelFormat_spicy}
         aria-labelledby="discrete-slider-restrict"
