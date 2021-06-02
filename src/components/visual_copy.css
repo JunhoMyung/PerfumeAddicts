@@ -45,7 +45,7 @@
     height: 50px;
     vertical-align: middle;
     padding-left: 30%;
-    width: 200px;
+    width: 300px;
 }
 
 .form{
@@ -95,15 +95,6 @@
     white-space: nowrap;
 }
 
-.brand_name{
-    font-family: "Lato", sans-serif;
-    font-weight: 1000;
-    text-transform: uppercase;
-    /* padding-top: 2%; */
-    padding-left: 18%;
-    white-space: nowrap;
-}
-
 .perfume_picture {
     /* padding-left: 3%; */
     padding-top: 8%;
@@ -137,7 +128,7 @@
     position: relative;
     justify-content: center;
     color: white;
-    transform: translate(275px, -300%);
+    transform: translate(300px, -300%);
     width: 180px;
     height: 35px;
     background: #815b8d;
