@@ -673,3 +673,8 @@ li.dropdown {
 .verticalcenter{
     vertical-align: middle;
 }
+
+.shape:hover{
+    fill-opacity: .9;
+    z-index: 100;
+}
