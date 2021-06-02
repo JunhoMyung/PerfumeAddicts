@@ -140,7 +140,7 @@ export default function Filter(props) {
         <NavBar2/>
         <div className="filtertitle">FIND YOUR PERFUME</div>
         <Overlay/>
-          <table className = "filtertable" width = "1200px">
+          <table className = "filtertable" width = "80%">
             <tbody>
               {display()}
             </tbody>
