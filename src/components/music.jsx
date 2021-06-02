@@ -74,16 +74,16 @@ export default function Music() {
 
     const returnvote = (value) => {
         if (auth.currentUser === null){
-            return (<i className="far fa-thumbs-up"></i>)
+            return (<i className="far fa-thumbs-up fa-lg"></i>)
         }
         else if(!Object.values(value.voteID).includes(auth.currentUser.email)){
             return(
-                <i className="far fa-thumbs-up"></i>
+                <i className="far fa-thumbs-up fa-lg"></i>
             )
         }
         else{
             return(
-                <i className="fas fa-thumbs-up"></i>
+                <i className="fas fa-thumbs-up fa-lg"></i>
             )
         }
     }
