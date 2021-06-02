@@ -6,7 +6,6 @@ import perfume_info from './perfume_info.jsx'
 import RadarChart from 'react-svg-radar-chart';
 import LOGO_Full from "../perfume_pictures/LOGO_Full.PNG"
 import LOGO_Thumbnail from "../perfume_pictures/LOGO_Thumbnail.PNG"
-import DeleteIcon from '@material-ui/icons/Delete';
 
 
 export default class Mypage extends Component {

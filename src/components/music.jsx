@@ -14,7 +14,9 @@ import Fade from '@material-ui/core/Fade';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import {db, auth} from './firebase';
-import perfume_info from './perfume_info.jsx'
+import perfume_info from './perfume_info.jsx';
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -239,7 +241,7 @@ export default function Music() {
                             return null
                         }
                     })}
-                    <button onClick = {show_more}>show more</button>
+                    <KeyboardArrowDownIcon className = "show" onClick = {show_more} fontSize="large"/>
                 </div>
             )
         }
@@ -265,7 +267,7 @@ export default function Music() {
                         )
                     
                     })}
-                    <button onClick = {show_less}>show less</button>
+                    <KeyboardArrowUpIcon className = "show" onClick = {show_less} fontSize="large"/>
                 </div>
             )
         }
