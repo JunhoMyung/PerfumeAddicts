@@ -124,9 +124,14 @@ class visual_copy2 extends Component {
                                 options={{zoomDistance: 1.3, captionMargin: 11}}/>
                         </td> 
                         <td className="radar_chart_explain">
-                            SCENT DETAIL <br/><br/>
-                        
-                            <table>
+                            <div className = "scenttitle">
+                                SCENT DETAIL 
+                            </div>
+                            <div className = "scentsubtitle">
+                                Click on scents for details
+                            </div>
+                            <br/>
+                            <table className = "centertable">
                                 <tbody>
                                     <tr>
                                         <td>
@@ -147,7 +152,10 @@ class visual_copy2 extends Component {
                                     </tr>
                                 </tbody>
                             </table>
-                            {this.slider()}
+                            <br/>
+                            <div className = "center">
+                                {this.slider()}
+                            </div>
                         </td>
                         </tr>
                     </table>
