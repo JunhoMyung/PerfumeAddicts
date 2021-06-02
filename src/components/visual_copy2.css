@@ -27,9 +27,9 @@
     white-space: nowrap;
     vertical-align: middle;
     text-align: center;
-    padding-left: 50px;
+    padding-left: 100px;
     height: 70vh;
-    width: 80vw;
+    /* width: 40vw; */
 }
 
 .detail_pic {
@@ -55,6 +55,6 @@
     margin-right: auto;
 }
 
-.padd {
-    padding: 5px 5px 5px;
+.center {
+    margin-right: auto;
 }
