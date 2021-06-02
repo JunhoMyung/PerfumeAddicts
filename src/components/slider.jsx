@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Slider from "@material-ui/core/Slider";
-import { Height } from "@material-ui/icons";
 import "./slider.css"
 import perfume_info from './perfume_info.jsx'
 
@@ -221,61 +220,61 @@ const CustomSlider_citrus = withStyles({
   ];
 
   function valueLabelFormat_citrus(value) {
-    if ( `${value}` == (citrus * 100)) {
+    if ( `${value}` === (citrus * 100)) {
         return "Here"
     }
-    else if ( `${value}` == (0)) {
+    else if ( `${value}` === (0)) {
         return "Min"
     }
-    else if ( `${value}` == (100)) {
+    else if ( `${value}` === (100)) {
         return "Max"
     }
   }
 
   function valueLabelFormat_floral(value) {
-    if ( `${value}` == (floral * 100)) {
+    if ( `${value}` === (floral * 100)) {
         return "Here"
     }
-    else if ( `${value}` == (0)) {
+    else if ( `${value}` === (0)) {
         return "Min"
     }
-    else if ( `${value}` == (100)) {
+    else if ( `${value}` === (100)) {
         return "Max"
     }
   }
 
   function valueLabelFormat_fruity(value) {
-    if ( `${value}` == (fruity * 100)) {
+    if ( `${value}` === (fruity * 100)) {
         return "Here"
     }
-    else if ( `${value}` == (0)) {
+    else if ( `${value}` === (0)) {
         return "Min"
     }
-    else if ( `${value}` == (100)) {
+    else if ( `${value}` === (100)) {
         return "Max"
     }
   }
 
   function valueLabelFormat_woody(value) {
-    if ( `${value}` == (woody * 100)) {
+    if ( `${value}` === (woody * 100)) {
         return "Here"
     }
-    else if ( `${value}` == (0)) {
+    else if ( `${value}` === (0)) {
         return "Min"
     }
-    else if ( `${value}` == (100)) {
+    else if ( `${value}` === (100)) {
         return "Max"
     }
   }
 
   function valueLabelFormat_spicy(value) {
-    if ( `${value}` == (spicy * 100)) {
+    if ( `${value}` === (spicy * 100)) {
         return "Here"
     }
-    else if ( `${value}` == (0)) {
+    else if ( `${value}` === (0)) {
         return "Min"
     }
-    else if ( `${value}` == (100)) {
+    else if ( `${value}` === (100)) {
         return "Max"
     }
   }
@@ -283,16 +282,11 @@ const CustomSlider_citrus = withStyles({
 
 export default function ContinuousSlider() {
   const classes = useStyles();
-  const [value, setValue] = React.useState(30);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
 
   
   return (
     <div className={classes.root}>
-      <CustomSlider_citrus
+      <CustomSlidercitrus
         defaultValue={citrus*100}
         valueLabelFormat={valueLabelFormat_citrus}
         aria-labelledby="discrete-slider-restrict"
@@ -301,7 +295,7 @@ export default function ContinuousSlider() {
         marks={marks_citrus}
         track={false}
       /><br/>
-            <CustomSlider_floral
+            <CustomSliderfloral
         defaultValue={floral*100}
         valueLabelFormat={valueLabelFormat_floral}
         aria-labelledby="discrete-slider-restrict"
@@ -311,7 +305,7 @@ export default function ContinuousSlider() {
         track={false}
       />
       <br/>
-            <CustomSlider_fruity
+            <CustomSliderfruity
         defaultValue={fruity*100}
         valueLabelFormat={valueLabelFormat_fruity}
         aria-labelledby="discrete-slider-restrict"
@@ -321,7 +315,7 @@ export default function ContinuousSlider() {
         track={false}
       />
             <br/>
-            <CustomSlider_woody
+            <CustomSliderwoody
         defaultValue={woody*100}
         valueLabelFormat={valueLabelFormat_woody}
         aria-labelledby="discrete-slider-restrict"
@@ -331,7 +325,7 @@ export default function ContinuousSlider() {
         track={false}
       />
       <br/>
-            <CustomSlider_spicy
+            <CustomSliderspicy
         defaultValue={spicy*100}
         valueLabelFormat={valueLabelFormat_spicy}
         aria-labelledby="discrete-slider-restrict"
