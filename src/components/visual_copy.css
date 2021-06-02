@@ -36,7 +36,7 @@
     font-size: 14pt;
     height: 50px;
     vertical-align: middle;
-    padding-left: 25%;
+    padding-left: 18%;
 }
 .inner_second_td{
     /* padding-left: 15px; */
@@ -44,7 +44,6 @@
     font-size: 14pt;
     height: 50px;
     vertical-align: middle;
-    padding-left: 30%;
     width: 300px;
 }
 
@@ -139,7 +138,7 @@
     position: relative;
     justify-content: center;
     color: white;
-    transform: translate(150px, -130%);
+    transform: translate(90px, -130%);
     width: 180px;
     height: 35px;
     background: #815b8d;
