@@ -179,16 +179,12 @@ class visual_copy extends Component {
                                 <tr> 
                                     <td className="inner_first_td"><b>Volume:  </b></td>
                                     <td className='inner_second_td'>
-                                        <form>
-                                        <select name='volume' id='volume' className='form' onChange={this.changePrice}>
-                                            <option value={0} >{this.state.info.sizes[0]}</option>
-                                            <option value={1} >{this.state.info.sizes[1]}</option>
-                                        </select>
-                                    </form></td>   
+                                        {this.state.info.sizes[0]} / {this.state.info.sizes[1]} (mL)
+                                    </td>   
                                 </tr>
                                 <tr>
                                     <td className="inner_first_td"><b>Price: </b></td>
-                                    <td className='inner_second_td'>${this.state.current_price}</td>   
+                                    <td className='inner_second_td'>{this.state.info.price[0]} / {this.state.info.price[1]} ($)</td>   
                                 </tr>
                                 </tbody>
                             </table>
