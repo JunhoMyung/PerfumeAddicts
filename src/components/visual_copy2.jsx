@@ -150,12 +150,15 @@ class visual_copy2 extends Component {
                                             <img src = {Citrus} alt = "" className = "detail_pic" onClick = {() => this.setState({scent: "citrus"})}></img>
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <td colSpan = "5" align = "center">
+                                            <br/>
+                                            {this.slider()}
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
-                            <br/>
-                            <div className = "center">
-                                {this.slider()}
-                            </div>
+                            
                         </td>
                         </tr>
                     </table>
