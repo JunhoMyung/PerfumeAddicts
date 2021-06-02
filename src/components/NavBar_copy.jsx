@@ -70,6 +70,8 @@ export class NavBar extends Component {
                 <div className = "nav_bar">
                     <ul>
                     <li onClick={this.goBack}><a href="# "><i className="fas fa-arrow-circle-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GO BACK</a></li>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="./filter">DISCOVER</a></li>
                         <ul style={{float: "right"}}>
                             <li onClick={signInWithGoogle} className="signin" href="# "><a href="# ">SIGN IN WITH GOOGLE</a></li>
                         </ul>
