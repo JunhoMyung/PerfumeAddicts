@@ -5,7 +5,11 @@ import RadarChart from 'react-svg-radar-chart';
 import 'react-svg-radar-chart/build/css/index.css'
 import {db, auth} from './firebase';
 import perfume_info from './perfume_info.jsx'
-import DETAIL from "../perfume_pictures/detail.png"
+import Fruity from "../perfume_pictures/fruity.png"
+import Floral from "../perfume_pictures/floral.png"
+import Woody from "../perfume_pictures/woody.png"
+import Spicy from "../perfume_pictures/spicy.png"
+import Citrus from "../perfume_pictures/citrus.png"
 import Slider1 from "./slider.jsx"
 
 
@@ -92,7 +96,27 @@ class visual_copy2 extends Component {
                         </td> 
                         <td className="radar_chart_explain">
                             SCENT DETAIL <br/><br/>
-                            <img src={DETAIL} alt = "" className='detail_pic'/>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img src = {Fruity} alt = "" className = "detail_pic"></img>
+                                        </td>
+                                        <td>
+                                            <img src = {Floral} alt = "" className = "detail_pic"></img>
+                                        </td>
+                                        <td>
+                                            <img src = {Spicy} alt = "" className = "detail_pic"></img>
+                                        </td>
+                                        <td>
+                                            <img src = {Woody} alt = "" className = "detail_pic"></img>
+                                        </td>
+                                        <td>
+                                            <img src = {Citrus} alt = "" className = "detail_pic"></img>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                             <Slider1 />
                         </td>
                         </tr>
