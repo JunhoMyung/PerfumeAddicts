@@ -117,7 +117,7 @@ class visual_copy2 extends Component {
                                     </tr>
                                 </tbody>
                             </table>
-                            <Slider1 />
+                            {/* <Slider1 /> */}
                         </td>
                         </tr>
                     </table>
