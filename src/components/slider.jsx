@@ -427,6 +427,7 @@ export function Citrus2() {
         marks={marks_citrus}
         track={false}
       />
+        <br/><div className="sliderexplain">Drag to Understand Fragrance Scale<br/></div>
     </div>
   )
 }
@@ -447,6 +448,7 @@ export function Floral2() {
         marks={marks_floral}
         track={false}
       />
+        <br/><div className="sliderexplain">Drag to Understand Fragrance Scale<br/></div>
     </div>
   )
 }
@@ -467,6 +469,7 @@ export function Woody2() {
         marks={marks_woody}
         track={false}
       />
+        <br/><div className="sliderexplain">Drag to Understand Fragrance Scale<br/></div>
     </div>
   )
 }
@@ -487,6 +490,7 @@ export function Fruity2() {
         marks={marks_fruity}
         track={false}
       />
+        <br/><div className="sliderexplain">Drag to Understand Fragrance Scale<br/></div>
     </div>
   )
 }
@@ -507,6 +511,7 @@ export function Spicy2() {
         marks={marks_spicy}
         track={false}
       />
+    <br/><div className="sliderexplain">Drag to Understand Fragrance Scale<br/></div>
     </div>
   )
 }

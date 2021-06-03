@@ -4,7 +4,14 @@
 
 .slidername {
     font-family: "Lato", sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     color: rgb(37, 37, 37);
     text-align: center;
+}
+
+.sliderexplain {
+    font-family: "Lato", sans-serif;
+    font-size: 13px;
+    color: gray;
+    margin-top: 10px;
 }
