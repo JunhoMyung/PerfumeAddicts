@@ -297,10 +297,16 @@ const CustomSlidercitrus = withStyles({
         return (<i class="fas fa-check"></i>)
     }
     else if (value === (0)) {
-        return "Min"
+        return (<div>
+          <div className = "labeltitle">Cool and Fresh Scents</div>
+          <div className = "labelsubtitle">Water, Lotus</div>
+        </div>)
     }
     else if (value === (100)) {
-        return "Max"
+      return (<div>
+        <div className = "labeltitle">Refreshing and Tangy Scents</div>
+        <div className = "labelsubtitle">Lemon, Lime, Orange</div>
+      </div>)
     }
   }
 
@@ -309,10 +315,16 @@ const CustomSlidercitrus = withStyles({
         return (<i class="fas fa-check"></i>)
     }
     else if (value === (0)) {
-        return "Min"
+      return (<div>
+        <div className = "labeltitle">Soft and Delicate Scents</div>
+        <div className = "labelsubtitle">Iris, Violet, Lavendar</div>
+      </div>)
     }
     else if (value === (100)) {
-        return "Max"
+      return (<div>
+        <div className = "labeltitle">Sensual Scents of Flowers</div>
+        <div className = "labelsubtitle">Rose, Lily, Lilac</div>
+      </div>)
     }
   }
 
@@ -321,10 +333,16 @@ const CustomSlidercitrus = withStyles({
         return (<i class="fas fa-check"></i>)
     }
     else if (value === (0)) {
-        return "Min"
+      return (<div>
+        <div className = "labeltitle">Fresh and Natural Scents</div>
+        <div className = "labelsubtitle">Watermelon, Avocado</div>
+      </div>)
     }
     else if (value === (100)) {
-        return "Max"
+      return (<div>
+        <div className = "labeltitle">Deep and Sweet Scents of Fruits</div>
+        <div className = "labelsubtitle">Melon, Apple, Mango</div>
+      </div>)
     }
   }
 
@@ -333,10 +351,16 @@ const CustomSlidercitrus = withStyles({
         return (<i class="fas fa-check"></i>)
     }
     else if (value === (0)) {
-        return "Min"
+      return (<div>
+        <div className = "labeltitle">Light and Earthy Scents</div>
+        <div className = "labelsubtitle">Leaves, Grass, Moss</div>
+      </div>)
     }
     else if (value === (100)) {
-        return "Max"
+      return (<div>
+        <div className = "labeltitle">Warm and Smoky Scents of a Wood</div>
+        <div className = "labelsubtitle">Sandalwood, Patchouli</div>
+      </div>)
     }
   }
 
@@ -345,10 +369,16 @@ const CustomSlidercitrus = withStyles({
         return (<i class="fas fa-check"></i>)
     }
     else if ( value === (0)) {
-        return "Min"
+      return (<div>
+        <div className = "labeltitle">Smooth and Sweet Spices</div>
+        <div className = "labelsubtitle">Vanilla, Tonka Beans</div>
+      </div>)
     }
     else if ( value === (100)) {
-        return "Max"
+      return (<div>
+        <div className = "labeltitle">Dark and Pungent Spices</div>
+        <div className = "labelsubtitle">Cinammon, Pepper</div>
+      </div>)
     }
   }
 
