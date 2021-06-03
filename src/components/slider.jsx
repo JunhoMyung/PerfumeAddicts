@@ -7,14 +7,14 @@ import Tooltip from "@material-ui/core/Tooltip";
 import PropTypes from "prop-types";
 
 
+localStorage.setItem('perfume_id', 0)
 const perfume_id = localStorage.getItem('perfume_id');
 const temp = perfume_info
-const citrus = temp[0].radar_chart.citrus;
-const fruity = temp[0].radar_chart.fruity;
-const floral = temp[0].radar_chart.flowery;
-const woody = temp[0].radar_chart.woody;
-const spicy = temp[0].radar_chart.spicy;
-
+const citrus = temp[perfume_id].radar_chart.citrus;
+const fruity = temp[perfume_id].radar_chart.fruity;
+const floral = temp[perfume_id].radar_chart.flowery;
+const woody = temp[perfume_id].radar_chart.woody;
+const spicy = temp[perfume_id].radar_chart.spicy;
 
 const styles = {
     tooltip: {
@@ -216,6 +216,14 @@ const CustomSlidercitrus = withStyles({
         backgroundColor: "rgba(0,0,0,0)",
     },
   })(Slider);
+
+  const perfume_id = localStorage.getItem('perfume_id');
+  const temp = perfume_info
+  const citrus = temp[perfume_id].radar_chart.citrus;
+  const fruity = temp[perfume_id].radar_chart.fruity;
+  const floral = temp[perfume_id].radar_chart.flowery;
+  const woody = temp[perfume_id].radar_chart.woody;
+  const spicy = temp[perfume_id].radar_chart.spicy;
 
   const marks_citrus = [
     {
