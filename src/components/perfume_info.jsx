@@ -82,7 +82,7 @@ const perfume_info = [
       "price": [133.00, 100.00],
       "volume": [100, 50],
       "radar_chart": {"citrus": 0.1, "spicy": 0.5, "woody": 0.2, "fruity": 0.5, "flowery": 0.8},
-      "ingredient": ["fruity", "aromatic", "softspicy"]
+      "ingredient": ["floral", "fruity", "aromatic", "softspicy"]
     },
     {
       "name": "Cherry Blossom",
