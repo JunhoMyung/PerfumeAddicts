@@ -171,8 +171,8 @@ const perfume_info = [
       "brand": "Tom Ford",
       "price": [65.00, 75.00],
       "volume": [40, 50],
-      "radar_chart": {"citrus": 0.0, "spicy": 0.9, "woody": 0.7, "fruity": 0.6, "flowery": 0.4},
-      "ingredient": ["sharpspicy", "drywood", "floral"]
+      "radar_chart": {"citrus": 0.0, "spicy": 0.6, "woody": 0.7, "fruity": 0.6, "flowery": 0.4},
+      "ingredient": ["softspicy", "drywood", "floral"]
     },
     {
       "name": "La Nuit de I'Homme",
