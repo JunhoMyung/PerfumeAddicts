@@ -15,13 +15,23 @@ const woody = perfume_info[perfume_id].radar_chart.woody;
 const spicy = perfume_info[perfume_id].radar_chart.spicy;
 
 
+const styles = {
+    tooltip: {
+        fontFamily: "'Lato', sans-serif",
+        fontSize: "9pt",
+        marginTop: "30px",
+    }
+};
+
+const CustomTooltip = withStyles(styles)(Tooltip);
+
 function ValueLabelComponent(props) {
   const { children, open, value } = props;
 
   return (
-    <Tooltip open={open} enterTouchDelay={0} placement="top" title={value} arrow>
+    <CustomTooltip open={open} enterTouchDelay={0} placement="bottom" title={value} arrow>
       {children}
-    </Tooltip>
+    </CustomTooltip>
   );
 }
 
