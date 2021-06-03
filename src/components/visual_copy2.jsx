@@ -128,7 +128,7 @@ class visual_copy2 extends Component {
                                 SCENT DETAIL 
                             </div>
                             <div className = "scentsubtitle">
-                                Click on scents for details
+                                Click icons below for details
                             </div>
                             <br/>
                             <table className = "centertable">
