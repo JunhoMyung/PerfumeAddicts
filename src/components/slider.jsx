@@ -6,16 +6,6 @@ import perfume_info from './perfume_info.jsx'
 import Tooltip from "@material-ui/core/Tooltip";
 import PropTypes from "prop-types";
 
-
-localStorage.setItem('perfume_id', 0)
-const perfume_id = localStorage.getItem('perfume_id');
-const temp = perfume_info
-const citrus = temp[perfume_id].radar_chart.citrus;
-const fruity = temp[perfume_id].radar_chart.fruity;
-const floral = temp[perfume_id].radar_chart.flowery;
-const woody = temp[perfume_id].radar_chart.woody;
-const spicy = temp[perfume_id].radar_chart.spicy;
-
 const styles = {
     tooltip: {
         fontFamily: "'Lato', sans-serif",
@@ -217,6 +207,129 @@ const CustomSlidercitrus = withStyles({
     },
   })(Slider);
 
+  
+
+  function valueLabelFormat_citrus(value) {
+    const perfume_id = localStorage.getItem('perfume_id');
+    const temp = perfume_info
+    const citrus = temp[perfume_id].radar_chart.citrus;
+
+    if (value === (citrus * 100)) {
+        return (<i class="fas fa-check"></i>)
+    }
+    else if (value === (0)) {
+        return (<div>
+          <div className = "labeltitle">Cool and Fresh Scents</div>
+          <div className = "labelsubtitle">Water, Lotus</div>
+        </div>)
+    }
+    else if (value === (100)) {
+      return (<div>
+        <div className = "labeltitle">Refreshing and Tangy Scents</div>
+        <div className = "labelsubtitle">Lemon, Lime, Orange</div>
+      </div>)
+    }
+  }
+
+  function valueLabelFormat_floral(value) {
+    const perfume_id = localStorage.getItem('perfume_id');
+    const temp = perfume_info
+    const floral = temp[perfume_id].radar_chart.flowery;
+
+
+    if (value === (floral * 100)) {
+        return (<i class="fas fa-check"></i>)
+    }
+    else if (value === (0)) {
+      return (<div>
+        <div className = "labeltitle">Soft and Delicate Scents</div>
+        <div className = "labelsubtitle">Iris, Violet, Lavendar</div>
+      </div>)
+    }
+    else if (value === (100)) {
+      return (<div>
+        <div className = "labeltitle">Sensual Scents of Flowers</div>
+        <div className = "labelsubtitle">Rose, Lily, Lilac</div>
+      </div>)
+    }
+  }
+
+  function valueLabelFormat_fruity(value) {
+    const perfume_id = localStorage.getItem('perfume_id');
+  const temp = perfume_info
+  const fruity = temp[perfume_id].radar_chart.fruity;
+
+    if (value === (fruity * 100)) {
+        return (<i class="fas fa-check"></i>)
+    }
+    else if (value === (0)) {
+      return (<div>
+        <div className = "labeltitle">Fresh and Natural Scents</div>
+        <div className = "labelsubtitle">Watermelon, Avocado</div>
+      </div>)
+    }
+    else if (value === (100)) {
+      return (<div>
+        <div className = "labeltitle">Deep and Sweet Scents of Fruits</div>
+        <div className = "labelsubtitle">Peach, Apple, Mango</div>
+      </div>)
+    }
+  }
+
+  function valueLabelFormat_woody(value) {
+    const perfume_id = localStorage.getItem('perfume_id');
+    const temp = perfume_info
+    const woody = temp[perfume_id].radar_chart.woody;
+
+    if (value === (woody * 100)) {
+        return (<i class="fas fa-check"></i>)
+    }
+    else if (value === (0)) {
+      return (<div>
+        <div className = "labeltitle">Light and Earthy Scents</div>
+        <div className = "labelsubtitle">Leaves, Grass, Moss</div>
+      </div>)
+    }
+    else if (value === (100)) {
+      return (<div>
+        <div className = "labeltitle">Warm and Smoky Scents of Woods</div>
+        <div className = "labelsubtitle">Sandalwood, Patchouli</div>
+      </div>)
+    }
+  }
+
+  function valueLabelFormat_spicy(value) {
+    const perfume_id = localStorage.getItem('perfume_id');
+  const temp = perfume_info
+  const spicy = temp[perfume_id].radar_chart.spicy;
+  
+    if ( value === (spicy * 100)) {
+        return (<i class="fas fa-check"></i>)
+    }
+    else if ( value === (0)) {
+      return (<div>
+        <div className = "labeltitle">Smooth and Sweet Spices</div>
+        <div className = "labelsubtitle">Vanilla, Tonka Beans</div>
+      </div>)
+    }
+    else if ( value === (100)) {
+      return (<div>
+        <div className = "labeltitle">Dark and Pungent Spices</div>
+        <div className = "labelsubtitle">Cinammon, Pepper</div>
+      </div>)
+    }
+  }
+
+
+export default function ContinuousSlider() {
+  const classes = useStyles();
+  const perfume_id = localStorage.getItem('perfume_id');
+  const temp = perfume_info
+  const citrus = temp[perfume_id].radar_chart.citrus;
+  const fruity = temp[perfume_id].radar_chart.fruity;
+  const floral = temp[perfume_id].radar_chart.flowery;
+  const woody = temp[perfume_id].radar_chart.woody;
+  const spicy = temp[perfume_id].radar_chart.spicy;
   const marks_citrus = [
     {
       value: 0,
@@ -292,101 +405,6 @@ const CustomSlidercitrus = withStyles({
       label: '10',
     },
   ];
-
-  function valueLabelFormat_citrus(value) {
-    if (value === (citrus * 100)) {
-        return (<i class="fas fa-check"></i>)
-    }
-    else if (value === (0)) {
-        return (<div>
-          <div className = "labeltitle">Cool and Fresh Scents</div>
-          <div className = "labelsubtitle">Water, Lotus</div>
-        </div>)
-    }
-    else if (value === (100)) {
-      return (<div>
-        <div className = "labeltitle">Refreshing and Tangy Scents</div>
-        <div className = "labelsubtitle">Lemon, Lime, Orange</div>
-      </div>)
-    }
-  }
-
-  function valueLabelFormat_floral(value) {
-    if (value === (floral * 100)) {
-        return (<i class="fas fa-check"></i>)
-    }
-    else if (value === (0)) {
-      return (<div>
-        <div className = "labeltitle">Soft and Delicate Scents</div>
-        <div className = "labelsubtitle">Iris, Violet, Lavendar</div>
-      </div>)
-    }
-    else if (value === (100)) {
-      return (<div>
-        <div className = "labeltitle">Sensual Scents of Flowers</div>
-        <div className = "labelsubtitle">Rose, Lily, Lilac</div>
-      </div>)
-    }
-  }
-
-  function valueLabelFormat_fruity(value) {
-    if (value === (fruity * 100)) {
-        return (<i class="fas fa-check"></i>)
-    }
-    else if (value === (0)) {
-      return (<div>
-        <div className = "labeltitle">Fresh and Natural Scents</div>
-        <div className = "labelsubtitle">Watermelon, Avocado</div>
-      </div>)
-    }
-    else if (value === (100)) {
-      return (<div>
-        <div className = "labeltitle">Deep and Sweet Scents of Fruits</div>
-        <div className = "labelsubtitle">Peach, Apple, Mango</div>
-      </div>)
-    }
-  }
-
-  function valueLabelFormat_woody(value) {
-    if (value === (woody * 100)) {
-        return (<i class="fas fa-check"></i>)
-    }
-    else if (value === (0)) {
-      return (<div>
-        <div className = "labeltitle">Light and Earthy Scents</div>
-        <div className = "labelsubtitle">Leaves, Grass, Moss</div>
-      </div>)
-    }
-    else if (value === (100)) {
-      return (<div>
-        <div className = "labeltitle">Warm and Smoky Scents of Woods</div>
-        <div className = "labelsubtitle">Sandalwood, Patchouli</div>
-      </div>)
-    }
-  }
-
-  function valueLabelFormat_spicy(value) {
-    if ( value === (spicy * 100)) {
-        return (<i class="fas fa-check"></i>)
-    }
-    else if ( value === (0)) {
-      return (<div>
-        <div className = "labeltitle">Smooth and Sweet Spices</div>
-        <div className = "labelsubtitle">Vanilla, Tonka Beans</div>
-      </div>)
-    }
-    else if ( value === (100)) {
-      return (<div>
-        <div className = "labeltitle">Dark and Pungent Spices</div>
-        <div className = "labelsubtitle">Cinammon, Pepper</div>
-      </div>)
-    }
-  }
-
-
-export default function ContinuousSlider() {
-  const classes = useStyles();
-
   
   return (
     <div className={classes.root}>
@@ -444,7 +462,25 @@ export default function ContinuousSlider() {
 
 export function Citrus2() {
   const classes = useStyles();
-  
+  const perfume_id = localStorage.getItem('perfume_id');
+  const temp = perfume_info
+  const citrus = temp[perfume_id].radar_chart.citrus;
+  const marks_citrus = [
+    {
+      value: 0,
+      label: '0',
+    },
+    {
+      value: (citrus * 100),
+      label: (citrus * 100)/10,
+    },
+    {
+      value: 100,
+      label: '10',
+    },
+  ];
+
+
   return (
     <div className={classes.root}>
       <div className="slidername">Citrus<br/></div>
@@ -465,6 +501,24 @@ export function Citrus2() {
 
 export function Floral2() {
   const classes = useStyles();
+  const perfume_id = localStorage.getItem('perfume_id');
+  const temp = perfume_info
+  const floral = temp[perfume_id].radar_chart.flowery;
+  const marks_floral = [
+    {
+      value: 0,
+      label: '0',
+    },
+    {
+      value: (floral * 100),
+      label: (floral * 100)/10,
+    },
+    {
+      value: 100,
+      label: '10',
+    },
+  ];
+
   
   return (
     <div className={classes.root}>
@@ -486,7 +540,25 @@ export function Floral2() {
 
 export function Woody2() {
   const classes = useStyles();
-  
+  const perfume_id = localStorage.getItem('perfume_id');
+  const temp = perfume_info
+  const woody = temp[perfume_id].radar_chart.woody;
+  const marks_woody = [
+    {
+      value: 0,
+      label: '0',
+    },
+    {
+      value: (woody * 100),
+      label: (woody * 100)/10,
+    },
+    {
+      value: 100,
+      label: '10',
+    },
+  ];
+
+
   return (
     <div className={classes.root}>
       <div className="slidername">Woody<br/></div>
@@ -507,7 +579,26 @@ export function Woody2() {
 
 export function Fruity2() {
   const classes = useStyles();
-  
+  const perfume_id = localStorage.getItem('perfume_id');
+  const temp = perfume_info
+  const fruity = temp[perfume_id].radar_chart.fruity;
+
+  const marks_fruity = [
+    {
+      value: 0,
+      label: '0',
+    },
+    {
+      value: (fruity * 100),
+      label: (fruity * 100)/10,
+    },
+    {
+      value: 100,
+      label: '10',
+    },
+  ];
+
+
   return (
     <div className={classes.root}>
       <div className="slidername">Fruity<br/></div>
@@ -528,6 +619,23 @@ export function Fruity2() {
 
 export function Spicy2() {
   const classes = useStyles();
+  const perfume_id = localStorage.getItem('perfume_id');
+  const temp = perfume_info
+  const spicy = temp[perfume_id].radar_chart.spicy;
+  const marks_spicy = [
+    {
+      value: 0,
+      label: '0',
+    },
+    {
+      value: (spicy * 100),
+      label: (spicy * 100)/10,
+    },
+    {
+      value: 100,
+      label: '10',
+    },
+  ];
   
   return (
     <div className={classes.root}>
