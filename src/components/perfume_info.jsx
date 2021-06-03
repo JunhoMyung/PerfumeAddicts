@@ -145,7 +145,7 @@ const perfume_info = [
       "price": [26.00, 36.00, 50.00],
       "volume": [30, 75, 250],
       "radar_chart": {"citrus": 0.4, "spicy": 0.0, "woody": 0.6, "fruity": 0.9, "flowery": 0.5},
-      "ingredient": ["drywood", "green", "musk", "citrus"]
+      "ingredient": ["fruity", "drywood", "green", "musk"]
     },
     {
       "name": "Coco Mademoiselle",
