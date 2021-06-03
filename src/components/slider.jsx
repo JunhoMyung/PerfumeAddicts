@@ -217,14 +217,6 @@ const CustomSlidercitrus = withStyles({
     },
   })(Slider);
 
-  const perfume_id = localStorage.getItem('perfume_id');
-  const temp = perfume_info
-  const citrus = temp[perfume_id].radar_chart.citrus;
-  const fruity = temp[perfume_id].radar_chart.fruity;
-  const floral = temp[perfume_id].radar_chart.flowery;
-  const woody = temp[perfume_id].radar_chart.woody;
-  const spicy = temp[perfume_id].radar_chart.spicy;
-
   const marks_citrus = [
     {
       value: 0,
