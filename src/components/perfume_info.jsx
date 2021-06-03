@@ -126,7 +126,7 @@ const perfume_info = [
       "brand": "Mugler",
       "price": [21.00, 35.00],
       "volume": [30, 50],
-      "radar_chart": {"citrus": 0.0, "spicy": 0.0, "woody": 0.6, "fruity": 0.7, "flowery": 0.9},
+      "radar_chart": {"citrus": 0.0, "spicy": 0.1, "woody": 0.6, "fruity": 0.7, "flowery": 0.9},
       "ingredient": ["floral", "powdery", "softspicy", "drywood"]
     },
     {
@@ -135,7 +135,7 @@ const perfume_info = [
       "brand": "Tom Ford",
       "price": [45.00, 80.00],
       "volume": [50, 100],
-      "radar_chart": {"citrus": 0.0, "spicy": 0.6, "woody": 0.4, "fruity": 0.5, "flowery": 0.9},
+      "radar_chart": {"citrus": 0.0, "spicy": 0.7, "woody": 0.4, "fruity": 0.5, "flowery": 0.4},
       "ingredient": ["softspicy", "powdery", "drywood"]
     },
     {
