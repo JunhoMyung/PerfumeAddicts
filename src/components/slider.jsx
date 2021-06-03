@@ -358,7 +358,7 @@ const CustomSlidercitrus = withStyles({
     }
     else if (value === (100)) {
       return (<div>
-        <div className = "labeltitle">Warm and Smoky Scents of a Wood</div>
+        <div className = "labeltitle">Warm and Smoky Scents of Woods</div>
         <div className = "labelsubtitle">Sandalwood, Patchouli</div>
       </div>)
     }
