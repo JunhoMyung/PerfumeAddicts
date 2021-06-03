@@ -341,7 +341,7 @@ const CustomSlidercitrus = withStyles({
     else if (value === (100)) {
       return (<div>
         <div className = "labeltitle">Deep and Sweet Scents of Fruits</div>
-        <div className = "labelsubtitle">Melon, Apple, Mango</div>
+        <div className = "labelsubtitle">Peach, Apple, Mango</div>
       </div>)
     }
   }
@@ -457,6 +457,7 @@ export function Citrus2() {
         marks={marks_citrus}
         track={false}
       />
+        <br/><div className="sliderexplain">Drag to Understand Fragrance Scale<br/></div>
     </div>
   )
 }
@@ -477,6 +478,7 @@ export function Floral2() {
         marks={marks_floral}
         track={false}
       />
+        <br/><div className="sliderexplain">Drag to Understand Fragrance Scale<br/></div>
     </div>
   )
 }
@@ -497,6 +499,7 @@ export function Woody2() {
         marks={marks_woody}
         track={false}
       />
+        <br/><div className="sliderexplain">Drag to Understand Fragrance Scale<br/></div>
     </div>
   )
 }
@@ -517,6 +520,7 @@ export function Fruity2() {
         marks={marks_fruity}
         track={false}
       />
+        <br/><div className="sliderexplain">Drag to Understand Fragrance Scale<br/></div>
     </div>
   )
 }
@@ -537,6 +541,7 @@ export function Spicy2() {
         marks={marks_spicy}
         track={false}
       />
+    <br/><div className="sliderexplain">Drag to Understand Fragrance Scale<br/></div>
     </div>
   )
 }
