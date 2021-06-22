@@ -65,14 +65,14 @@ const useStyles = makeStyles((theme) => ({
 
     const handleopen = () => {
         if (auth.currentUser !== null){
-            db.ref('/'+ auth.currentUser.displayName + "tutorial" +'/').get().then((snapshot)=> {
+            db.ref('/tutorial/' + auth.currentUser.displayName +'/').get().then((snapshot)=> {
                 if (snapshot.exists()){
                     console.log(false)
                     setOpen(false)
                 }
                 else{
                     setOpen(true)
-                    db.ref('/'+ auth.currentUser.displayName + "tutorial" +'/').push(true);
+                    db.ref('/tutorial/' + auth.currentUser.displayName +'/').push(true);
                 }
             })            
         }
