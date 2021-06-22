@@ -553,6 +553,7 @@ li.dropdown {
     height: 20px;
     border: 1px solid black;
     margin-right: 5px;
+    cursor: default;
 }
 
 .music_bar{

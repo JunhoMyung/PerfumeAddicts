@@ -13,7 +13,8 @@ export default class Mypage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          columns: [
+            templst: [],
+            columns: [
             { field: 'img', headerName: 'Image', width: 170, sortable: false, 
                 renderCell: (params) => {
                     return (
@@ -101,7 +102,6 @@ export default class Mypage extends Component {
 
     print = () =>{
         var h = window.innerHeight;
-        console.log(h)
         if(this.state.rows.length !== 0){
             return(
                 <div>
@@ -131,7 +131,10 @@ export default class Mypage extends Component {
                                             var a = 1*((perfume_info[value].radar_chart.woody + perfume_info[value].radar_chart.spicy) / 2)
                                             return(
                                                 <div className = "legendspecific">
-                                                    <span className = "box" style = {{backgroundColor: "rgba(" + r + "," + g + "," + b + "," + a + ")"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                                    <span className = "box" 
+                                                    onMouseEnter = {() => this.shade(value)}
+                                                    onMouseLeave = {() => this.setState({data: this.state.templst})}
+                                                    style = {{backgroundColor: "rgba(" + r + "," + g + "," + b + "," + a + ")"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                                     {perfume_info[value].name}
                                                 </div>
                                             )
@@ -161,6 +164,46 @@ export default class Mypage extends Component {
         }
     }
 
+    shade = (value) => {
+        var temp2 = []
+        var temp = this.state.select
+        for (let i of temp){
+            var r = 255*((perfume_info[i].radar_chart.fruity + perfume_info[i].radar_chart.flowery) / 2)
+            var g = 255*perfume_info[i].radar_chart.woody
+            var b = 255*perfume_info[i].radar_chart.citrus;
+            var a = 1*((perfume_info[i].radar_chart.woody + perfume_info[i].radar_chart.spicy) / 2)
+            if (i === value){
+                temp2.push(
+                    {
+                        data: {
+                            citrus: perfume_info[i].radar_chart.citrus,
+                            woody: perfume_info[i].radar_chart.woody,
+                            spicy: perfume_info[i].radar_chart.spicy,
+                            flower: perfume_info[i].radar_chart.flowery,
+                            fruit: perfume_info[i].radar_chart.fruity
+                        },
+                        meta: { color: "rgba(" + r + "," + g + "," + b + "," + 1 + ")" }
+                    }
+                )
+            }
+            else{
+                temp2.push(
+                    {
+                        data: {
+                            citrus: perfume_info[i].radar_chart.citrus,
+                            woody: perfume_info[i].radar_chart.woody,
+                            spicy: perfume_info[i].radar_chart.spicy,
+                            flower: perfume_info[i].radar_chart.flowery,
+                            fruit: perfume_info[i].radar_chart.fruity
+                        },
+                        meta: { color: "rgba(" + r + "," + g + "," + b + "," + a + ")" }
+                    }
+                )
+            }
+        }
+        this.setState({data: temp2})
+    }
+
     selected_list = (e) => {
         console.log(e)
         this.setState({select: e.selectionModel})
@@ -183,7 +226,7 @@ export default class Mypage extends Component {
                 }
             )
         }
-        this.setState({data: temp2})
+        this.setState({data: temp2, templst: temp2})
     }
 
     render (){
