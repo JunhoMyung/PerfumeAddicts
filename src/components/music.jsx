@@ -21,7 +21,7 @@ import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 const useStyles = makeStyles((theme) => ({
     paper: {
         position: 'absolute',
-        height: "80%",
+        height: "70%",
         width: "120%",
         backgroundColor: '#ffffff',
         border: '2px solid #000',
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
         width: "50%",
         alignItems: 'center',
         marginLeft: '15%',
-        marginTop: "5%",
+        marginTop: "10%",
         border: '100px',
       },
 }));
@@ -48,7 +48,7 @@ export default function Music() {
     const [open, setOpen] = useState(false);
     const [title, setTitle] = useState('')
     const [artist, setArtist] = useState('')
-    const [url, setURL] = useState('')
+    // const [url, setURL] = useState('')
     const [description, setDescription] = useState('')
     const [update, setUpdate] = useState(0)
     const [review_order, setReviewOrder] = useState([]);
@@ -96,7 +96,7 @@ export default function Music() {
             var new_data = {
                 title: value.title,
                 artist: value.artist,
-                url: value.url,
+                // url: value.url,
                 description: value.description,
                 vote: value.vote + 1,
                 voteID: value.voteID
@@ -112,7 +112,7 @@ export default function Music() {
             var new_data2 = {
                 title: value.title,
                 artist: value.artist,
-                url: value.url,
+                // url: value.url,
                 description: value.description,
                 vote: value.vote - 1,
                 voteID: value.voteID
@@ -133,7 +133,7 @@ export default function Music() {
     }
 
     const onsubmit = () => {
-        if (title !== "" && artist !== "" && url !== "" && description !== ""){
+        if (title !== "" && artist !== "" && description !== ""){
             setOpen(false);
             updateDB();
         }
@@ -148,7 +148,7 @@ export default function Music() {
         newKey.set({
             title: title,
             artist: artist,
-            url: url,
+            // url: url,
             description: description,
             vote: 0,
             voteID: {
@@ -157,7 +157,7 @@ export default function Music() {
         });
         setTitle("");
         setArtist("");
-        setURL("");
+        // setURL("");
         setDescription("");
     }
 
@@ -321,8 +321,8 @@ export default function Music() {
                             // margin="normal"
                             onChange = {event => setArtist(event.target.value)}
                         />
-                        <div className = "recommendtext2">Music URL (YouTube Link)</div>
-                        <TextField 
+                        {/* <div className = "recommendtext2">Music URL (YouTube Link)</div> */}
+                        {/* <TextField 
                             className = "recommendtext"
                             // style={{ margin: 8 }}
                             required 
@@ -333,7 +333,7 @@ export default function Music() {
                             fullWidth
                             // margin="normal"
                             onChange = {event => setURL(event.target.value)}
-                        />
+                        /> */}
                         <div className = "recommendtext2">Brief Reason</div>
                         <TextField 
                             // style={{ margin: 8 }}
