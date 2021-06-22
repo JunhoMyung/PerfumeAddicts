@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
   export default function SimpleModal() {
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
+    const [tutorial, setTutorial] = React.useState(true);
     
     const handleClose = () => {
       setOpen(false);
@@ -77,7 +78,10 @@ const useStyles = makeStyles((theme) => ({
             })            
         }
         else{
-            setOpen(true)
+            if (tutorial){
+                setOpen(true)
+                setTutorial(false)
+            }
         }
     }
 
