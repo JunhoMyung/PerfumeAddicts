@@ -14,6 +14,16 @@
     text-align: center;
 }
 
+.tutorialtitle {
+    color: black;
+    font-family: 'LEMON MILK', sans-serif;
+    font-weight: bold;
+    font-size: 30pt;
+    white-space: nowrap;
+    padding-bottom: 20pt;
+    text-align: center;
+}
+
 .overlaytitle2 {
     color: black;
     font-family: 'LEMON MILK', sans-serif;
@@ -122,3 +132,54 @@ br {
     margin: 0 0 0 0;
 }
 
+.tutorialcolumn {
+    float: left;
+}
+  
+.tutorialleft {
+    width: 50%;
+    text-align: center;
+}
+
+.tutorialright {
+    width: 50%;
+    text-align: center;
+}
+
+.tutorialbutton {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    left: 50%;
+    margin-top: 46%;
+    transform: translate(-50%, 0%);
+    width: 200px;
+    height: 50px;
+    background: #704685;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-size: 14pt;
+}
+
+.tutorialbutton:hover { 
+    background: #8f709e; 
+    color: white; 
+}
+
+.tutorial1 {
+    padding-top: 20%;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-size: 30pt;
+}
+
+.tutorial2 {
+    padding-top: 10%;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-size: 20pt;
+}

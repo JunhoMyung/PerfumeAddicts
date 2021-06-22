@@ -209,6 +209,12 @@ li.dropdown {
     position: relative;
 }
 
+.tutorial_pic {
+    margin-top: 8%;
+    margin-bottom: 8%;
+    height: 55%;
+    position: relative;
+}
 
 
 .service_pic2 {

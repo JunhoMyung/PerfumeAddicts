@@ -16,6 +16,7 @@ import ELEVEN from "../filter_icons/11.png"
 import TWELVE from "../filter_icons/12.png"
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
+import Tutorial from "./tutorial.jsx"
 
 
 const useStyles = makeStyles((theme) => ({
@@ -190,6 +191,7 @@ export default function SimpleModal() {
   const body = (
     <Fade in={open}>
       <div className={classes.paper}>
+        <Tutorial />
           <div className='overlaytitle'>CHOOSE SCENTS YOU AVOID</div>
           <table className = "overlaytable" width = "100%">
             <tbody>

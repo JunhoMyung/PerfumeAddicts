@@ -69,8 +69,7 @@ const useStyles = makeStyles(theme => ({
   };
   
   export default function main(props) {
-
-    localStorage.setItem('perfume_id', 0)
+    localStorage.setItem('tutorial', true)
     for (let k = 0; k < localStorage.getItem('length'); k++){
         localStorage.setItem('index' + k, null)
     }
