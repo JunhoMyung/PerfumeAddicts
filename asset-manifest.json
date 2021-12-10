@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/perdict/static/css/main.917dac48.chunk.css",
-    "main.js": "/perdict/static/js/main.20593a5b.chunk.js",
-    "main.js.map": "/perdict/static/js/main.20593a5b.chunk.js.map",
+    "main.js": "/perdict/static/js/main.095d207c.chunk.js",
+    "main.js.map": "/perdict/static/js/main.095d207c.chunk.js.map",
     "runtime-main.js": "/perdict/static/js/runtime-main.8ce7aa45.js",
     "runtime-main.js.map": "/perdict/static/js/runtime-main.8ce7aa45.js.map",
     "static/css/2.a4e45bde.chunk.css": "/perdict/static/css/2.a4e45bde.chunk.css",
-    "static/js/2.c5cd9246.chunk.js": "/perdict/static/js/2.c5cd9246.chunk.js",
-    "static/js/2.c5cd9246.chunk.js.map": "/perdict/static/js/2.c5cd9246.chunk.js.map",
+    "static/js/2.7fb2cf53.chunk.js": "/perdict/static/js/2.7fb2cf53.chunk.js",
+    "static/js/2.7fb2cf53.chunk.js.map": "/perdict/static/js/2.7fb2cf53.chunk.js.map",
     "index.html": "/perdict/index.html",
     "static/css/2.a4e45bde.chunk.css.map": "/perdict/static/css/2.a4e45bde.chunk.css.map",
     "static/css/main.917dac48.chunk.css.map": "/perdict/static/css/main.917dac48.chunk.css.map",
-    "static/js/2.c5cd9246.chunk.js.LICENSE.txt": "/perdict/static/js/2.c5cd9246.chunk.js.LICENSE.txt",
+    "static/js/2.7fb2cf53.chunk.js.LICENSE.txt": "/perdict/static/js/2.7fb2cf53.chunk.js.LICENSE.txt",
     "static/media/1.93700e63.png": "/perdict/static/media/1.93700e63.png",
     "static/media/10.b8cbec15.png": "/perdict/static/media/10.b8cbec15.png",
     "static/media/11.b9240345.png": "/perdict/static/media/11.b9240345.png",
@@ -70,8 +70,8 @@
   "entrypoints": [
     "static/js/runtime-main.8ce7aa45.js",
     "static/css/2.a4e45bde.chunk.css",
-    "static/js/2.c5cd9246.chunk.js",
+    "static/js/2.7fb2cf53.chunk.js",
     "static/css/main.917dac48.chunk.css",
-    "static/js/main.20593a5b.chunk.js"
+    "static/js/main.095d207c.chunk.js"
   ]
 }
